@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "978480878129",
+    "firebase_url": "https://hayat-371613-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "hayat-371613",
+    "storage_bucket": "hayat-371613.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:978480878129:android:f95d36072d93500400fb10",
+        "android_client_info": {
+          "package_name": "com.mycompany.aplicatie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "978480878129-jf6ut3qnacdjntvj9n4cp29vducufgp0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAx9rpfIAA7A00I-MxfUk2Fy2u0NmW7Dfk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "978480878129-jf6ut3qnacdjntvj9n4cp29vducufgp0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "978480878129-0cs9duj5slvjro36ncssjvgskf64pa3i.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.aplicatie"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
