@@ -1,6 +1,6 @@
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_video_player.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -53,14 +53,14 @@ class _VideoWidgetState extends State<VideoWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Container(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height * 1,
+                width: MediaQuery.of(context).size.width * 1.0,
+                height: MediaQuery.of(context).size.height * 1.0,
                 child: Stack(
                   children: [
                     FlutterFlowVideoPlayer(
                       path: '${widget.path}',
                       videoType: VideoType.network,
-                      width: MediaQuery.of(context).size.width,
+                      width: MediaQuery.of(context).size.width * 1.0,
                       height: MediaQuery.of(context).size.height * 0.98,
                       autoPlay: false,
                       looping: false,
@@ -78,7 +78,7 @@ class _VideoWidgetState extends State<VideoWidget> {
                         child: Icon(
                           Icons.arrow_back_rounded,
                           color: FlutterFlowTheme.of(context).primaryText,
-                          size: 46,
+                          size: 46.0,
                         ),
                       ),
                     ),

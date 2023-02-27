@@ -1,9 +1,9 @@
-import '../backend/api_requests/api_calls.dart';
-import '../category_courses/category_courses_widget.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../meditations/meditations_widget.dart';
+import '/backend/api_requests/api_calls.dart';
+import '/category_courses/category_courses_widget.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/meditations/meditations_widget.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -55,13 +55,13 @@ class _CategoryListWidgetState extends State<CategoryListWidget> {
         automaticallyImplyLeading: false,
         leading: FlutterFlowIconButton(
           borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
+          borderRadius: 30.0,
+          borderWidth: 1.0,
+          buttonSize: 60.0,
           icon: Icon(
             Icons.arrow_back,
             color: FlutterFlowTheme.of(context).primaryText,
-            size: 25,
+            size: 25.0,
           ),
           onPressed: () async {
             Navigator.pop(context);
@@ -72,34 +72,36 @@ class _CategoryListWidgetState extends State<CategoryListWidget> {
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Nunito Sans',
                 color: FlutterFlowTheme.of(context).primaryText,
-                fontSize: 22,
+                fontSize: 22.0,
                 fontWeight: FontWeight.w500,
               ),
         ),
         actions: [],
         centerTitle: false,
-        elevation: 0,
+        elevation: 0.0,
       ),
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
           child: Align(
-            alignment: AlignmentDirectional(0, 0),
+            alignment: AlignmentDirectional(0.0, 0.0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(0, 0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 75),
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 75.0),
                       child: Container(
                         width: MediaQuery.of(context).size.width * 0.9,
                         height: MediaQuery.of(context).size.height * 0.9,
                         decoration: BoxDecoration(),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 50),
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 50.0),
                           child: FutureBuilder<ApiCallResponse>(
                             future: (_model.apiRequestCompleter ??=
                                     Completer<ApiCallResponse>()
@@ -112,8 +114,8 @@ class _CategoryListWidgetState extends State<CategoryListWidget> {
                               if (!snapshot.hasData) {
                                 return Center(
                                   child: SizedBox(
-                                    width: 50,
-                                    height: 50,
+                                    width: 50.0,
+                                    height: 50.0,
                                     child: CircularProgressIndicator(
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryColor,
@@ -145,7 +147,7 @@ class _CategoryListWidgetState extends State<CategoryListWidget> {
                                         return Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  0, 0, 0, 15),
+                                                  0.0, 0.0, 0.0, 15.0),
                                           child: InkWell(
                                             onTap: () async {
                                               if (getJsonField(
@@ -190,13 +192,13 @@ class _CategoryListWidgetState extends State<CategoryListWidget> {
                                                         .alternate,
                                                 boxShadow: [
                                                   BoxShadow(
-                                                    blurRadius: 4,
+                                                    blurRadius: 4.0,
                                                     color: Color(0x33000000),
-                                                    offset: Offset(0, 2),
+                                                    offset: Offset(0.0, 2.0),
                                                   )
                                                 ],
                                                 borderRadius:
-                                                    BorderRadius.circular(32),
+                                                    BorderRadius.circular(32.0),
                                               ),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
@@ -207,13 +209,13 @@ class _CategoryListWidgetState extends State<CategoryListWidget> {
                                                     borderRadius:
                                                         BorderRadius.only(
                                                       bottomLeft:
-                                                          Radius.circular(20),
+                                                          Radius.circular(20.0),
                                                       bottomRight:
-                                                          Radius.circular(0),
+                                                          Radius.circular(0.0),
                                                       topLeft:
-                                                          Radius.circular(20),
+                                                          Radius.circular(20.0),
                                                       topRight:
-                                                          Radius.circular(0),
+                                                          Radius.circular(0.0),
                                                     ),
                                                     child: Image.network(
                                                       valueOrDefault<String>(
@@ -223,12 +225,12 @@ class _CategoryListWidgetState extends State<CategoryListWidget> {
                                                         ),
                                                         'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg',
                                                       ),
-                                                      width: 120,
+                                                      width: 120.0,
                                                       height:
                                                           MediaQuery.of(context)
                                                                   .size
                                                                   .height *
-                                                              1,
+                                                              1.0,
                                                       fit: BoxFit.cover,
                                                     ),
                                                   ),
@@ -242,7 +244,7 @@ class _CategoryListWidgetState extends State<CategoryListWidget> {
                                                         MediaQuery.of(context)
                                                                 .size
                                                                 .height *
-                                                            1,
+                                                            1.0,
                                                     decoration: BoxDecoration(),
                                                   ),
                                                   Column(
@@ -271,7 +273,7 @@ class _CategoryListWidgetState extends State<CategoryListWidget> {
                                                         child: Align(
                                                           alignment:
                                                               AlignmentDirectional(
-                                                                  -0.95, 0),
+                                                                  -0.95, 0.0),
                                                           child: Text(
                                                             getJsonField(
                                                               categoriesItem,
@@ -285,7 +287,8 @@ class _CategoryListWidgetState extends State<CategoryListWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Nunito Sans',
-                                                                  fontSize: 16,
+                                                                  fontSize:
+                                                                      16.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w600,

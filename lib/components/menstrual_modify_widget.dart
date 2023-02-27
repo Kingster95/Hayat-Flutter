@@ -1,9 +1,9 @@
-import '../auth/auth_util.dart';
-import '../backend/backend.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
-import '../menstrual_calendar/menstrual_calendar_widget.dart';
+import '/auth/auth_util.dart';
+import '/backend/backend.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import '/menstrual_calendar/menstrual_calendar_widget.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
@@ -49,27 +49,27 @@ class _MenstrualModifyWidgetState extends State<MenstrualModifyWidget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: AlignmentDirectional(0, 0),
+      alignment: AlignmentDirectional(0.0, 0.0),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Align(
-            alignment: AlignmentDirectional(0, 0),
+            alignment: AlignmentDirectional(0.0, 0.0),
             child: Container(
               width: MediaQuery.of(context).size.width * 0.9,
               height: MediaQuery.of(context).size.height * 0.6,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(45),
+                borderRadius: BorderRadius.circular(45.0),
               ),
               child: Align(
-                alignment: AlignmentDirectional(0, 0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0, 0),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: Container(
                         width: MediaQuery.of(context).size.width * 0.85,
                         height: MediaQuery.of(context).size.height * 0.4,
@@ -77,16 +77,16 @@ class _MenstrualModifyWidgetState extends State<MenstrualModifyWidget> {
                           color: FlutterFlowTheme.of(context).primaryBackground,
                           boxShadow: [
                             BoxShadow(
-                              blurRadius: 4,
+                              blurRadius: 4.0,
                               color: Color(0x33000000),
-                              offset: Offset(0, 2),
+                              offset: Offset(0.0, 2.0),
                             )
                           ],
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(30.0),
                         ),
-                        alignment: AlignmentDirectional(0, 0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Align(
-                          alignment: AlignmentDirectional(0, 0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Container(
                             width: MediaQuery.of(context).size.width * 0.8,
                             height: MediaQuery.of(context).size.height * 0.4,
@@ -99,14 +99,15 @@ class _MenstrualModifyWidgetState extends State<MenstrualModifyWidget> {
                                   key: _model.formKey,
                                   autovalidateMode: AutovalidateMode.always,
                                   child: Align(
-                                    alignment: AlignmentDirectional(0, -0.15),
+                                    alignment: AlignmentDirectional(0.0, -0.15),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.min,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       children: [
                                         Align(
-                                          alignment: AlignmentDirectional(0, 0),
+                                          alignment:
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Container(
                                             width: MediaQuery.of(context)
                                                     .size
@@ -117,11 +118,11 @@ class _MenstrualModifyWidgetState extends State<MenstrualModifyWidget> {
                                                     .height *
                                                 0.06,
                                             decoration: BoxDecoration(),
-                                            alignment:
-                                                AlignmentDirectional(-0.85, 0),
+                                            alignment: AlignmentDirectional(
+                                                -0.85, 0.0),
                                             child: Align(
-                                              alignment:
-                                                  AlignmentDirectional(0, 0),
+                                              alignment: AlignmentDirectional(
+                                                  0.0, 0.0),
                                               child: AutoSizeText(
                                                 'Durata Ciclu Menstrual',
                                                 textAlign: TextAlign.center,
@@ -132,7 +133,7 @@ class _MenstrualModifyWidgetState extends State<MenstrualModifyWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Nunito Sans',
-                                                          fontSize: 18,
+                                                          fontSize: 18.0,
                                                           fontWeight:
                                                               FontWeight.bold,
                                                         ),
@@ -141,7 +142,8 @@ class _MenstrualModifyWidgetState extends State<MenstrualModifyWidget> {
                                           ),
                                         ),
                                         Align(
-                                          alignment: AlignmentDirectional(0, 0),
+                                          alignment:
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Container(
                                             width: MediaQuery.of(context)
                                                     .size
@@ -152,11 +154,11 @@ class _MenstrualModifyWidgetState extends State<MenstrualModifyWidget> {
                                                     .height *
                                                 0.05,
                                             decoration: BoxDecoration(),
-                                            alignment:
-                                                AlignmentDirectional(-1, -0.4),
+                                            alignment: AlignmentDirectional(
+                                                -1.0, -0.4),
                                             child: Align(
-                                              alignment:
-                                                  AlignmentDirectional(0, 0),
+                                              alignment: AlignmentDirectional(
+                                                  0.0, 0.0),
                                               child: TextFormField(
                                                 controller:
                                                     _model.textController,
@@ -172,48 +174,48 @@ class _MenstrualModifyWidgetState extends State<MenstrualModifyWidget> {
                                                       UnderlineInputBorder(
                                                     borderSide: BorderSide(
                                                       color: Color(0x00000000),
-                                                      width: 1,
+                                                      width: 1.0,
                                                     ),
                                                     borderRadius:
                                                         BorderRadius.circular(
-                                                            22),
+                                                            22.0),
                                                   ),
                                                   focusedBorder:
                                                       UnderlineInputBorder(
                                                     borderSide: BorderSide(
                                                       color: Color(0x00000000),
-                                                      width: 1,
+                                                      width: 1.0,
                                                     ),
                                                     borderRadius:
                                                         BorderRadius.circular(
-                                                            22),
+                                                            22.0),
                                                   ),
                                                   errorBorder:
                                                       UnderlineInputBorder(
                                                     borderSide: BorderSide(
                                                       color: Color(0x00000000),
-                                                      width: 1,
+                                                      width: 1.0,
                                                     ),
                                                     borderRadius:
                                                         BorderRadius.circular(
-                                                            22),
+                                                            22.0),
                                                   ),
                                                   focusedErrorBorder:
                                                       UnderlineInputBorder(
                                                     borderSide: BorderSide(
                                                       color: Color(0x00000000),
-                                                      width: 1,
+                                                      width: 1.0,
                                                     ),
                                                     borderRadius:
                                                         BorderRadius.circular(
-                                                            22),
+                                                            22.0),
                                                   ),
                                                   filled: true,
                                                   fillColor: Color(0x7B6F1AB6),
                                                   contentPadding:
                                                       EdgeInsetsDirectional
-                                                          .fromSTEB(
-                                                              15, 0, 0, 0),
+                                                          .fromSTEB(15.0, 0.0,
+                                                              0.0, 0.0),
                                                 ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -221,7 +223,7 @@ class _MenstrualModifyWidgetState extends State<MenstrualModifyWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Nunito Sans',
-                                                          lineHeight: 1,
+                                                          lineHeight: 1.0,
                                                         ),
                                                 textAlign: TextAlign.start,
                                                 validator: _model
@@ -243,11 +245,12 @@ class _MenstrualModifyWidgetState extends State<MenstrualModifyWidget> {
                                           decoration: BoxDecoration(),
                                         ),
                                         Align(
-                                          alignment: AlignmentDirectional(0, 0),
+                                          alignment:
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    0, 5, 0, 0),
+                                                    0.0, 5.0, 0.0, 0.0),
                                             child: Container(
                                               width: MediaQuery.of(context)
                                                       .size
@@ -258,8 +261,8 @@ class _MenstrualModifyWidgetState extends State<MenstrualModifyWidget> {
                                                       .height *
                                                   0.06,
                                               decoration: BoxDecoration(),
-                                              alignment:
-                                                  AlignmentDirectional(0, 0),
+                                              alignment: AlignmentDirectional(
+                                                  0.0, 0.0),
                                               child: AutoSizeText(
                                                 'Prima zi a ultimului\nciclu menstrual',
                                                 textAlign: TextAlign.center,
@@ -270,7 +273,7 @@ class _MenstrualModifyWidgetState extends State<MenstrualModifyWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Nunito Sans',
-                                                          fontSize: 18,
+                                                          fontSize: 18.0,
                                                           fontWeight:
                                                               FontWeight.bold,
                                                         ),
@@ -279,11 +282,12 @@ class _MenstrualModifyWidgetState extends State<MenstrualModifyWidget> {
                                           ),
                                         ),
                                         Align(
-                                          alignment: AlignmentDirectional(0, 0),
+                                          alignment:
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    0, 5, 0, 0),
+                                                    0.0, 5.0, 0.0, 0.0),
                                             child: Container(
                                               width: MediaQuery.of(context)
                                                       .size
@@ -295,10 +299,10 @@ class _MenstrualModifyWidgetState extends State<MenstrualModifyWidget> {
                                                   0.05,
                                               decoration: BoxDecoration(
                                                 borderRadius:
-                                                    BorderRadius.circular(20),
+                                                    BorderRadius.circular(20.0),
                                               ),
-                                              alignment:
-                                                  AlignmentDirectional(0, 0),
+                                              alignment: AlignmentDirectional(
+                                                  0.0, 0.0),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
                                                   final _datePickedDate =
@@ -327,11 +331,18 @@ class _MenstrualModifyWidgetState extends State<MenstrualModifyWidget> {
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .primaryText,
-                                                  size: 15,
+                                                  size: 15.0,
                                                 ),
                                                 options: FFButtonOptions(
                                                   width: double.infinity,
                                                   height: double.infinity,
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 0.0, 0.0, 0.0),
+                                                  iconPadding:
+                                                      EdgeInsetsDirectional
+                                                          .fromSTEB(0.0, 0.0,
+                                                              0.0, 0.0),
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryColor,
@@ -345,14 +356,15 @@ class _MenstrualModifyWidgetState extends State<MenstrualModifyWidget> {
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .primaryText,
-                                                        fontSize: 18,
+                                                        fontSize: 18.0,
                                                       ),
                                                   borderSide: BorderSide(
                                                     color: Colors.transparent,
-                                                    width: 1,
+                                                    width: 1.0,
                                                   ),
                                                   borderRadius:
-                                                      BorderRadius.circular(8),
+                                                      BorderRadius.circular(
+                                                          8.0),
                                                 ),
                                               ),
                                             ),
@@ -370,7 +382,8 @@ class _MenstrualModifyWidgetState extends State<MenstrualModifyWidget> {
                                           decoration: BoxDecoration(),
                                         ),
                                         Align(
-                                          alignment: AlignmentDirectional(0, 0),
+                                          alignment:
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Container(
                                             width: MediaQuery.of(context)
                                                     .size
@@ -382,7 +395,7 @@ class _MenstrualModifyWidgetState extends State<MenstrualModifyWidget> {
                                                 0.05,
                                             decoration: BoxDecoration(
                                               borderRadius:
-                                                  BorderRadius.circular(50),
+                                                  BorderRadius.circular(50.0),
                                             ),
                                             child: FFButtonWidget(
                                               onPressed: () async {
@@ -415,6 +428,13 @@ class _MenstrualModifyWidgetState extends State<MenstrualModifyWidget> {
                                               },
                                               text: 'Salveaza',
                                               options: FFButtonOptions(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        0.0, 0.0, 0.0, 0.0),
+                                                iconPadding:
+                                                    EdgeInsetsDirectional
+                                                        .fromSTEB(
+                                                            0.0, 0.0, 0.0, 0.0),
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .alternate,
@@ -425,14 +445,14 @@ class _MenstrualModifyWidgetState extends State<MenstrualModifyWidget> {
                                                           fontFamily:
                                                               'Nunito Sans',
                                                           color: Colors.white,
-                                                          fontSize: 13,
+                                                          fontSize: 13.0,
                                                         ),
                                                 borderSide: BorderSide(
                                                   color: Colors.transparent,
-                                                  width: 1,
+                                                  width: 1.0,
                                                 ),
                                                 borderRadius:
-                                                    BorderRadius.circular(50),
+                                                    BorderRadius.circular(50.0),
                                               ),
                                             ),
                                           ),

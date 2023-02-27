@@ -44,8 +44,8 @@ class _MyAppState extends State<MyApp> {
   Locale? _locale;
   ThemeMode _themeMode = ThemeMode.system;
 
-  late Stream<AplicatieFirebaseUser> userStream;
-  AplicatieFirebaseUser? initialUser;
+  late Stream<HayatFirebaseUser> userStream;
+  HayatFirebaseUser? initialUser;
   bool displaySplashImage = true;
 
   final authUserSub = authenticatedUserStream.listen((_) {});
@@ -54,7 +54,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    userStream = aplicatieFirebaseUserStream()
+    userStream = hayatFirebaseUserStream()
       ..listen((user) => initialUser ?? setState(() => initialUser = user));
     jwtTokenStream.listen((_) {});
     Future.delayed(
@@ -81,7 +81,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'aplicatie',
+      title: 'Hayat',
       localizationsDelegates: [
         FFLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,
@@ -96,11 +96,13 @@ class _MyAppState extends State<MyApp> {
       themeMode: _themeMode,
       home: initialUser == null || displaySplashImage
           ? Builder(
-              builder: (context) => Container(
-                color: Colors.transparent,
-                child: Image.asset(
-                  'assets/images/WelcomeLogo.png',
-                  fit: BoxFit.contain,
+              builder: (context) => Center(
+                child: SizedBox(
+                  width: 50.0,
+                  height: 50.0,
+                  child: CircularProgressIndicator(
+                    color: FlutterFlowTheme.of(context).secondaryColor,
+                  ),
                 ),
               ),
             )
@@ -161,11 +163,11 @@ class _NavBarPageState extends State<NavBarPage> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home_outlined,
-              size: 34,
+              size: 34.0,
             ),
             activeIcon: Icon(
               Icons.home,
-              size: 24,
+              size: 24.0,
             ),
             label: 'Acasă',
             tooltip: '',
@@ -173,11 +175,11 @@ class _NavBarPageState extends State<NavBarPage> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.chat_bubble_outline,
-              size: 28,
+              size: 28.0,
             ),
             activeIcon: Icon(
               Icons.chat_bubble_rounded,
-              size: 28,
+              size: 28.0,
             ),
             label: 'Mesaje',
             tooltip: '',
@@ -185,11 +187,11 @@ class _NavBarPageState extends State<NavBarPage> {
           BottomNavigationBarItem(
             icon: FaIcon(
               FontAwesomeIcons.map,
-              size: 24,
+              size: 24.0,
             ),
             activeIcon: FaIcon(
               FontAwesomeIcons.solidMap,
-              size: 24,
+              size: 24.0,
             ),
             label: 'Hartă',
             tooltip: '',
@@ -197,11 +199,11 @@ class _NavBarPageState extends State<NavBarPage> {
           BottomNavigationBarItem(
             icon: FaIcon(
               FontAwesomeIcons.fileAlt,
-              size: 24,
+              size: 24.0,
             ),
             activeIcon: FaIcon(
               FontAwesomeIcons.solidFileAlt,
-              size: 24,
+              size: 24.0,
             ),
             label: 'Cursuri',
             tooltip: '',
@@ -209,11 +211,11 @@ class _NavBarPageState extends State<NavBarPage> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.account_circle_outlined,
-              size: 34,
+              size: 34.0,
             ),
             activeIcon: Icon(
               Icons.account_circle_rounded,
-              size: 34,
+              size: 34.0,
             ),
             label: 'Cont',
             tooltip: '',

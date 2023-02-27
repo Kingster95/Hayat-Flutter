@@ -1,14 +1,14 @@
-import '../auth/auth_util.dart';
-import '../backend/api_requests/api_calls.dart';
-import '../create_account/create_account_widget.dart';
-import '../create_profile/create_profile_widget.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
-import '../main.dart';
-import '../welcome/welcome_widget.dart';
-import '../custom_code/actions/index.dart' as actions;
+import '/auth/auth_util.dart';
+import '/backend/api_requests/api_calls.dart';
+import '/create_account/create_account_widget.dart';
+import '/create_profile/create_profile_widget.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import '/main.dart';
+import '/welcome/welcome_widget.dart';
+import '/custom_code/actions/index.dart' as actions;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
@@ -63,16 +63,16 @@ class _LoginAccountWidgetState extends State<LoginAccountWidget> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Align(
-                alignment: AlignmentDirectional(-0.99, 0),
+                alignment: AlignmentDirectional(-0.99, 0.0),
                 child: FlutterFlowIconButton(
                   borderColor: Colors.transparent,
-                  borderRadius: 30,
-                  borderWidth: 1,
-                  buttonSize: 60,
+                  borderRadius: 30.0,
+                  borderWidth: 1.0,
+                  buttonSize: 60.0,
                   icon: Icon(
                     Icons.arrow_back,
                     color: FlutterFlowTheme.of(context).primaryText,
-                    size: 25,
+                    size: 25.0,
                   ),
                   onPressed: () async {
                     await Navigator.push(
@@ -85,7 +85,7 @@ class _LoginAccountWidgetState extends State<LoginAccountWidget> {
                 ),
               ),
               Container(
-                width: MediaQuery.of(context).size.width,
+                width: MediaQuery.of(context).size.width * 1.0,
                 height: MediaQuery.of(context).size.height * 0.02,
                 decoration: BoxDecoration(),
               ),
@@ -94,19 +94,19 @@ class _LoginAccountWidgetState extends State<LoginAccountWidget> {
                 height: MediaQuery.of(context).size.height * 0.15,
                 decoration: BoxDecoration(),
                 child: Align(
-                  alignment: AlignmentDirectional(-0.55, 0),
+                  alignment: AlignmentDirectional(-0.55, 0.0),
                   child: AutoSizeText(
                     'Intră in contul\ntau',
                     textAlign: TextAlign.start,
                     style: FlutterFlowTheme.of(context).title1.override(
                           fontFamily: 'Poppins',
-                          fontSize: 40,
+                          fontSize: 40.0,
                         ),
                   ),
                 ),
               ),
               Container(
-                width: MediaQuery.of(context).size.width,
+                width: MediaQuery.of(context).size.width * 1.0,
                 height: MediaQuery.of(context).size.height * 0.05,
                 decoration: BoxDecoration(),
               ),
@@ -119,9 +119,9 @@ class _LoginAccountWidgetState extends State<LoginAccountWidget> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Align(
-                        alignment: AlignmentDirectional(0, 0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Container(
-                          width: MediaQuery.of(context).size.width,
+                          width: MediaQuery.of(context).size.width * 1.0,
                           child: TextFormField(
                             controller: _model.emailFieldController,
                             onChanged: (_) => EasyDebounce.debounce(
@@ -135,7 +135,7 @@ class _LoginAccountWidgetState extends State<LoginAccountWidget> {
                                   .bodyText1
                                   .override(
                                     fontFamily: 'Poppins',
-                                    fontSize: 14,
+                                    fontSize: 14.0,
                                     fontWeight: FontWeight.w600,
                                   ),
                               hintText: 'Email',
@@ -143,42 +143,42 @@ class _LoginAccountWidgetState extends State<LoginAccountWidget> {
                                 'Poppins',
                                 color: FlutterFlowTheme.of(context).primaryText,
                                 fontWeight: FontWeight.w300,
-                                fontSize: 14,
+                                fontSize: 14.0,
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: Color(0x00FFFFFF),
-                                  width: 1,
+                                  width: 1.0,
                                 ),
-                                borderRadius: BorderRadius.circular(12),
+                                borderRadius: BorderRadius.circular(12.0),
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: Color(0x00000000),
-                                  width: 1,
+                                  width: 1.0,
                                 ),
-                                borderRadius: BorderRadius.circular(12),
+                                borderRadius: BorderRadius.circular(12.0),
                               ),
                               errorBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: Color(0x00000000),
-                                  width: 1,
+                                  width: 1.0,
                                 ),
-                                borderRadius: BorderRadius.circular(12),
+                                borderRadius: BorderRadius.circular(12.0),
                               ),
                               focusedErrorBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: Color(0x00000000),
-                                  width: 1,
+                                  width: 1.0,
                                 ),
-                                borderRadius: BorderRadius.circular(12),
+                                borderRadius: BorderRadius.circular(12.0),
                               ),
                               filled: true,
                               fillColor: Color(0x3CFFFFFF),
                               prefixIcon: Icon(
                                 Icons.email,
                                 color: FlutterFlowTheme.of(context).primaryText,
-                                size: 20,
+                                size: 20.0,
                               ),
                             ),
                             style: FlutterFlowTheme.of(context)
@@ -187,7 +187,7 @@ class _LoginAccountWidgetState extends State<LoginAccountWidget> {
                                   fontFamily: 'Poppins',
                                   color:
                                       FlutterFlowTheme.of(context).primaryText,
-                                  fontSize: 14,
+                                  fontSize: 14.0,
                                   fontWeight: FontWeight.w600,
                                 ),
                             keyboardType: TextInputType.emailAddress,
@@ -197,14 +197,14 @@ class _LoginAccountWidgetState extends State<LoginAccountWidget> {
                         ),
                       ),
                       Container(
-                        width: MediaQuery.of(context).size.width,
+                        width: MediaQuery.of(context).size.width * 1.0,
                         height: MediaQuery.of(context).size.height * 0.03,
                         decoration: BoxDecoration(),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0, 0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Container(
-                          width: MediaQuery.of(context).size.width,
+                          width: MediaQuery.of(context).size.width * 1.0,
                           child: TextFormField(
                             controller: _model.passwordFieldController,
                             obscureText: !_model.passwordFieldVisibility,
@@ -221,37 +221,37 @@ class _LoginAccountWidgetState extends State<LoginAccountWidget> {
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: Color(0x00FFFFFF),
-                                  width: 1,
+                                  width: 1.0,
                                 ),
-                                borderRadius: BorderRadius.circular(12),
+                                borderRadius: BorderRadius.circular(12.0),
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: Color(0x00000000),
-                                  width: 1,
+                                  width: 1.0,
                                 ),
-                                borderRadius: BorderRadius.circular(12),
+                                borderRadius: BorderRadius.circular(12.0),
                               ),
                               errorBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: Color(0x00000000),
-                                  width: 1,
+                                  width: 1.0,
                                 ),
-                                borderRadius: BorderRadius.circular(12),
+                                borderRadius: BorderRadius.circular(12.0),
                               ),
                               focusedErrorBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: Color(0x00000000),
-                                  width: 1,
+                                  width: 1.0,
                                 ),
-                                borderRadius: BorderRadius.circular(12),
+                                borderRadius: BorderRadius.circular(12.0),
                               ),
                               filled: true,
                               fillColor: Color(0x3CFFFFFF),
                               prefixIcon: Icon(
                                 Icons.lock,
                                 color: FlutterFlowTheme.of(context).primaryText,
-                                size: 18,
+                                size: 18.0,
                               ),
                               suffixIcon: InkWell(
                                 onTap: () => setState(
@@ -264,7 +264,7 @@ class _LoginAccountWidgetState extends State<LoginAccountWidget> {
                                       ? Icons.visibility_outlined
                                       : Icons.visibility_off_outlined,
                                   color: Color(0xFF757575),
-                                  size: 22,
+                                  size: 22.0,
                                 ),
                               ),
                             ),
@@ -286,10 +286,10 @@ class _LoginAccountWidgetState extends State<LoginAccountWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
                 child: Wrap(
-                  spacing: 0,
-                  runSpacing: 0,
+                  spacing: 0.0,
+                  runSpacing: 0.0,
                   alignment: WrapAlignment.center,
                   crossAxisAlignment: WrapCrossAlignment.center,
                   direction: Axis.horizontal,
@@ -301,7 +301,7 @@ class _LoginAccountWidgetState extends State<LoginAccountWidget> {
                       data: ThemeData(
                         checkboxTheme: CheckboxThemeData(
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(5),
+                            borderRadius: BorderRadius.circular(5.0),
                           ),
                         ),
                         unselectedWidgetColor:
@@ -321,16 +321,16 @@ class _LoginAccountWidgetState extends State<LoginAccountWidget> {
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Poppins',
-                            fontSize: 16,
+                            fontSize: 16.0,
                             fontWeight: FontWeight.w500,
-                            lineHeight: 1,
+                            lineHeight: 1.0,
                           ),
                     ),
                   ],
                 ),
               ),
               Container(
-                width: MediaQuery.of(context).size.width,
+                width: MediaQuery.of(context).size.width * 1.0,
                 height: MediaQuery.of(context).size.height * 0.03,
                 decoration: BoxDecoration(),
               ),
@@ -340,12 +340,12 @@ class _LoginAccountWidgetState extends State<LoginAccountWidget> {
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
-                      blurRadius: 4,
+                      blurRadius: 4.0,
                       color: Color(0x33000000),
-                      offset: Offset(0, 2),
+                      offset: Offset(0.0, 2.0),
                     )
                   ],
-                  borderRadius: BorderRadius.circular(22),
+                  borderRadius: BorderRadius.circular(22.0),
                 ),
                 child: FFButtonWidget(
                   onPressed: () async {
@@ -454,24 +454,27 @@ class _LoginAccountWidgetState extends State<LoginAccountWidget> {
                   },
                   text: 'Intră in cont',
                   options: FFButtonOptions(
-                    height: 40,
+                    height: 40.0,
+                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    iconPadding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).alternate,
                     textStyle: FlutterFlowTheme.of(context).subtitle1,
                     borderSide: BorderSide(
                       color: Colors.transparent,
-                      width: 1,
+                      width: 1.0,
                     ),
-                    borderRadius: BorderRadius.circular(22),
+                    borderRadius: BorderRadius.circular(22.0),
                   ),
                 ),
               ),
               Container(
-                width: MediaQuery.of(context).size.width,
+                width: MediaQuery.of(context).size.width * 1.0,
                 height: MediaQuery.of(context).size.height * 0.04,
                 decoration: BoxDecoration(),
               ),
               Container(
-                width: MediaQuery.of(context).size.width,
+                width: MediaQuery.of(context).size.width * 1.0,
                 height: MediaQuery.of(context).size.height * 0.05,
                 decoration: BoxDecoration(),
               ),
@@ -480,12 +483,12 @@ class _LoginAccountWidgetState extends State<LoginAccountWidget> {
                   'sau continua cu',
                   style: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Nunito Sans',
-                        fontSize: 17,
+                        fontSize: 17.0,
                         fontWeight: FontWeight.normal,
                       ),
                 ),
               Container(
-                width: MediaQuery.of(context).size.width,
+                width: MediaQuery.of(context).size.width * 1.0,
                 height: MediaQuery.of(context).size.height * 0.02,
                 decoration: BoxDecoration(),
               ),
@@ -500,47 +503,47 @@ class _LoginAccountWidgetState extends State<LoginAccountWidget> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Container(
-                        width: 88,
-                        height: 60,
+                        width: 88.0,
+                        height: 60.0,
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
-                          borderRadius: BorderRadius.circular(16),
+                          borderRadius: BorderRadius.circular(16.0),
                         ),
                         child: Image.asset(
                           'assets/images/Facebook.png',
                           width: MediaQuery.of(context).size.width * 0.01,
-                          height: 24,
+                          height: 24.0,
                           fit: BoxFit.scaleDown,
                         ),
                       ),
                       Container(
-                        width: 88,
-                        height: 60,
+                        width: 88.0,
+                        height: 60.0,
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
-                          borderRadius: BorderRadius.circular(16),
+                          borderRadius: BorderRadius.circular(16.0),
                         ),
                         child: Image.asset(
                           'assets/images/Google.png',
                           width: MediaQuery.of(context).size.width * 0.01,
-                          height: 24,
+                          height: 24.0,
                           fit: BoxFit.scaleDown,
                         ),
                       ),
                       Container(
-                        width: 88,
-                        height: 60,
+                        width: 88.0,
+                        height: 60.0,
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
-                          borderRadius: BorderRadius.circular(16),
+                          borderRadius: BorderRadius.circular(16.0),
                         ),
                         child: Image.asset(
                           'assets/images/Apple.png',
                           width: MediaQuery.of(context).size.width * 0.01,
-                          height: 24,
+                          height: 24.0,
                           fit: BoxFit.scaleDown,
                         ),
                       ),
@@ -549,7 +552,7 @@ class _LoginAccountWidgetState extends State<LoginAccountWidget> {
                 ),
               ),
               Container(
-                width: MediaQuery.of(context).size.width,
+                width: MediaQuery.of(context).size.width * 1.0,
                 height: MediaQuery.of(context).size.height * 0.01,
                 decoration: BoxDecoration(),
               ),

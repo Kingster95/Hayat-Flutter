@@ -1,11 +1,11 @@
-import '../backend/api_requests/api_calls.dart';
-import '../components/buy_pop_widget.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
-import '../vimeo_video/vimeo_video_widget.dart';
-import '../flutter_flow/custom_functions.dart' as functions;
+import '/backend/api_requests/api_calls.dart';
+import '/components/buy_pop_widget.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import '/vimeo_video/vimeo_video_widget.dart';
+import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -61,8 +61,8 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
         if (!snapshot.hasData) {
           return Center(
             child: SizedBox(
-              width: 50,
-              height: 50,
+              width: 50.0,
+              height: 50.0,
               child: CircularProgressIndicator(
                 color: FlutterFlowTheme.of(context).secondaryColor,
               ),
@@ -81,16 +81,16 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Container(
-                    width: MediaQuery.of(context).size.width,
+                    width: MediaQuery.of(context).size.width * 1.0,
                     height: MediaQuery.of(context).size.height * 0.37,
                     decoration: BoxDecoration(),
                     child: Align(
-                      alignment: AlignmentDirectional(0, 0),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: MediaQuery.of(context).size.height * 1,
+                        width: MediaQuery.of(context).size.width * 1.0,
+                        height: MediaQuery.of(context).size.height * 1.0,
                         child: Stack(
-                          alignment: AlignmentDirectional(0, 0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           children: [
                             Image.network(
                               valueOrDefault<String>(
@@ -100,21 +100,21 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                                 ),
                                 'https://arta2.b-cdn.net/cover_cursuri/7.png',
                               ),
-                              width: MediaQuery.of(context).size.width,
-                              height: MediaQuery.of(context).size.height * 1,
+                              width: MediaQuery.of(context).size.width * 1.0,
+                              height: MediaQuery.of(context).size.height * 1.0,
                               fit: BoxFit.fitWidth,
                             ),
                             Align(
-                              alignment: AlignmentDirectional(-1, -1),
+                              alignment: AlignmentDirectional(-1.0, -1.0),
                               child: FlutterFlowIconButton(
-                                borderRadius: 30,
-                                borderWidth: 1,
-                                buttonSize: 60,
+                                borderRadius: 30.0,
+                                borderWidth: 1.0,
+                                buttonSize: 60.0,
                                 icon: Icon(
                                   Icons.arrow_back,
                                   color: FlutterFlowTheme.of(context)
                                       .primaryBackground,
-                                  size: 25,
+                                  size: 25.0,
                                 ),
                                 onPressed: () async {
                                   Navigator.pop(context);
@@ -142,7 +142,7 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                       ).toString(),
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Nunito Sans',
-                            fontSize: 30,
+                            fontSize: 30.0,
                             fontWeight: FontWeight.bold,
                           ),
                     ),
@@ -190,7 +190,7 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                                   fontFamily: 'Nunito Sans',
                                   color:
                                       FlutterFlowTheme.of(context).primaryText,
-                                  fontSize: 25,
+                                  fontSize: 25.0,
                                   fontWeight: FontWeight.bold,
                                 ),
                           ),
@@ -206,7 +206,7 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                                 FlutterFlowTheme.of(context).bodyText1.override(
                                       fontFamily: 'Nunito Sans',
                                       color: Color(0xFF800909),
-                                      fontSize: 25,
+                                      fontSize: 25.0,
                                       fontWeight: FontWeight.bold,
                                     ),
                           ),
@@ -242,7 +242,7 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                                   fontFamily: 'Nunito Sans',
                                   color:
                                       FlutterFlowTheme.of(context).primaryText,
-                                  fontSize: 25,
+                                  fontSize: 25.0,
                                   fontWeight: FontWeight.bold,
                                 ),
                           ),
@@ -250,7 +250,7 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                     ),
                   ),
                   Container(
-                    width: 100,
+                    width: 100.0,
                     height: MediaQuery.of(context).size.height * 0.014,
                     decoration: BoxDecoration(),
                   ),
@@ -259,7 +259,8 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                     height: MediaQuery.of(context).size.height * 0.5,
                     decoration: BoxDecoration(),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -342,7 +343,10 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                                                       padding:
                                                           EdgeInsetsDirectional
                                                               .fromSTEB(
-                                                                  0, 10, 0, 0),
+                                                                  0.0,
+                                                                  10.0,
+                                                                  0.0,
+                                                                  0.0),
                                                       child: AutoSizeText(
                                                         valueOrDefault<String>(
                                                           functions.cleanString(
@@ -364,7 +368,8 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .secondaryText,
-                                                                  fontSize: 18,
+                                                                  fontSize:
+                                                                      18.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -387,8 +392,8 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                                                   if (!snapshot.hasData) {
                                                     return Center(
                                                       child: SizedBox(
-                                                        width: 50,
-                                                        height: 50,
+                                                        width: 50.0,
+                                                        height: 50.0,
                                                         child:
                                                             CircularProgressIndicator(
                                                           color: FlutterFlowTheme
@@ -425,16 +430,16 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                                                             padding:
                                                                 EdgeInsetsDirectional
                                                                     .fromSTEB(
-                                                                        0,
-                                                                        15,
-                                                                        0,
-                                                                        0),
+                                                                        0.0,
+                                                                        15.0,
+                                                                        0.0,
+                                                                        0.0),
                                                             child: Container(
-                                                              width:
-                                                                  MediaQuery.of(
+                                                              width: MediaQuery.of(
                                                                           context)
                                                                       .size
-                                                                      .width,
+                                                                      .width *
+                                                                  1.0,
                                                               height: MediaQuery.of(
                                                                           context)
                                                                       .size
@@ -448,7 +453,7 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                                                                 borderRadius:
                                                                     BorderRadius
                                                                         .circular(
-                                                                            16),
+                                                                            16.0),
                                                               ),
                                                               child: Row(
                                                                 mainAxisSize:
@@ -461,10 +466,10 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                                                                   Padding(
                                                                     padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
-                                                                            25,
-                                                                            0,
-                                                                            0,
-                                                                            0),
+                                                                            25.0,
+                                                                            0.0,
+                                                                            0.0,
+                                                                            0.0),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -509,22 +514,21 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                                                                     false,
                                                                   ))
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional
-                                                                          .fromSTEB(
-                                                                              0,
-                                                                              0,
-                                                                              25,
-                                                                              0),
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          0.0,
+                                                                          0.0,
+                                                                          25.0,
+                                                                          0.0),
                                                                       child:
                                                                           FlutterFlowIconButton(
                                                                         borderColor:
                                                                             Colors.transparent,
                                                                         borderRadius:
-                                                                            30,
+                                                                            30.0,
                                                                         borderWidth:
-                                                                            1,
+                                                                            1.0,
                                                                         buttonSize:
-                                                                            60,
+                                                                            60.0,
                                                                         icon:
                                                                             Icon(
                                                                           Icons
@@ -532,7 +536,7 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                                                                           color:
                                                                               FlutterFlowTheme.of(context).primaryBackground,
                                                                           size:
-                                                                              45,
+                                                                              45.0,
                                                                         ),
                                                                         onPressed:
                                                                             () async {
@@ -608,22 +612,21 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                                                                     false,
                                                                   ))
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional
-                                                                          .fromSTEB(
-                                                                              0,
-                                                                              0,
-                                                                              25,
-                                                                              0),
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          0.0,
+                                                                          0.0,
+                                                                          25.0,
+                                                                          0.0),
                                                                       child:
                                                                           FlutterFlowIconButton(
                                                                         borderColor:
                                                                             Colors.transparent,
                                                                         borderRadius:
-                                                                            30,
+                                                                            30.0,
                                                                         borderWidth:
-                                                                            1,
+                                                                            1.0,
                                                                         buttonSize:
-                                                                            60,
+                                                                            60.0,
                                                                         icon:
                                                                             Icon(
                                                                           Icons
@@ -631,64 +634,12 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                                                                           color:
                                                                               FlutterFlowTheme.of(context).primaryBackground,
                                                                           size:
-                                                                              36,
+                                                                              36.0,
                                                                         ),
                                                                         onPressed:
-                                                                            () async {
-                                                                          if (lessonIndex ==
-                                                                              0) {
-                                                                            if (widget.med ==
-                                                                                false) {
-                                                                              await Navigator.push(
-                                                                                context,
-                                                                                MaterialPageRoute(
-                                                                                  builder: (context) => VimeoVideoWidget(
-                                                                                    videoID: getJsonField(
-                                                                                      lessonItem,
-                                                                                      r'''$.video_id''',
-                                                                                    ).toString(),
-                                                                                  ),
-                                                                                ),
-                                                                              );
-                                                                            } else {
-                                                                              if (getJsonField(
-                                                                                    widget.body,
-                                                                                    r'''$.id''',
-                                                                                  ) ==
-                                                                                  '41') {
-                                                                                await Navigator.push(
-                                                                                  context,
-                                                                                  MaterialPageRoute(
-                                                                                    builder: (context) => VimeoVideoWidget(
-                                                                                      videoID: getJsonField(
-                                                                                        lessonItem,
-                                                                                        r'''$.video_id''',
-                                                                                      ).toString(),
-                                                                                    ),
-                                                                                  ),
-                                                                                );
-                                                                              } else {
-                                                                                await launchURL('https://artadeafifemeie.ro/detalii-curs/${getJsonField(
-                                                                                  widget.body,
-                                                                                  r'''$.slug''',
-                                                                                ).toString()}');
-                                                                              }
-                                                                            }
-                                                                          } else {
-                                                                            if (widget.unlocked!) {
-                                                                              await Navigator.push(
-                                                                                context,
-                                                                                MaterialPageRoute(
-                                                                                  builder: (context) => VimeoVideoWidget(
-                                                                                    videoID: getJsonField(
-                                                                                      lessonItem,
-                                                                                      r'''$.video_id''',
-                                                                                    ).toString(),
-                                                                                  ),
-                                                                                ),
-                                                                              );
-                                                                            }
-                                                                          }
+                                                                            () {
+                                                                          print(
+                                                                              'IconButton pressed ...');
                                                                         },
                                                                       ),
                                                                     ),
@@ -758,7 +709,7 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                                           Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    0, 10, 0, 0),
+                                                    0.0, 10.0, 0.0, 0.0),
                                             child: AutoSizeText(
                                               valueOrDefault<String>(
                                                 functions
@@ -777,7 +728,7 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                                                     color: FlutterFlowTheme.of(
                                                             context)
                                                         .secondaryText,
-                                                    fontSize: 18,
+                                                    fontSize: 18.0,
                                                     fontWeight: FontWeight.w500,
                                                   ),
                                             ),
@@ -791,14 +742,14 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                           ),
                           if (!widget.unlocked!)
                             Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 15, 0, 35),
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 15.0, 0.0, 35.0),
                               child: Container(
                                 width: MediaQuery.of(context).size.width * 0.9,
                                 height:
                                     MediaQuery.of(context).size.height * 0.07,
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(100),
+                                  borderRadius: BorderRadius.circular(100.0),
                                 ),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -809,7 +760,7 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  0, 0, 10, 0),
+                                                  0.0, 0.0, 10.0, 0.0),
                                           child: FutureBuilder<ApiCallResponse>(
                                             future: GetCoursesLessonsCall.call(
                                               id: getJsonField(
@@ -822,8 +773,8 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                                               if (!snapshot.hasData) {
                                                 return Center(
                                                   child: SizedBox(
-                                                    width: 50,
-                                                    height: 50,
+                                                    width: 50.0,
+                                                    height: 50.0,
                                                     child:
                                                         CircularProgressIndicator(
                                                       color:
@@ -854,8 +805,15 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                                                 },
                                                 text: 'Vezi demo curs',
                                                 options: FFButtonOptions(
-                                                  width: 1,
+                                                  width: 1.0,
                                                   height: double.infinity,
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 0.0, 0.0, 0.0),
+                                                  iconPadding:
+                                                      EdgeInsetsDirectional
+                                                          .fromSTEB(0.0, 0.0,
+                                                              0.0, 0.0),
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .alternate,
@@ -873,11 +831,11 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                                                           ),
                                                   borderSide: BorderSide(
                                                     color: Colors.transparent,
-                                                    width: 1,
+                                                    width: 1.0,
                                                   ),
                                                   borderRadius:
                                                       BorderRadius.circular(
-                                                          100),
+                                                          100.0),
                                                 ),
                                               );
                                             },
@@ -903,7 +861,7 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                                                         MediaQuery.of(context)
                                                                 .size
                                                                 .height *
-                                                            1,
+                                                            1.0,
                                                     child: BuyPopWidget(
                                                       slug: valueOrDefault<
                                                           String>(
@@ -923,6 +881,12 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                                           options: FFButtonOptions(
                                             width: double.infinity,
                                             height: double.infinity,
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 0.0, 0.0),
+                                            iconPadding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 0.0, 0.0),
                                             color: FlutterFlowTheme.of(context)
                                                 .alternate,
                                             textStyle:
@@ -937,10 +901,10 @@ class _CoursePageWidgetState extends State<CoursePageWidget> {
                                                     ),
                                             borderSide: BorderSide(
                                               color: Colors.transparent,
-                                              width: 1,
+                                              width: 1.0,
                                             ),
                                             borderRadius:
-                                                BorderRadius.circular(100),
+                                                BorderRadius.circular(100.0),
                                           ),
                                         ),
                                       ),

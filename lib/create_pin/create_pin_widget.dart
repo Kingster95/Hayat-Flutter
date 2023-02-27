@@ -1,9 +1,9 @@
-import '../auth/auth_util.dart';
-import '../backend/backend.dart';
-import '../done_account/done_account_widget.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
+import '/auth/auth_util.dart';
+import '/backend/backend.dart';
+import '/done_account/done_account_widget.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -56,24 +56,25 @@ class _CreatePinWidgetState extends State<CreatePinWidget> {
         ),
         actions: [],
         centerTitle: true,
-        elevation: 0,
+        elevation: 0.0,
       ),
       body: GestureDetector(
         onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
         child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0, 75, 0, 0),
+          padding: EdgeInsetsDirectional.fromSTEB(0.0, 75.0, 0.0, 0.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(44, 8, 44, 0),
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(44.0, 8.0, 44.0, 0.0),
                       child: Text(
                         'Adaugă un cod pin pentru a\n securiza contul',
                         textAlign: TextAlign.center,
@@ -88,7 +89,8 @@ class _CreatePinWidgetState extends State<CreatePinWidget> {
                       key: _model.formKey,
                       autovalidateMode: AutovalidateMode.always,
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 45, 0, 0),
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 45.0, 0.0, 0.0),
                         child: PinCodeTextField(
                           appContext: context,
                           length: 4,
@@ -105,10 +107,10 @@ class _CreatePinWidgetState extends State<CreatePinWidget> {
                           obscureText: true,
                           obscuringCharacter: '●',
                           pinTheme: PinTheme(
-                            fieldHeight: 60,
-                            fieldWidth: 60,
-                            borderWidth: 2,
-                            borderRadius: BorderRadius.circular(12),
+                            fieldHeight: 60.0,
+                            fieldWidth: 60.0,
+                            borderWidth: 2.0,
+                            borderRadius: BorderRadius.circular(12.0),
                             shape: PinCodeFieldShape.box,
                             activeColor: Color(0x3CFFFFFF),
                             inactiveColor: Color(0x3CFFFFFF),
@@ -126,21 +128,21 @@ class _CreatePinWidgetState extends State<CreatePinWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0, 0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 80, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 80.0, 0.0, 0.0),
                   child: Container(
                     width: MediaQuery.of(context).size.width * 0.85,
                     height: MediaQuery.of(context).size.height * 0.06,
                     decoration: BoxDecoration(
                       boxShadow: [
                         BoxShadow(
-                          blurRadius: 4,
+                          blurRadius: 4.0,
                           color: Color(0x33000000),
-                          offset: Offset(0, 2),
+                          offset: Offset(0.0, 2.0),
                         )
                       ],
-                      borderRadius: BorderRadius.circular(22),
+                      borderRadius: BorderRadius.circular(22.0),
                     ),
                     child: FFButtonWidget(
                       onPressed: () async {
@@ -190,6 +192,10 @@ class _CreatePinWidgetState extends State<CreatePinWidget> {
                       options: FFButtonOptions(
                         width: double.infinity,
                         height: double.infinity,
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        iconPadding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).alternate,
                         textStyle: FlutterFlowTheme.of(context)
                             .subtitle2
@@ -197,12 +203,12 @@ class _CreatePinWidgetState extends State<CreatePinWidget> {
                               fontFamily: 'Nunito Sans',
                               color: FlutterFlowTheme.of(context).primaryText,
                             ),
-                        elevation: 0,
+                        elevation: 0.0,
                         borderSide: BorderSide(
                           color: Colors.transparent,
-                          width: 1,
+                          width: 1.0,
                         ),
-                        borderRadius: BorderRadius.circular(22),
+                        borderRadius: BorderRadius.circular(22.0),
                       ),
                     ),
                   ),

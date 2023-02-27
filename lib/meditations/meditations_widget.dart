@@ -1,10 +1,11 @@
-import '../backend/backend.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../main.dart';
-import '../med_page/med_page_widget.dart';
-import '../mp3_page/mp3_page_widget.dart';
+import '/auth/auth_util.dart';
+import '/backend/backend.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/main.dart';
+import '/med_page/med_page_widget.dart';
+import '/mp3_page/mp3_page_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -52,8 +53,8 @@ class _MeditationsWidgetState extends State<MeditationsWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Container(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height * 1,
+                width: MediaQuery.of(context).size.width * 1.0,
+                height: MediaQuery.of(context).size.height * 1.0,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     fit: BoxFit.cover,
@@ -70,19 +71,19 @@ class _MeditationsWidgetState extends State<MeditationsWidget> {
                       height: MediaQuery.of(context).size.height * 0.07,
                       decoration: BoxDecoration(),
                       child: Align(
-                        alignment: AlignmentDirectional(0, 0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             FlutterFlowIconButton(
                               borderColor: Colors.transparent,
-                              borderRadius: 30,
-                              borderWidth: 1,
-                              buttonSize: 60,
+                              borderRadius: 30.0,
+                              borderWidth: 1.0,
+                              buttonSize: 60.0,
                               icon: Icon(
                                 Icons.arrow_back_rounded,
                                 color: FlutterFlowTheme.of(context).primaryText,
-                                size: 30,
+                                size: 30.0,
                               ),
                               onPressed: () async {
                                 await Navigator.push(
@@ -101,7 +102,7 @@ class _MeditationsWidgetState extends State<MeditationsWidget> {
                                   .bodyText1
                                   .override(
                                     fontFamily: 'Nunito Sans',
-                                    fontSize: 24,
+                                    fontSize: 24.0,
                                   ),
                             ),
                           ],
@@ -109,13 +110,15 @@ class _MeditationsWidgetState extends State<MeditationsWidget> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 25),
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 25.0),
                       child: Container(
                         width: MediaQuery.of(context).size.width * 0.9,
                         height: MediaQuery.of(context).size.height * 0.9,
                         decoration: BoxDecoration(),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 40),
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 40.0),
                           child: FutureBuilder<List<MeditationsRecord>>(
                             future: queryMeditationsRecordOnce(
                               queryBuilder: (meditationsRecord) =>
@@ -126,8 +129,8 @@ class _MeditationsWidgetState extends State<MeditationsWidget> {
                               if (!snapshot.hasData) {
                                 return Center(
                                   child: SizedBox(
-                                    width: 50,
-                                    height: 50,
+                                    width: 50.0,
+                                    height: 50.0,
                                     child: CircularProgressIndicator(
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryColor,
@@ -147,11 +150,11 @@ class _MeditationsWidgetState extends State<MeditationsWidget> {
                                       listViewMeditationsRecordList[
                                           listViewIndex];
                                   return Container(
-                                    width: 100,
+                                    width: 100.0,
                                     height: MediaQuery.of(context).size.height *
                                         0.12,
                                     decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(22),
+                                      borderRadius: BorderRadius.circular(22.0),
                                     ),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -159,8 +162,10 @@ class _MeditationsWidgetState extends State<MeditationsWidget> {
                                           MainAxisAlignment.spaceAround,
                                       children: [
                                         Container(
-                                          width:
-                                              MediaQuery.of(context).size.width,
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width *
+                                              1.0,
                                           height: MediaQuery.of(context)
                                                   .size
                                                   .height *
@@ -173,13 +178,109 @@ class _MeditationsWidgetState extends State<MeditationsWidget> {
                                             children: [
                                               Stack(
                                                 children: [
-                                                  if (listViewMeditationsRecord
-                                                          .deployed ??
-                                                      true)
-                                                    InkWell(
-                                                      onTap: () async {
-                                                        if (listViewMeditationsRecord
-                                                            .deployed!) {
+                                                  if (valueOrDefault<bool>(
+                                                    () {
+                                                      if (listViewMeditationsRecord
+                                                          .deployed!) {
+                                                        return true;
+                                                      } else if ((currentUserDocument
+                                                                  ?.ownedMeds
+                                                                  ?.toList() ??
+                                                              [])
+                                                          .contains(
+                                                              listViewMeditationsRecord
+                                                                  .reference)) {
+                                                        return true;
+                                                      } else {
+                                                        return false;
+                                                      }
+                                                    }(),
+                                                    false,
+                                                  ))
+                                                    AuthUserStreamWidget(
+                                                      builder: (context) =>
+                                                          InkWell(
+                                                        onTap: () async {
+                                                          if (listViewMeditationsRecord
+                                                              .deployed!) {
+                                                            if (listViewMeditationsRecord
+                                                                .isAudio!) {
+                                                              await Navigator
+                                                                  .push(
+                                                                context,
+                                                                MaterialPageRoute(
+                                                                  builder:
+                                                                      (context) =>
+                                                                          Mp3PageWidget(
+                                                                    meditation:
+                                                                        listViewMeditationsRecord,
+                                                                  ),
+                                                                ),
+                                                              );
+                                                            } else {
+                                                              await Navigator
+                                                                  .push(
+                                                                context,
+                                                                MaterialPageRoute(
+                                                                  builder:
+                                                                      (context) =>
+                                                                          MedPageWidget(
+                                                                    meditation:
+                                                                        listViewMeditationsRecord,
+                                                                  ),
+                                                                ),
+                                                              );
+                                                            }
+                                                          }
+                                                        },
+                                                        child: Container(
+                                                          width: MediaQuery.of(
+                                                                      context)
+                                                                  .size
+                                                                  .width *
+                                                              0.14,
+                                                          height: MediaQuery.of(
+                                                                      context)
+                                                                  .size
+                                                                  .width *
+                                                              0.14,
+                                                          clipBehavior:
+                                                              Clip.antiAlias,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            shape:
+                                                                BoxShape.circle,
+                                                          ),
+                                                          child: Image.asset(
+                                                            'assets/images/play_btn.png',
+                                                            fit: BoxFit.cover,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  if (!valueOrDefault<bool>(
+                                                    () {
+                                                      if (listViewMeditationsRecord
+                                                          .deployed!) {
+                                                        return true;
+                                                      } else if ((currentUserDocument
+                                                                  ?.ownedMeds
+                                                                  ?.toList() ??
+                                                              [])
+                                                          .contains(
+                                                              listViewMeditationsRecord
+                                                                  .reference)) {
+                                                        return true;
+                                                      } else {
+                                                        return false;
+                                                      }
+                                                    }(),
+                                                    false,
+                                                  ))
+                                                    AuthUserStreamWidget(
+                                                      builder: (context) =>
+                                                          InkWell(
+                                                        onTap: () async {
                                                           if (listViewMeditationsRecord
                                                               .isAudio!) {
                                                             await Navigator
@@ -208,53 +309,30 @@ class _MeditationsWidgetState extends State<MeditationsWidget> {
                                                               ),
                                                             );
                                                           }
-                                                        }
-                                                      },
-                                                      child: Container(
-                                                        width: MediaQuery.of(
-                                                                    context)
-                                                                .size
-                                                                .width *
-                                                            0.14,
-                                                        height: MediaQuery.of(
-                                                                    context)
-                                                                .size
-                                                                .width *
-                                                            0.14,
-                                                        clipBehavior:
-                                                            Clip.antiAlias,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          shape:
-                                                              BoxShape.circle,
-                                                        ),
-                                                        child: Image.asset(
-                                                          'assets/images/play_btn.png',
-                                                          fit: BoxFit.cover,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  if (!listViewMeditationsRecord
-                                                      .deployed!)
-                                                    Container(
-                                                      width:
-                                                          MediaQuery.of(context)
+                                                        },
+                                                        child: Container(
+                                                          width: MediaQuery.of(
+                                                                      context)
                                                                   .size
                                                                   .width *
                                                               0.14,
-                                                      height:
-                                                          MediaQuery.of(context)
+                                                          height: MediaQuery.of(
+                                                                      context)
                                                                   .size
                                                                   .width *
                                                               0.14,
-                                                      clipBehavior:
-                                                          Clip.antiAlias,
-                                                      decoration: BoxDecoration(
-                                                        shape: BoxShape.circle,
-                                                      ),
-                                                      child: Image.asset(
-                                                        'assets/images/iconapp54234532.png',
-                                                        fit: BoxFit.cover,
+                                                          clipBehavior:
+                                                              Clip.antiAlias,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            shape:
+                                                                BoxShape.circle,
+                                                          ),
+                                                          child: Image.asset(
+                                                            'assets/images/iconapp54234532.png',
+                                                            fit: BoxFit.cover,
+                                                          ),
+                                                        ),
                                                       ),
                                                     ),
                                                 ],
@@ -264,7 +342,7 @@ class _MeditationsWidgetState extends State<MeditationsWidget> {
                                                         .size
                                                         .width *
                                                     0.05,
-                                                height: 100,
+                                                height: 100.0,
                                                 decoration: BoxDecoration(),
                                               ),
                                               Container(
@@ -272,12 +350,12 @@ class _MeditationsWidgetState extends State<MeditationsWidget> {
                                                         .size
                                                         .width *
                                                     0.52,
-                                                height: 100,
+                                                height: 100.0,
                                                 decoration: BoxDecoration(),
                                                 child: Align(
                                                   alignment:
                                                       AlignmentDirectional(
-                                                          -1, 0),
+                                                          -1.0, 0.0),
                                                   child: Text(
                                                     listViewMeditationsRecord
                                                         .name!,
@@ -288,7 +366,7 @@ class _MeditationsWidgetState extends State<MeditationsWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Nunito Sans',
-                                                          fontSize: 16,
+                                                          fontSize: 16.0,
                                                           lineHeight: 1.4,
                                                         ),
                                                   ),
@@ -302,7 +380,7 @@ class _MeditationsWidgetState extends State<MeditationsWidget> {
                                                 height: MediaQuery.of(context)
                                                         .size
                                                         .height *
-                                                    1,
+                                                    1.0,
                                                 decoration: BoxDecoration(),
                                               ),
                                               if (false)
@@ -339,7 +417,7 @@ class _MeditationsWidgetState extends State<MeditationsWidget> {
                                         ),
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(0.45, 0),
+                                              AlignmentDirectional(0.45, 0.0),
                                           child: Container(
                                             width: MediaQuery.of(context)
                                                     .size

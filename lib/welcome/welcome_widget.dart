@@ -1,10 +1,10 @@
-import '../create_account/create_account_widget.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
-import '../login_account/login_account_widget.dart';
-import '../custom_code/widgets/index.dart' as custom_widgets;
-import '../flutter_flow/permissions_util.dart';
+import '/create_account/create_account_widget.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import '/login_account/login_account_widget.dart';
+import '/custom_code/widgets/index.dart' as custom_widgets;
+import '/flutter_flow/permissions_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -60,33 +60,33 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Container(
-                width: MediaQuery.of(context).size.width,
+                width: MediaQuery.of(context).size.width * 1.0,
                 height: MediaQuery.of(context).size.height * 0.35,
                 decoration: BoxDecoration(),
                 child: Align(
-                  alignment: AlignmentDirectional(0, 0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Image.asset(
                     'assets/images/WelcomeLogo.png',
-                    width: MediaQuery.of(context).size.width,
+                    width: MediaQuery.of(context).size.width * 1.0,
                     height: MediaQuery.of(context).size.height * 0.3,
                     fit: BoxFit.contain,
                   ),
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
                 child: Text(
                   'BINE AI VENIT!',
                   style: FlutterFlowTheme.of(context).title1.override(
                         fontFamily: 'JosefinSans',
-                        fontSize: 42,
+                        fontSize: 42.0,
                         fontWeight: FontWeight.w500,
                         useGoogleFonts: false,
                       ),
                 ),
               ),
               Container(
-                width: MediaQuery.of(context).size.width,
+                width: MediaQuery.of(context).size.width * 1.0,
                 height: MediaQuery.of(context).size.height * 0.2,
                 decoration: BoxDecoration(
                   shape: BoxShape.rectangle,
@@ -99,7 +99,8 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(75, 0, 0, 0),
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(75.0, 0.0, 0.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -107,8 +108,8 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                           children: [
                             Image.asset(
                               'assets/images/FacebookLogo.png',
-                              width: 24,
-                              height: 24,
+                              width: 24.0,
+                              height: 24.0,
                               fit: BoxFit.cover,
                             ),
                             Text(
@@ -117,7 +118,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                   .bodyText1
                                   .override(
                                     fontFamily: 'Nunito Sans',
-                                    fontSize: 16,
+                                    fontSize: 16.0,
                                     fontWeight: FontWeight.w600,
                                   ),
                             ),
@@ -125,7 +126,8 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(75, 35, 0, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(
+                            75.0, 35.0, 0.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -133,8 +135,8 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                           children: [
                             Image.asset(
                               'assets/images/icons8-google-48.png',
-                              width: 24,
-                              height: 24,
+                              width: 24.0,
+                              height: 24.0,
                               fit: BoxFit.cover,
                             ),
                             Text(
@@ -143,7 +145,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                   .bodyText1
                                   .override(
                                     fontFamily: 'Nunito Sans',
-                                    fontSize: 16,
+                                    fontSize: 16.0,
                                     fontWeight: FontWeight.w600,
                                   ),
                             ),
@@ -151,7 +153,8 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(75, 35, 0, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(
+                            75.0, 35.0, 0.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -159,8 +162,8 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                           children: [
                             Image.asset(
                               'assets/images/clipart347603.png',
-                              width: 24,
-                              height: 24,
+                              width: 24.0,
+                              height: 24.0,
                               fit: BoxFit.contain,
                             ),
                             Text(
@@ -169,7 +172,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                   .bodyText1
                                   .override(
                                     fontFamily: 'Nunito Sans',
-                                    fontSize: 16,
+                                    fontSize: 16.0,
                                     fontWeight: FontWeight.w600,
                                   ),
                             ),
@@ -181,11 +184,11 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                 ),
               ),
               Container(
-                width: 1,
-                height: 1,
+                width: 1.0,
+                height: 1.0,
                 child: custom_widgets.SetPortrait(
-                  width: 1,
-                  height: 1,
+                  width: 1.0,
+                  height: 1.0,
                 ),
               ),
               if (false)
@@ -198,19 +201,19 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                       ),
                 ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 35, 0, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 35.0, 0.0, 0.0),
                 child: Container(
                   width: MediaQuery.of(context).size.width * 0.85,
                   height: MediaQuery.of(context).size.height * 0.07,
                   decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
-                        blurRadius: 4,
+                        blurRadius: 4.0,
                         color: Color(0x33000000),
-                        offset: Offset(0, 2),
+                        offset: Offset(0.0, 2.0),
                       )
                     ],
-                    borderRadius: BorderRadius.circular(22),
+                    borderRadius: BorderRadius.circular(22.0),
                   ),
                   child: FFButtonWidget(
                     onPressed: () async {
@@ -225,6 +228,10 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                     options: FFButtonOptions(
                       width: double.infinity,
                       height: double.infinity,
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      iconPadding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).alternate,
                       textStyle:
                           FlutterFlowTheme.of(context).subtitle2.override(
@@ -233,15 +240,15 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                               ),
                       borderSide: BorderSide(
                         color: Colors.transparent,
-                        width: 1,
+                        width: 1.0,
                       ),
-                      borderRadius: BorderRadius.circular(22),
+                      borderRadius: BorderRadius.circular(22.0),
                     ),
                   ),
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -252,7 +259,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                       style: FlutterFlowTheme.of(context).bodyText2.override(
                             fontFamily: 'Nunito Sans',
                             color: FlutterFlowTheme.of(context).primaryText,
-                            fontSize: 16,
+                            fontSize: 16.0,
                             fontWeight: FontWeight.w300,
                           ),
                     ),
@@ -270,7 +277,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Nunito Sans',
                               color: FlutterFlowTheme.of(context).secondaryText,
-                              fontSize: 16,
+                              fontSize: 16.0,
                             ),
                       ),
                     ),

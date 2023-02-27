@@ -1,13 +1,13 @@
-import '../auth/auth_util.dart';
-import '../backend/backend.dart';
-import '../backend/firebase_storage/storage.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
-import '../flutter_flow/upload_media.dart';
-import '../main.dart';
-import '../welcome/welcome_widget.dart';
+import '/auth/auth_util.dart';
+import '/backend/backend.dart';
+import '/backend/firebase_storage/storage.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/upload_media.dart';
+import '/main.dart';
+import '/welcome/welcome_widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -74,13 +74,13 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
         automaticallyImplyLeading: false,
         leading: FlutterFlowIconButton(
           borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
+          borderRadius: 30.0,
+          borderWidth: 1.0,
+          buttonSize: 60.0,
           icon: Icon(
             Icons.arrow_back,
             color: FlutterFlowTheme.of(context).primaryText,
-            size: 25,
+            size: 25.0,
           ),
           onPressed: () async {
             await Navigator.push(
@@ -97,7 +97,7 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
         ),
         actions: [],
         centerTitle: false,
-        elevation: 0,
+        elevation: 0.0,
       ),
       body: SafeArea(
         child: GestureDetector(
@@ -107,7 +107,7 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                 child: InkWell(
                   onTap: () async {
                     final selectedMedia =
@@ -178,18 +178,19 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                     }
                   },
                   child: Container(
-                    width: 100,
-                    height: 100,
+                    width: 100.0,
+                    height: 100.0,
                     decoration: BoxDecoration(
                       color: Color(0xFFDBE2E7),
                       shape: BoxShape.circle,
                     ),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(2, 2, 2, 2),
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(2.0, 2.0, 2.0, 2.0),
                       child: AuthUserStreamWidget(
                         builder: (context) => Container(
-                          width: 90,
-                          height: 90,
+                          width: 90.0,
+                          height: 90.0,
                           clipBehavior: Clip.antiAlias,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
@@ -205,7 +206,7 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                 ),
               ),
               Container(
-                width: MediaQuery.of(context).size.width,
+                width: MediaQuery.of(context).size.width * 1.0,
                 height: MediaQuery.of(context).size.height * 0.02,
                 decoration: BoxDecoration(),
               ),
@@ -214,7 +215,7 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                 height: MediaQuery.of(context).size.height * 0.42,
                 decoration: BoxDecoration(),
                 child: Container(
-                  width: MediaQuery.of(context).size.width,
+                  width: MediaQuery.of(context).size.width * 1.0,
                   child: Form(
                     key: _model.formKey,
                     autovalidateMode: AutovalidateMode.disabled,
@@ -224,7 +225,7 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                       children: [
                         AuthUserStreamWidget(
                           builder: (context) => Container(
-                            width: MediaQuery.of(context).size.width,
+                            width: MediaQuery.of(context).size.width * 1.0,
                             child: TextFormField(
                               controller: _model.numeController,
                               obscureText: false,
@@ -235,30 +236,30 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: Color(0x00000000),
-                                    width: 1,
+                                    width: 1.0,
                                   ),
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: Color(0x00000000),
-                                    width: 1,
+                                    width: 1.0,
                                   ),
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 errorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: Color(0x00000000),
-                                    width: 1,
+                                    width: 1.0,
                                   ),
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 focusedErrorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: Color(0x00000000),
-                                    width: 1,
+                                    width: 1.0,
                                   ),
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 filled: true,
                                 fillColor: Color(0x3CFFFFFF),
@@ -267,7 +268,7 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                                   .bodyText1
                                   .override(
                                     fontFamily: 'Nunito Sans',
-                                    lineHeight: 2,
+                                    lineHeight: 2.0,
                                   ),
                               keyboardType: TextInputType.name,
                               validator: _model.numeControllerValidator
@@ -276,10 +277,11 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 2.0, 0.0, 0.0),
                           child: AuthUserStreamWidget(
                             builder: (context) => Container(
-                              width: MediaQuery.of(context).size.width,
+                              width: MediaQuery.of(context).size.width * 1.0,
                               child: TextFormField(
                                 controller: _model.usernameController,
                                 obscureText: false,
@@ -290,30 +292,30 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Color(0x00000000),
-                                      width: 1,
+                                      width: 1.0,
                                     ),
-                                    borderRadius: BorderRadius.circular(12),
+                                    borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Color(0x00000000),
-                                      width: 1,
+                                      width: 1.0,
                                     ),
-                                    borderRadius: BorderRadius.circular(12),
+                                    borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   errorBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Color(0x00000000),
-                                      width: 1,
+                                      width: 1.0,
                                     ),
-                                    borderRadius: BorderRadius.circular(12),
+                                    borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   focusedErrorBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Color(0x00000000),
-                                      width: 1,
+                                      width: 1.0,
                                     ),
-                                    borderRadius: BorderRadius.circular(12),
+                                    borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   filled: true,
                                   fillColor: Color(0x3CFFFFFF),
@@ -322,7 +324,7 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                                     .bodyText1
                                     .override(
                                       fontFamily: 'Nunito Sans',
-                                      lineHeight: 2,
+                                      lineHeight: 2.0,
                                     ),
                                 validator: _model.usernameControllerValidator
                                     .asValidator(context),
@@ -331,10 +333,11 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 2.0, 0.0, 0.0),
                           child: AuthUserStreamWidget(
                             builder: (context) => Container(
-                              width: MediaQuery.of(context).size.width,
+                              width: MediaQuery.of(context).size.width * 1.0,
                               child: TextFormField(
                                 controller: _model.dataNastereController,
                                 obscureText: false,
@@ -345,30 +348,30 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Color(0x00000000),
-                                      width: 1,
+                                      width: 1.0,
                                     ),
-                                    borderRadius: BorderRadius.circular(12),
+                                    borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Color(0x00000000),
-                                      width: 1,
+                                      width: 1.0,
                                     ),
-                                    borderRadius: BorderRadius.circular(12),
+                                    borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   errorBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Color(0x00000000),
-                                      width: 1,
+                                      width: 1.0,
                                     ),
-                                    borderRadius: BorderRadius.circular(12),
+                                    borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   focusedErrorBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Color(0x00000000),
-                                      width: 1,
+                                      width: 1.0,
                                     ),
-                                    borderRadius: BorderRadius.circular(12),
+                                    borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   filled: true,
                                   fillColor: Color(0x3CFFFFFF),
@@ -377,7 +380,7 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                                     .bodyText1
                                     .override(
                                       fontFamily: 'Nunito Sans',
-                                      lineHeight: 2,
+                                      lineHeight: 2.0,
                                     ),
                                 validator: _model.dataNastereControllerValidator
                                     .asValidator(context),
@@ -386,10 +389,11 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 2.0, 0.0, 0.0),
                           child: AuthUserStreamWidget(
                             builder: (context) => Container(
-                              width: MediaQuery.of(context).size.width,
+                              width: MediaQuery.of(context).size.width * 1.0,
                               child: TextFormField(
                                 controller: _model.telefonController,
                                 obscureText: false,
@@ -400,30 +404,30 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Color(0x00000000),
-                                      width: 1,
+                                      width: 1.0,
                                     ),
-                                    borderRadius: BorderRadius.circular(12),
+                                    borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Color(0x00000000),
-                                      width: 1,
+                                      width: 1.0,
                                     ),
-                                    borderRadius: BorderRadius.circular(12),
+                                    borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   errorBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Color(0x00000000),
-                                      width: 1,
+                                      width: 1.0,
                                     ),
-                                    borderRadius: BorderRadius.circular(12),
+                                    borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   focusedErrorBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Color(0x00000000),
-                                      width: 1,
+                                      width: 1.0,
                                     ),
-                                    borderRadius: BorderRadius.circular(12),
+                                    borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   filled: true,
                                   fillColor: Color(0x3CFFFFFF),
@@ -432,7 +436,7 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                                     .bodyText1
                                     .override(
                                       fontFamily: 'Nunito Sans',
-                                      lineHeight: 2,
+                                      lineHeight: 2.0,
                                     ),
                                 keyboardType: TextInputType.phone,
                                 validator: _model.telefonControllerValidator
@@ -447,14 +451,14 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                 ),
               ),
               Container(
-                width: 100,
+                width: 100.0,
                 height: MediaQuery.of(context).size.height * 0.03,
                 decoration: BoxDecoration(),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Container(
-                      width: MediaQuery.of(context).size.width * 0,
+                      width: MediaQuery.of(context).size.width * 0.0,
                       child: TextFormField(
                         controller: _model.emailController,
                         obscureText: false,
@@ -463,30 +467,30 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0x00000000),
-                              width: 1,
+                              width: 1.0,
                             ),
-                            borderRadius: BorderRadius.circular(0),
+                            borderRadius: BorderRadius.circular(0.0),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0x00000000),
-                              width: 1,
+                              width: 1.0,
                             ),
-                            borderRadius: BorderRadius.circular(0),
+                            borderRadius: BorderRadius.circular(0.0),
                           ),
                           errorBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0x00000000),
-                              width: 1,
+                              width: 1.0,
                             ),
-                            borderRadius: BorderRadius.circular(0),
+                            borderRadius: BorderRadius.circular(0.0),
                           ),
                           focusedErrorBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0x00000000),
-                              width: 1,
+                              width: 1.0,
                             ),
-                            borderRadius: BorderRadius.circular(0),
+                            borderRadius: BorderRadius.circular(0.0),
                           ),
                           filled: true,
                           fillColor:
@@ -494,16 +498,16 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                         ),
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Nunito Sans',
-                              fontSize: 0,
+                              fontSize: 0.0,
                               fontWeight: FontWeight.w100,
-                              lineHeight: 0,
+                              lineHeight: 0.0,
                             ),
                         validator: _model.emailControllerValidator
                             .asValidator(context),
                       ),
                     ),
                     Container(
-                      width: MediaQuery.of(context).size.width * 0,
+                      width: MediaQuery.of(context).size.width * 0.0,
                       child: TextFormField(
                         controller: _model.passwordController,
                         readOnly: true,
@@ -513,30 +517,30 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0x00000000),
-                              width: 1,
+                              width: 1.0,
                             ),
-                            borderRadius: BorderRadius.circular(0),
+                            borderRadius: BorderRadius.circular(0.0),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0x00000000),
-                              width: 1,
+                              width: 1.0,
                             ),
-                            borderRadius: BorderRadius.circular(0),
+                            borderRadius: BorderRadius.circular(0.0),
                           ),
                           errorBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0x00000000),
-                              width: 1,
+                              width: 1.0,
                             ),
-                            borderRadius: BorderRadius.circular(0),
+                            borderRadius: BorderRadius.circular(0.0),
                           ),
                           focusedErrorBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0x00000000),
-                              width: 1,
+                              width: 1.0,
                             ),
-                            borderRadius: BorderRadius.circular(0),
+                            borderRadius: BorderRadius.circular(0.0),
                           ),
                           filled: true,
                           fillColor:
@@ -552,15 +556,15 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                                   ? Icons.visibility_outlined
                                   : Icons.visibility_off_outlined,
                               color: Color(0xFF757575),
-                              size: 0,
+                              size: 0.0,
                             ),
                           ),
                         ),
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Nunito Sans',
-                              fontSize: 0,
+                              fontSize: 0.0,
                               fontWeight: FontWeight.w100,
-                              lineHeight: 0,
+                              lineHeight: 0.0,
                             ),
                         validator: _model.passwordControllerValidator
                             .asValidator(context),
@@ -575,12 +579,12 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
-                      blurRadius: 4,
+                      blurRadius: 4.0,
                       color: Color(0x33000000),
-                      offset: Offset(0, 2),
+                      offset: Offset(0.0, 2.0),
                     )
                   ],
-                  borderRadius: BorderRadius.circular(22),
+                  borderRadius: BorderRadius.circular(22.0),
                 ),
                 child: FFButtonWidget(
                   onPressed: () async {
@@ -601,14 +605,17 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                   },
                   text: 'Salvează',
                   options: FFButtonOptions(
-                    height: 40,
+                    height: 40.0,
+                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    iconPadding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).alternate,
                     textStyle: FlutterFlowTheme.of(context).subtitle1,
                     borderSide: BorderSide(
                       color: Colors.transparent,
-                      width: 1,
+                      width: 1.0,
                     ),
-                    borderRadius: BorderRadius.circular(22),
+                    borderRadius: BorderRadius.circular(22.0),
                   ),
                 ),
               ),
@@ -616,17 +623,17 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                 width: MediaQuery.of(context).size.width * 0.85,
                 height: MediaQuery.of(context).size.height * 0.01,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(22),
+                  borderRadius: BorderRadius.circular(22.0),
                 ),
               ),
               Container(
                 width: MediaQuery.of(context).size.width * 0.85,
                 height: MediaQuery.of(context).size.height * 0.07,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(22),
+                  borderRadius: BorderRadius.circular(22.0),
                 ),
                 child: Align(
-                  alignment: AlignmentDirectional(0, 0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: InkWell(
                     onTap: () async {
                       await signOut();
@@ -642,7 +649,7 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Nunito Sans',
                             color: FlutterFlowTheme.of(context).secondaryText,
-                            fontSize: 16,
+                            fontSize: 16.0,
                           ),
                     ),
                   ),

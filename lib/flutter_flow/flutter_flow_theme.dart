@@ -105,49 +105,49 @@ class ThemeTypography extends Typography {
         'Nunito Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
-        fontSize: 24,
+        fontSize: 24.0,
       );
   String get title2Family => 'Nunito Sans';
   TextStyle get title2 => GoogleFonts.getFont(
         'Nunito Sans',
         color: theme.secondaryText,
         fontWeight: FontWeight.w600,
-        fontSize: 22,
+        fontSize: 22.0,
       );
   String get title3Family => 'Nunito Sans';
   TextStyle get title3 => GoogleFonts.getFont(
         'Nunito Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
-        fontSize: 20,
+        fontSize: 20.0,
       );
   String get subtitle1Family => 'Nunito Sans';
   TextStyle get subtitle1 => GoogleFonts.getFont(
         'Nunito Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
-        fontSize: 18,
+        fontSize: 18.0,
       );
   String get subtitle2Family => 'Nunito Sans';
   TextStyle get subtitle2 => GoogleFonts.getFont(
         'Nunito Sans',
         color: theme.secondaryText,
         fontWeight: FontWeight.w600,
-        fontSize: 16,
+        fontSize: 16.0,
       );
   String get bodyText1Family => 'Nunito Sans';
   TextStyle get bodyText1 => GoogleFonts.getFont(
         'Nunito Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
-        fontSize: 14,
+        fontSize: 14.0,
       );
   String get bodyText2Family => 'Nunito Sans';
   TextStyle get bodyText2 => GoogleFonts.getFont(
         'Nunito Sans',
         color: theme.secondaryText,
         fontWeight: FontWeight.w600,
-        fontSize: 14,
+        fontSize: 14.0,
       );
 }
 

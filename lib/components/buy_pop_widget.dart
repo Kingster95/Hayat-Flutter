@@ -1,6 +1,6 @@
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -46,27 +46,27 @@ class _BuyPopWidgetState extends State<BuyPopWidget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: AlignmentDirectional(0, 0),
+      alignment: AlignmentDirectional(0.0, 0.0),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Align(
-            alignment: AlignmentDirectional(0, 0),
+            alignment: AlignmentDirectional(0.0, 0.0),
             child: Container(
               width: MediaQuery.of(context).size.width * 0.9,
               height: MediaQuery.of(context).size.height * 0.6,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(45),
+                borderRadius: BorderRadius.circular(45.0),
               ),
               child: Align(
-                alignment: AlignmentDirectional(0, 0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0, 0),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: Container(
                         width: MediaQuery.of(context).size.width * 0.85,
                         height: MediaQuery.of(context).size.height * 0.4,
@@ -74,18 +74,18 @@ class _BuyPopWidgetState extends State<BuyPopWidget> {
                           color: FlutterFlowTheme.of(context).primaryBackground,
                           boxShadow: [
                             BoxShadow(
-                              blurRadius: 4,
+                              blurRadius: 4.0,
                               color: Color(0x33000000),
-                              offset: Offset(0, 2),
+                              offset: Offset(0.0, 2.0),
                             )
                           ],
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(30.0),
                         ),
-                        alignment: AlignmentDirectional(0, 0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Stack(
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(0, 0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Container(
                                 width: MediaQuery.of(context).size.width * 0.75,
                                 height:
@@ -97,10 +97,10 @@ class _BuyPopWidgetState extends State<BuyPopWidget> {
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     Align(
-                                      alignment: AlignmentDirectional(0, 0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            0, 10, 0, 0),
+                                            0.0, 10.0, 0.0, 0.0),
                                         child: Container(
                                           width: MediaQuery.of(context)
                                                   .size
@@ -111,7 +111,8 @@ class _BuyPopWidgetState extends State<BuyPopWidget> {
                                                   .height *
                                               0.2,
                                           decoration: BoxDecoration(),
-                                          alignment: AlignmentDirectional(0, 0),
+                                          alignment:
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Text(
                                             'Pentru a avea acces la curs in aplicatia mobila va trebui sa continuati cu achizitionarea acestuia de pe platforma.',
                                             textAlign: TextAlign.start,
@@ -119,7 +120,7 @@ class _BuyPopWidgetState extends State<BuyPopWidget> {
                                                 .bodyText1
                                                 .override(
                                                   fontFamily: 'Nunito Sans',
-                                                  fontSize: 24,
+                                                  fontSize: 24.0,
                                                   lineHeight: 1.2,
                                                 ),
                                           ),
@@ -128,7 +129,7 @@ class _BuyPopWidgetState extends State<BuyPopWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 0, 0, 15),
+                                          0.0, 0.0, 0.0, 15.0),
                                       child: Container(
                                         width:
                                             MediaQuery.of(context).size.width *
@@ -140,7 +141,7 @@ class _BuyPopWidgetState extends State<BuyPopWidget> {
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryColor,
                                           borderRadius:
-                                              BorderRadius.circular(22),
+                                              BorderRadius.circular(22.0),
                                         ),
                                         child: FFButtonWidget(
                                           onPressed: () async {
@@ -151,6 +152,12 @@ class _BuyPopWidgetState extends State<BuyPopWidget> {
                                           options: FFButtonOptions(
                                             width: double.infinity,
                                             height: double.infinity,
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 0.0, 0.0),
+                                            iconPadding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 0.0, 0.0),
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryColor,
                                             textStyle:
@@ -162,10 +169,10 @@ class _BuyPopWidgetState extends State<BuyPopWidget> {
                                                     ),
                                             borderSide: BorderSide(
                                               color: Colors.transparent,
-                                              width: 1,
+                                              width: 1.0,
                                             ),
                                             borderRadius:
-                                                BorderRadius.circular(8),
+                                                BorderRadius.circular(8.0),
                                           ),
                                         ),
                                       ),
@@ -184,7 +191,7 @@ class _BuyPopWidgetState extends State<BuyPopWidget> {
                                   Icons.close,
                                   color:
                                       FlutterFlowTheme.of(context).primaryText,
-                                  size: 36,
+                                  size: 36.0,
                                 ),
                               ),
                             ),

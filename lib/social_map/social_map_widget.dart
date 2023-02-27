@@ -1,10 +1,10 @@
-import '../auth/auth_util.dart';
-import '../backend/backend.dart';
-import '../chat_page/chat_page_widget.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../main.dart';
-import '../custom_code/widgets/index.dart' as custom_widgets;
+import '/auth/auth_util.dart';
+import '/backend/backend.dart';
+import '/chat_page/chat_page_widget.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/main.dart';
+import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -71,8 +71,8 @@ class _SocialMapWidgetState extends State<SocialMapWidget> {
         color: FlutterFlowTheme.of(context).primaryBackground,
         child: Center(
           child: SizedBox(
-            width: 50,
-            height: 50,
+            width: 50.0,
+            height: 50.0,
             child: CircularProgressIndicator(
               color: FlutterFlowTheme.of(context).secondaryColor,
             ),
@@ -91,8 +91,8 @@ class _SocialMapWidgetState extends State<SocialMapWidget> {
         if (!snapshot.hasData) {
           return Center(
             child: SizedBox(
-              width: 40,
-              height: 40,
+              width: 40.0,
+              height: 40.0,
               child: CircularProgressIndicator(
                 color: FlutterFlowTheme.of(context).primaryColor,
               ),
@@ -112,7 +112,7 @@ class _SocialMapWidgetState extends State<SocialMapWidget> {
               children: [
                 Expanded(
                   child: Container(
-                    width: MediaQuery.of(context).size.width,
+                    width: MediaQuery.of(context).size.width * 1.0,
                     height: MediaQuery.of(context).size.height * 0.45,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -121,11 +121,11 @@ class _SocialMapWidgetState extends State<SocialMapWidget> {
                     child: Stack(
                       children: [
                         Container(
-                          width: MediaQuery.of(context).size.width,
-                          height: MediaQuery.of(context).size.height * 1,
+                          width: MediaQuery.of(context).size.width * 1.0,
+                          height: MediaQuery.of(context).size.height * 1.0,
                           child: custom_widgets.CustomMap(
-                            width: MediaQuery.of(context).size.width,
-                            height: MediaQuery.of(context).size.height * 1,
+                            width: MediaQuery.of(context).size.width * 1.0,
+                            height: MediaQuery.of(context).size.height * 1.0,
                             loc: currentUserLocationValue,
                             documentsList: socialMapUsersRecordList.toList(),
                           ),
@@ -145,7 +145,7 @@ class _SocialMapWidgetState extends State<SocialMapWidget> {
                             child: Icon(
                               Icons.arrow_back_rounded,
                               color: FlutterFlowTheme.of(context).black600,
-                              size: 40,
+                              size: 40.0,
                             ),
                           ),
                         ),
@@ -154,25 +154,25 @@ class _SocialMapWidgetState extends State<SocialMapWidget> {
                   ),
                 ),
                 Container(
-                  width: MediaQuery.of(context).size.width,
+                  width: MediaQuery.of(context).size.width * 1.0,
                   height: MediaQuery.of(context).size.height * 0.2,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(0),
-                      bottomRight: Radius.circular(0),
-                      topLeft: Radius.circular(16),
-                      topRight: Radius.circular(16),
+                      bottomLeft: Radius.circular(0.0),
+                      bottomRight: Radius.circular(0.0),
+                      topLeft: Radius.circular(16.0),
+                      topRight: Radius.circular(16.0),
                     ),
                   ),
                   child: Align(
-                    alignment: AlignmentDirectional(0, 0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(-0.85, 0),
+                          alignment: AlignmentDirectional(-0.85, 0.0),
                           child: Text(
                             'Networking',
                             textAlign: TextAlign.start,
@@ -181,16 +181,16 @@ class _SocialMapWidgetState extends State<SocialMapWidget> {
                                       fontFamily: 'Nunito Sans',
                                       color: FlutterFlowTheme.of(context)
                                           .primaryBtnText,
-                                      fontSize: 18,
+                                      fontSize: 18.0,
                                       fontWeight: FontWeight.normal,
                                     ),
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(1, 1),
+                          alignment: AlignmentDirectional(1.0, 1.0),
                           child: Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 10.0, 0.0, 0.0),
                             child: Container(
                               width: MediaQuery.of(context).size.width * 0.95,
                               height: MediaQuery.of(context).size.height * 0.17,
@@ -228,7 +228,7 @@ class _SocialMapWidgetState extends State<SocialMapWidget> {
                                               listViewIndex];
                                       return Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            0, 0, 10, 0),
+                                            0.0, 0.0, 10.0, 0.0),
                                         child: Container(
                                           width: MediaQuery.of(context)
                                                   .size
@@ -237,7 +237,7 @@ class _SocialMapWidgetState extends State<SocialMapWidget> {
                                           height: MediaQuery.of(context)
                                                   .size
                                                   .height *
-                                              1,
+                                              1.0,
                                           decoration: BoxDecoration(
                                             shape: BoxShape.rectangle,
                                           ),
@@ -282,7 +282,8 @@ class _SocialMapWidgetState extends State<SocialMapWidget> {
                                               ),
                                               Padding(
                                                 padding: EdgeInsetsDirectional
-                                                    .fromSTEB(0, 5, 0, 0),
+                                                    .fromSTEB(
+                                                        0.0, 5.0, 0.0, 0.0),
                                                 child: AutoSizeText(
                                                   listViewUsersRecord
                                                       .displayName!,
@@ -293,7 +294,7 @@ class _SocialMapWidgetState extends State<SocialMapWidget> {
                                                       .override(
                                                         fontFamily:
                                                             'Nunito Sans',
-                                                        fontSize: 12,
+                                                        fontSize: 12.0,
                                                       ),
                                                 ),
                                               ),

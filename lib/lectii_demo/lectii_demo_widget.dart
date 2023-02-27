@@ -1,8 +1,8 @@
-import '../backend/backend.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../video/video_widget.dart';
+import '/backend/backend.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/video/video_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -53,13 +53,13 @@ class _LectiiDemoWidgetState extends State<LectiiDemoWidget> {
         automaticallyImplyLeading: false,
         leading: FlutterFlowIconButton(
           borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
+          borderRadius: 30.0,
+          borderWidth: 1.0,
+          buttonSize: 60.0,
           icon: Icon(
             Icons.arrow_back_rounded,
             color: FlutterFlowTheme.of(context).primaryText,
-            size: 24,
+            size: 24.0,
           ),
           onPressed: () async {
             Navigator.pop(context);
@@ -70,12 +70,12 @@ class _LectiiDemoWidgetState extends State<LectiiDemoWidget> {
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Nunito Sans',
                 color: Colors.white,
-                fontSize: 22,
+                fontSize: 22.0,
               ),
         ),
         actions: [],
         centerTitle: false,
-        elevation: 0,
+        elevation: 0.0,
       ),
       body: SafeArea(
         child: GestureDetector(
@@ -84,15 +84,15 @@ class _LectiiDemoWidgetState extends State<LectiiDemoWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Align(
-                alignment: AlignmentDirectional(0, 0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 35),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 35.0),
                   child: Container(
                     width: MediaQuery.of(context).size.width * 0.9,
                     height: MediaQuery.of(context).size.height * 0.85,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).primaryBackground,
-                      borderRadius: BorderRadius.circular(32),
+                      borderRadius: BorderRadius.circular(32.0),
                     ),
                     child: FutureBuilder<List<CursuriRecord>>(
                       future: queryCursuriRecordOnce(
@@ -105,8 +105,8 @@ class _LectiiDemoWidgetState extends State<LectiiDemoWidget> {
                         if (!snapshot.hasData) {
                           return Center(
                             child: SizedBox(
-                              width: 50,
-                              height: 50,
+                              width: 50.0,
+                              height: 50.0,
                               child: CircularProgressIndicator(
                                 color:
                                     FlutterFlowTheme.of(context).secondaryColor,
@@ -127,40 +127,42 @@ class _LectiiDemoWidgetState extends State<LectiiDemoWidget> {
                               width: MediaQuery.of(context).size.width * 0.85,
                               height: MediaQuery.of(context).size.height * 0.32,
                               decoration: BoxDecoration(),
-                              alignment: AlignmentDirectional(0, 0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(0, -1),
+                                    alignment: AlignmentDirectional(0.0, -1.0),
                                     child: Container(
-                                      width: MediaQuery.of(context).size.width,
+                                      width: MediaQuery.of(context).size.width *
+                                          1.0,
                                       height:
                                           MediaQuery.of(context).size.height *
                                               0.075,
                                       decoration: BoxDecoration(),
-                                      alignment: AlignmentDirectional(0, 0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(-0.9, 0),
+                                            AlignmentDirectional(-0.9, 0.0),
                                         child: Text(
                                           listViewCursuriRecord.title!,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyText1
                                               .override(
                                                 fontFamily: 'Nunito Sans',
-                                                fontSize: 15,
+                                                fontSize: 15.0,
                                               ),
                                         ),
                                       ),
                                     ),
                                   ),
                                   Container(
-                                    width: MediaQuery.of(context).size.width,
+                                    width:
+                                        MediaQuery.of(context).size.width * 1.0,
                                     height: MediaQuery.of(context).size.height *
                                         0.24,
                                     decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(30),
+                                      borderRadius: BorderRadius.circular(30.0),
                                     ),
                                     child: InkWell(
                                       onTap: () async {
@@ -174,11 +176,12 @@ class _LectiiDemoWidgetState extends State<LectiiDemoWidget> {
                                         );
                                       },
                                       child: ClipRRect(
-                                        borderRadius: BorderRadius.circular(30),
+                                        borderRadius:
+                                            BorderRadius.circular(30.0),
                                         child: Image.network(
                                           '${listViewCursuriRecord.image}',
-                                          width: 100,
-                                          height: 100,
+                                          width: 100.0,
+                                          height: 100.0,
                                           fit: BoxFit.fill,
                                         ),
                                       ),

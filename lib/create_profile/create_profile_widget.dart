@@ -1,13 +1,13 @@
-import '../auth/auth_util.dart';
-import '../backend/api_requests/api_calls.dart';
-import '../backend/backend.dart';
-import '../backend/firebase_storage/storage.dart';
-import '../create_account/create_account_widget.dart';
-import '../create_pin/create_pin_widget.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
-import '../flutter_flow/upload_media.dart';
+import '/auth/auth_util.dart';
+import '/backend/api_requests/api_calls.dart';
+import '/backend/backend.dart';
+import '/backend/firebase_storage/storage.dart';
+import '/create_account/create_account_widget.dart';
+import '/create_pin/create_pin_widget.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/upload_media.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -70,13 +70,13 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
         child: GestureDetector(
           onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
           child: Align(
-            alignment: AlignmentDirectional(0, 0),
+            alignment: AlignmentDirectional(0.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.width,
+                  width: MediaQuery.of(context).size.width * 1.0,
                   height: MediaQuery.of(context).size.height * 0.15,
                   decoration: BoxDecoration(),
                   child: Row(
@@ -94,7 +94,7 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                   child: InkWell(
                     onTap: () async {
                       final selectedMedia =
@@ -158,17 +158,18 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                       }
                     },
                     child: Container(
-                      width: 100,
-                      height: 100,
+                      width: 100.0,
+                      height: 100.0,
                       decoration: BoxDecoration(
                         color: Color(0xFFDBE2E7),
                         shape: BoxShape.circle,
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(2, 2, 2, 2),
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(2.0, 2.0, 2.0, 2.0),
                         child: Container(
-                          width: 90,
-                          height: 90,
+                          width: 90.0,
+                          height: 90.0,
                           clipBehavior: Clip.antiAlias,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
@@ -186,7 +187,7 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                   ),
                 ),
                 Container(
-                  width: MediaQuery.of(context).size.width,
+                  width: MediaQuery.of(context).size.width * 1.0,
                   height: MediaQuery.of(context).size.height * 0.03,
                   decoration: BoxDecoration(),
                 ),
@@ -195,7 +196,7 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                   height: MediaQuery.of(context).size.height * 0.45,
                   decoration: BoxDecoration(),
                   child: Container(
-                    width: MediaQuery.of(context).size.width,
+                    width: MediaQuery.of(context).size.width * 1.0,
                     child: Form(
                       key: _model.formKey,
                       autovalidateMode: AutovalidateMode.disabled,
@@ -204,7 +205,7 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Container(
-                            width: MediaQuery.of(context).size.width,
+                            width: MediaQuery.of(context).size.width * 1.0,
                             child: TextFormField(
                               controller: _model.numeController,
                               obscureText: false,
@@ -220,30 +221,30 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: Color(0x00000000),
-                                    width: 1,
+                                    width: 1.0,
                                   ),
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: Color(0x00000000),
-                                    width: 1,
+                                    width: 1.0,
                                   ),
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 errorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: Color(0x00000000),
-                                    width: 1,
+                                    width: 1.0,
                                   ),
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 focusedErrorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: Color(0x00000000),
-                                    width: 1,
+                                    width: 1.0,
                                   ),
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 filled: true,
                                 fillColor: Color(0x3CFFFFFF),
@@ -252,7 +253,7 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                                   .bodyText1
                                   .override(
                                     fontFamily: 'Nunito Sans',
-                                    lineHeight: 2,
+                                    lineHeight: 2.0,
                                   ),
                               keyboardType: TextInputType.name,
                               validator: _model.numeControllerValidator
@@ -260,7 +261,7 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                             ),
                           ),
                           Container(
-                            width: MediaQuery.of(context).size.width,
+                            width: MediaQuery.of(context).size.width * 1.0,
                             child: TextFormField(
                               controller: _model.prenumeController,
                               obscureText: false,
@@ -276,30 +277,30 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: Color(0x00000000),
-                                    width: 1,
+                                    width: 1.0,
                                   ),
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: Color(0x00000000),
-                                    width: 1,
+                                    width: 1.0,
                                   ),
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 errorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: Color(0x00000000),
-                                    width: 1,
+                                    width: 1.0,
                                   ),
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 focusedErrorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: Color(0x00000000),
-                                    width: 1,
+                                    width: 1.0,
                                   ),
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 filled: true,
                                 fillColor: Color(0x3CFFFFFF),
@@ -308,14 +309,14 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                                   .bodyText1
                                   .override(
                                     fontFamily: 'Nunito Sans',
-                                    lineHeight: 2,
+                                    lineHeight: 2.0,
                                   ),
                               validator: _model.prenumeControllerValidator
                                   .asValidator(context),
                             ),
                           ),
                           Container(
-                            width: MediaQuery.of(context).size.width,
+                            width: MediaQuery.of(context).size.width * 1.0,
                             child: TextFormField(
                               controller: _model.usernameController,
                               obscureText: false,
@@ -331,30 +332,30 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: Color(0x00000000),
-                                    width: 1,
+                                    width: 1.0,
                                   ),
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: Color(0x00000000),
-                                    width: 1,
+                                    width: 1.0,
                                   ),
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 errorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: Color(0x00000000),
-                                    width: 1,
+                                    width: 1.0,
                                   ),
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 focusedErrorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: Color(0x00000000),
-                                    width: 1,
+                                    width: 1.0,
                                   ),
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 filled: true,
                                 fillColor: Color(0x3CFFFFFF),
@@ -363,14 +364,14 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                                   .bodyText1
                                   .override(
                                     fontFamily: 'Nunito Sans',
-                                    lineHeight: 2,
+                                    lineHeight: 2.0,
                                   ),
                               validator: _model.usernameControllerValidator
                                   .asValidator(context),
                             ),
                           ),
                           Container(
-                            width: MediaQuery.of(context).size.width,
+                            width: MediaQuery.of(context).size.width * 1.0,
                             child: TextFormField(
                               controller: _model.telefonController,
                               obscureText: false,
@@ -386,30 +387,30 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: Color(0x00000000),
-                                    width: 1,
+                                    width: 1.0,
                                   ),
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: Color(0x00000000),
-                                    width: 1,
+                                    width: 1.0,
                                   ),
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 errorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: Color(0x00000000),
-                                    width: 1,
+                                    width: 1.0,
                                   ),
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 focusedErrorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: Color(0x00000000),
-                                    width: 1,
+                                    width: 1.0,
                                   ),
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 filled: true,
                                 fillColor: Color(0x3CFFFFFF),
@@ -418,7 +419,7 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                                   .bodyText1
                                   .override(
                                     fontFamily: 'Nunito Sans',
-                                    lineHeight: 2,
+                                    lineHeight: 2.0,
                                   ),
                               keyboardType: TextInputType.phone,
                               validator: _model.telefonControllerValidator
@@ -431,14 +432,14 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                   ),
                 ),
                 Container(
-                  width: 100,
+                  width: 100.0,
                   height: MediaQuery.of(context).size.height * 0.05,
                   decoration: BoxDecoration(),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Container(
-                        width: MediaQuery.of(context).size.width * 0,
+                        width: MediaQuery.of(context).size.width * 0.0,
                         child: TextFormField(
                           controller: _model.emailController,
                           obscureText: false,
@@ -447,30 +448,30 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                 color: Color(0x00000000),
-                                width: 1,
+                                width: 1.0,
                               ),
-                              borderRadius: BorderRadius.circular(0),
+                              borderRadius: BorderRadius.circular(0.0),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                 color: Color(0x00000000),
-                                width: 1,
+                                width: 1.0,
                               ),
-                              borderRadius: BorderRadius.circular(0),
+                              borderRadius: BorderRadius.circular(0.0),
                             ),
                             errorBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                 color: Color(0x00000000),
-                                width: 1,
+                                width: 1.0,
                               ),
-                              borderRadius: BorderRadius.circular(0),
+                              borderRadius: BorderRadius.circular(0.0),
                             ),
                             focusedErrorBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                 color: Color(0x00000000),
-                                width: 1,
+                                width: 1.0,
                               ),
-                              borderRadius: BorderRadius.circular(0),
+                              borderRadius: BorderRadius.circular(0.0),
                             ),
                             filled: true,
                             fillColor:
@@ -479,16 +480,16 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                           style:
                               FlutterFlowTheme.of(context).bodyText1.override(
                                     fontFamily: 'Nunito Sans',
-                                    fontSize: 0,
+                                    fontSize: 0.0,
                                     fontWeight: FontWeight.w100,
-                                    lineHeight: 0,
+                                    lineHeight: 0.0,
                                   ),
                           validator: _model.emailControllerValidator
                               .asValidator(context),
                         ),
                       ),
                       Container(
-                        width: MediaQuery.of(context).size.width * 0,
+                        width: MediaQuery.of(context).size.width * 0.0,
                         child: TextFormField(
                           controller: _model.passwordController,
                           readOnly: true,
@@ -498,30 +499,30 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                 color: Color(0x00000000),
-                                width: 1,
+                                width: 1.0,
                               ),
-                              borderRadius: BorderRadius.circular(0),
+                              borderRadius: BorderRadius.circular(0.0),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                 color: Color(0x00000000),
-                                width: 1,
+                                width: 1.0,
                               ),
-                              borderRadius: BorderRadius.circular(0),
+                              borderRadius: BorderRadius.circular(0.0),
                             ),
                             errorBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                 color: Color(0x00000000),
-                                width: 1,
+                                width: 1.0,
                               ),
-                              borderRadius: BorderRadius.circular(0),
+                              borderRadius: BorderRadius.circular(0.0),
                             ),
                             focusedErrorBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                 color: Color(0x00000000),
-                                width: 1,
+                                width: 1.0,
                               ),
-                              borderRadius: BorderRadius.circular(0),
+                              borderRadius: BorderRadius.circular(0.0),
                             ),
                             filled: true,
                             fillColor:
@@ -537,16 +538,16 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                                     ? Icons.visibility_outlined
                                     : Icons.visibility_off_outlined,
                                 color: Color(0xFF757575),
-                                size: 0,
+                                size: 0.0,
                               ),
                             ),
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyText1.override(
                                     fontFamily: 'Nunito Sans',
-                                    fontSize: 0,
+                                    fontSize: 0.0,
                                     fontWeight: FontWeight.w100,
-                                    lineHeight: 0,
+                                    lineHeight: 0.0,
                                   ),
                           validator: _model.passwordControllerValidator
                               .asValidator(context),
@@ -556,7 +557,7 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                   ),
                 ),
                 Container(
-                  width: 100,
+                  width: 100.0,
                   height: MediaQuery.of(context).size.height * 0.03,
                   decoration: BoxDecoration(),
                 ),
@@ -566,12 +567,12 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                   decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
-                        blurRadius: 4,
+                        blurRadius: 4.0,
                         color: Color(0x33000000),
-                        offset: Offset(0, 2),
+                        offset: Offset(0.0, 2.0),
                       )
                     ],
-                    borderRadius: BorderRadius.circular(22),
+                    borderRadius: BorderRadius.circular(22.0),
                   ),
                   child: FFButtonWidget(
                     onPressed: () async {
@@ -662,14 +663,18 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                     },
                     text: 'Continuă',
                     options: FFButtonOptions(
-                      height: 40,
+                      height: 40.0,
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      iconPadding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).alternate,
                       textStyle: FlutterFlowTheme.of(context).subtitle1,
                       borderSide: BorderSide(
                         color: Colors.transparent,
-                        width: 1,
+                        width: 1.0,
                       ),
-                      borderRadius: BorderRadius.circular(22),
+                      borderRadius: BorderRadius.circular(22.0),
                     ),
                   ),
                 ),

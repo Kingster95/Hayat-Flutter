@@ -1,27 +1,27 @@
-import '../afirmatie_siprovocare/afirmatie_siprovocare_widget.dart';
-import '../astral_calendar/astral_calendar_widget.dart';
-import '../auth/auth_util.dart';
-import '../backend/api_requests/api_calls.dart';
-import '../backend/backend.dart';
-import '../category_courses/category_courses_widget.dart';
-import '../category_list/category_list_widget.dart';
-import '../chat_page/chat_page_widget.dart';
-import '../components/buy_pack_widget.dart';
-import '../components/subscription_widget.dart';
-import '../demos/demos_widget.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
-import '../flutter_flow/instant_timer.dart';
-import '../main.dart';
-import '../med_page/med_page_widget.dart';
-import '../meditations/meditations_widget.dart';
-import '../menstrual_calendar/menstrual_calendar_widget.dart';
-import '../mp3_page/mp3_page_widget.dart';
+import '/afirmatie_siprovocare/afirmatie_siprovocare_widget.dart';
+import '/astral_calendar/astral_calendar_widget.dart';
+import '/auth/auth_util.dart';
+import '/backend/api_requests/api_calls.dart';
+import '/backend/backend.dart';
+import '/category_courses/category_courses_widget.dart';
+import '/category_list/category_list_widget.dart';
+import '/chat_page/chat_page_widget.dart';
+import '/components/buy_pack_widget.dart';
+import '/components/subscription_widget.dart';
+import '/demos/demos_widget.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/instant_timer.dart';
+import '/main.dart';
+import '/med_page/med_page_widget.dart';
+import '/meditations/meditations_widget.dart';
+import '/menstrual_calendar/menstrual_calendar_widget.dart';
+import '/mp3_page/mp3_page_widget.dart';
 import 'dart:ui';
-import '../custom_code/actions/index.dart' as actions;
-import '../custom_code/widgets/index.dart' as custom_widgets;
-import '../flutter_flow/custom_functions.dart' as functions;
+import '/custom_code/actions/index.dart' as actions;
+import '/custom_code/widgets/index.dart' as custom_widgets;
+import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:auto_size_text/auto_size_text.dart';
@@ -134,7 +134,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Align(
-                  alignment: AlignmentDirectional(0, 0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Container(
                     width: MediaQuery.of(context).size.width * 0.9,
                     height: MediaQuery.of(context).size.height * 0.1,
@@ -177,8 +177,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               ),
                             ),
                             Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  12.0, 0.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -202,7 +202,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           .bodyText1
                                           .override(
                                             fontFamily: 'Nunito Sans',
-                                            fontSize: 17,
+                                            fontSize: 17.0,
                                             fontWeight: FontWeight.bold,
                                           ),
                                     ),
@@ -217,14 +217,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0, 0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Container(
                     width: MediaQuery.of(context).size.width * 0.95,
                     height: MediaQuery.of(context).size.height * 0.12,
                     decoration: BoxDecoration(),
                     child: Container(
-                      width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 1,
+                      width: MediaQuery.of(context).size.width * 1.0,
+                      height: MediaQuery.of(context).size.height * 1.0,
                       child: Stack(
                         children: [
                           PageView(
@@ -237,7 +237,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(0, -0.5),
+                                    alignment: AlignmentDirectional(0.0, -0.5),
                                     child: InkWell(
                                       onTap: () async {
                                         await Navigator.push(
@@ -270,16 +270,17 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                               .secondaryColor,
                                           boxShadow: [
                                             BoxShadow(
-                                              blurRadius: 4,
+                                              blurRadius: 4.0,
                                               color: Color(0x33000000),
-                                              offset: Offset(0, 2),
+                                              offset: Offset(0.0, 2.0),
                                             )
                                           ],
                                           borderRadius:
-                                              BorderRadius.circular(15),
+                                              BorderRadius.circular(15.0),
                                         ),
                                         child: Align(
-                                          alignment: AlignmentDirectional(0, 0),
+                                          alignment:
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             mainAxisAlignment:
@@ -303,7 +304,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .primaryBtnText,
-                                                size: 26,
+                                                size: 26.0,
                                               ),
                                             ],
                                           ),
@@ -312,10 +313,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0, -0.5),
+                                    alignment: AlignmentDirectional(0.0, -0.5),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          8, 0, 0, 0),
+                                          8.0, 0.0, 0.0, 0.0),
                                       child: InkWell(
                                         onTap: () async {
                                           await Navigator.push(
@@ -342,17 +343,17 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 .secondaryColor,
                                             boxShadow: [
                                               BoxShadow(
-                                                blurRadius: 4,
+                                                blurRadius: 4.0,
                                                 color: Color(0x33000000),
-                                                offset: Offset(0, 2),
+                                                offset: Offset(0.0, 2.0),
                                               )
                                             ],
                                             borderRadius:
-                                                BorderRadius.circular(15),
+                                                BorderRadius.circular(15.0),
                                           ),
                                           child: Align(
                                             alignment:
-                                                AlignmentDirectional(0, 0),
+                                                AlignmentDirectional(0.0, 0.0),
                                             child: InkWell(
                                               onTap: () async {
                                                 await Navigator.push(
@@ -385,14 +386,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   Align(
                                                     alignment:
                                                         AlignmentDirectional(
-                                                            0, 0),
+                                                            0.0, 0.0),
                                                     child: Icon(
                                                       Icons.library_music,
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .primaryBtnText,
-                                                      size: 22,
+                                                      size: 22.0,
                                                     ),
                                                   ),
                                                 ],
@@ -404,10 +405,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0, -0.5),
+                                    alignment: AlignmentDirectional(0.0, -0.5),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          8, 0, 0, 0),
+                                          8.0, 0.0, 0.0, 0.0),
                                       child: InkWell(
                                         onTap: () async {
                                           await launchURL(
@@ -427,17 +428,17 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 .secondaryColor,
                                             boxShadow: [
                                               BoxShadow(
-                                                blurRadius: 4,
+                                                blurRadius: 4.0,
                                                 color: Color(0x33000000),
-                                                offset: Offset(0, 2),
+                                                offset: Offset(0.0, 2.0),
                                               )
                                             ],
                                             borderRadius:
-                                                BorderRadius.circular(15),
+                                                BorderRadius.circular(15.0),
                                           ),
                                           child: Align(
                                             alignment:
-                                                AlignmentDirectional(0, 0),
+                                                AlignmentDirectional(0.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
@@ -462,7 +463,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .primaryBtnText,
-                                                  size: 24,
+                                                  size: 24.0,
                                                 ),
                                               ],
                                             ),
@@ -478,10 +479,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(0, -0.5),
+                                    alignment: AlignmentDirectional(0.0, -0.5),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          8, 0, 0, 0),
+                                          8.0, 0.0, 0.0, 0.0),
                                       child: InkWell(
                                         onTap: () async {
                                           if (valueOrDefault<bool>(
@@ -525,13 +526,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 .secondaryColor,
                                             boxShadow: [
                                               BoxShadow(
-                                                blurRadius: 4,
+                                                blurRadius: 4.0,
                                                 color: Color(0x33000000),
-                                                offset: Offset(0, 2),
+                                                offset: Offset(0.0, 2.0),
                                               )
                                             ],
                                             borderRadius:
-                                                BorderRadius.circular(15),
+                                                BorderRadius.circular(15.0),
                                           ),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -549,7 +550,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .primaryBtnText,
-                                                      fontSize: 14,
+                                                      fontSize: 14.0,
                                                     ),
                                               ),
                                               FaIcon(
@@ -557,7 +558,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .primaryBtnText,
-                                                size: 24,
+                                                size: 24.0,
                                               ),
                                             ],
                                           ),
@@ -566,10 +567,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0, -0.5),
+                                    alignment: AlignmentDirectional(0.0, -0.5),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          8, 0, 0, 0),
+                                          8.0, 0.0, 0.0, 0.0),
                                       child: InkWell(
                                         onTap: () async {
                                           if (valueOrDefault<bool>(
@@ -613,13 +614,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 .secondaryColor,
                                             boxShadow: [
                                               BoxShadow(
-                                                blurRadius: 4,
+                                                blurRadius: 4.0,
                                                 color: Color(0x33000000),
-                                                offset: Offset(0, 2),
+                                                offset: Offset(0.0, 2.0),
                                               )
                                             ],
                                             borderRadius:
-                                                BorderRadius.circular(15),
+                                                BorderRadius.circular(15.0),
                                           ),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -637,7 +638,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .primaryBtnText,
-                                                      fontSize: 14,
+                                                      fontSize: 14.0,
                                                     ),
                                               ),
                                               FaIcon(
@@ -645,7 +646,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .primaryBtnText,
-                                                size: 24,
+                                                size: 24.0,
                                               ),
                                             ],
                                           ),
@@ -654,10 +655,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0, -0.5),
+                                    alignment: AlignmentDirectional(0.0, -0.5),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          8, 0, 0, 0),
+                                          8.0, 0.0, 0.0, 0.0),
                                       child: InkWell(
                                         onTap: () async {
                                           await _model.columnController
@@ -683,13 +684,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 .secondaryColor,
                                             boxShadow: [
                                               BoxShadow(
-                                                blurRadius: 4,
+                                                blurRadius: 4.0,
                                                 color: Color(0x33000000),
-                                                offset: Offset(0, 2),
+                                                offset: Offset(0.0, 2.0),
                                               )
                                             ],
                                             borderRadius:
-                                                BorderRadius.circular(15),
+                                                BorderRadius.circular(15.0),
                                           ),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -708,7 +709,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .primaryBtnText,
-                                                      fontSize: 14,
+                                                      fontSize: 14.0,
                                                     ),
                                               ),
                                               FaIcon(
@@ -716,7 +717,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .primaryBtnText,
-                                                size: 20,
+                                                size: 20.0,
                                               ),
                                             ],
                                           ),
@@ -729,10 +730,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             ],
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0, 1),
+                            alignment: AlignmentDirectional(0.0, 1.0),
                             child: Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 18),
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 18.0),
                               child: smooth_page_indicator.SmoothPageIndicator(
                                 controller: _model.pageViewController ??=
                                     PageController(initialPage: 0),
@@ -746,10 +747,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   );
                                 },
                                 effect: smooth_page_indicator.SlideEffect(
-                                  spacing: 8,
-                                  radius: 5,
-                                  dotWidth: 6,
-                                  dotHeight: 6,
+                                  spacing: 8.0,
+                                  radius: 5.0,
+                                  dotWidth: 6.0,
+                                  dotHeight: 6.0,
                                   dotColor: Color(0xFF9E9E9E),
                                   activeDotColor:
                                       FlutterFlowTheme.of(context).alternate,
@@ -764,7 +765,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 15, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
                   child: InkWell(
                     onTap: () async {
                       _model.instantTimer?.cancel();
@@ -773,16 +774,16 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       width: MediaQuery.of(context).size.width * 0.92,
                       height: MediaQuery.of(context).size.height * 0.27,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(20.0),
                       ),
                       child: Container(
                         width: double.infinity,
-                        height: MediaQuery.of(context).size.height * 1,
+                        height: MediaQuery.of(context).size.height * 1.0,
                         child: Stack(
                           children: [
                             Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 25),
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 25.0),
                               child: PageView(
                                 controller: _model.slideShowController ??=
                                     PageController(initialPage: 0),
@@ -790,12 +791,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 children: [
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        15, 0, 0, 0),
+                                        15.0, 0.0, 0.0, 0.0),
                                     child: Container(
-                                      width: 96,
-                                      height: 100,
+                                      width: 96.0,
+                                      height: 100.0,
                                       decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(20),
+                                        borderRadius:
+                                            BorderRadius.circular(20.0),
                                       ),
                                       child: InkWell(
                                         onTap: () async {
@@ -804,7 +806,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         },
                                         child: ClipRRect(
                                           borderRadius:
-                                              BorderRadius.circular(20),
+                                              BorderRadius.circular(20.0),
                                           child: Image.asset(
                                             'assets/images/afis_categorii.jpeg',
                                             width: MediaQuery.of(context)
@@ -814,7 +816,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             height: MediaQuery.of(context)
                                                     .size
                                                     .height *
-                                                1,
+                                                1.0,
                                             fit: BoxFit.fitWidth,
                                           ),
                                         ),
@@ -823,12 +825,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        15, 0, 0, 0),
+                                        15.0, 0.0, 0.0, 0.0),
                                     child: Container(
-                                      width: 100,
-                                      height: 100,
+                                      width: 100.0,
+                                      height: 100.0,
                                       decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(22),
+                                        borderRadius:
+                                            BorderRadius.circular(22.0),
                                       ),
                                       child: InkWell(
                                         onTap: () async {
@@ -837,11 +840,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         },
                                         child: ClipRRect(
                                           borderRadius:
-                                              BorderRadius.circular(20),
+                                              BorderRadius.circular(20.0),
                                           child: Image.asset(
                                             'assets/images/afis_catre_link_youtube_De_ce_nu_primim_cadouri.png',
-                                            width: 100,
-                                            height: 100,
+                                            width: 100.0,
+                                            height: 100.0,
                                             fit: BoxFit.fitHeight,
                                           ),
                                         ),
@@ -850,12 +853,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        15, 0, 0, 0),
+                                        15.0, 0.0, 0.0, 0.0),
                                     child: Container(
-                                      width: 100,
-                                      height: 100,
+                                      width: 100.0,
+                                      height: 100.0,
                                       decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(22),
+                                        borderRadius:
+                                            BorderRadius.circular(22.0),
                                       ),
                                       child: InkWell(
                                         onTap: () async {
@@ -864,11 +868,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         },
                                         child: ClipRRect(
                                           borderRadius:
-                                              BorderRadius.circular(20),
+                                              BorderRadius.circular(20.0),
                                           child: Image.asset(
                                             'assets/images/th_2.png',
-                                            width: 100,
-                                            height: 100,
+                                            width: 100.0,
+                                            height: 100.0,
                                             fit: BoxFit.fitHeight,
                                           ),
                                         ),
@@ -877,12 +881,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        15, 0, 0, 0),
+                                        15.0, 0.0, 0.0, 0.0),
                                     child: Container(
-                                      width: 100,
-                                      height: 100,
+                                      width: 100.0,
+                                      height: 100.0,
                                       decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(22),
+                                        borderRadius:
+                                            BorderRadius.circular(22.0),
                                       ),
                                       child: InkWell(
                                         onTap: () async {
@@ -898,11 +903,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         },
                                         child: ClipRRect(
                                           borderRadius:
-                                              BorderRadius.circular(20),
+                                              BorderRadius.circular(20.0),
                                           child: Image.asset(
                                             'assets/images/afis_Like_A_Diva.png',
-                                            width: 100,
-                                            height: 100,
+                                            width: 100.0,
+                                            height: 100.0,
                                             fit: BoxFit.fitHeight,
                                           ),
                                         ),
@@ -911,26 +916,26 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        15, 0, 0, 0),
+                                        15.0, 0.0, 0.0, 0.0),
                                     child: InkWell(
                                       onTap: () async {
                                         await launchURL(
                                             'https://www.youtube.com/watch?v=rMLAzHUuInA');
                                       },
                                       child: Container(
-                                        width: 100,
-                                        height: 100,
+                                        width: 100.0,
+                                        height: 100.0,
                                         decoration: BoxDecoration(
                                           borderRadius:
-                                              BorderRadius.circular(22),
+                                              BorderRadius.circular(22.0),
                                         ),
                                         child: ClipRRect(
                                           borderRadius:
-                                              BorderRadius.circular(20),
+                                              BorderRadius.circular(20.0),
                                           child: Image.asset(
                                             'assets/images/afis_link_catre_youtube_Rusinea.png',
-                                            width: 100,
-                                            height: 100,
+                                            width: 100.0,
+                                            height: 100.0,
                                             fit: BoxFit.fitHeight,
                                           ),
                                         ),
@@ -939,22 +944,22 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        15, 0, 0, 0),
+                                        15.0, 0.0, 0.0, 0.0),
                                     child: InkWell(
                                       onTap: () async {
                                         await launchURL(
                                             'https://artadeafifemeie.ro/detalii-curs/seminar-avatarul-barbatului-ideal');
                                       },
                                       child: Container(
-                                        width: 100,
-                                        height: 100,
+                                        width: 100.0,
+                                        height: 100.0,
                                         decoration: BoxDecoration(
                                           borderRadius:
-                                              BorderRadius.circular(22),
+                                              BorderRadius.circular(22.0),
                                         ),
                                         child: ClipRRect(
                                           borderRadius:
-                                              BorderRadius.circular(20),
+                                              BorderRadius.circular(20.0),
                                           child: Image.asset(
                                             'assets/images/afis_Seminarul_Barbatului_Ideal.png',
                                             width: double.infinity,
@@ -967,12 +972,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        15, 0, 0, 0),
+                                        15.0, 0.0, 0.0, 0.0),
                                     child: Container(
-                                      width: 96,
-                                      height: 100,
+                                      width: 96.0,
+                                      height: 100.0,
                                       decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(20),
+                                        borderRadius:
+                                            BorderRadius.circular(20.0),
                                       ),
                                       child: InkWell(
                                         onTap: () async {
@@ -981,7 +987,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         },
                                         child: ClipRRect(
                                           borderRadius:
-                                              BorderRadius.circular(20),
+                                              BorderRadius.circular(20.0),
                                           child: Image.asset(
                                             'assets/images/linsewrwers.png',
                                             width: MediaQuery.of(context)
@@ -991,7 +997,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             height: MediaQuery.of(context)
                                                     .size
                                                     .height *
-                                                1,
+                                                1.0,
                                             fit: BoxFit.cover,
                                           ),
                                         ),
@@ -1000,12 +1006,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        15, 0, 0, 0),
+                                        15.0, 0.0, 0.0, 0.0),
                                     child: Container(
-                                      width: 96,
-                                      height: 100,
+                                      width: 96.0,
+                                      height: 100.0,
                                       decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(20),
+                                        borderRadius:
+                                            BorderRadius.circular(20.0),
                                       ),
                                       child: InkWell(
                                         onTap: () async {
@@ -1040,7 +1047,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         },
                                         child: ClipRRect(
                                           borderRadius:
-                                              BorderRadius.circular(20),
+                                              BorderRadius.circular(20.0),
                                           child: Image.asset(
                                             'assets/images/th_(5).png',
                                             width: MediaQuery.of(context)
@@ -1050,7 +1057,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             height: MediaQuery.of(context)
                                                     .size
                                                     .height *
-                                                1,
+                                                1.0,
                                             fit: BoxFit.cover,
                                           ),
                                         ),
@@ -1061,10 +1068,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0, 1),
+                              alignment: AlignmentDirectional(0.0, 1.0),
                               child: Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 10.0),
                                 child:
                                     smooth_page_indicator.SmoothPageIndicator(
                                   controller: _model.slideShowController ??=
@@ -1079,10 +1086,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     );
                                   },
                                   effect: smooth_page_indicator.SlideEffect(
-                                    spacing: 8,
-                                    radius: 5,
-                                    dotWidth: 6,
-                                    dotHeight: 6,
+                                    spacing: 8.0,
+                                    radius: 5.0,
+                                    dotWidth: 6.0,
+                                    dotHeight: 6.0,
                                     dotColor: Color(0xFF9E9E9E),
                                     activeDotColor:
                                         FlutterFlowTheme.of(context).alternate,
@@ -1098,12 +1105,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   ),
                 ),
                 Container(
-                  width: 100,
+                  width: 100.0,
                   height: MediaQuery.of(context).size.height * 0.02,
                   decoration: BoxDecoration(),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
                   child: Container(
                     width: MediaQuery.of(context).size.width * 0.9,
                     height: MediaQuery.of(context).size.height * 0.04,
@@ -1119,7 +1126,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           style:
                               FlutterFlowTheme.of(context).bodyText1.override(
                                     fontFamily: 'Nunito Sans',
-                                    fontSize: 16,
+                                    fontSize: 16.0,
                                   ),
                         ),
                       ],
@@ -1156,10 +1163,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               'assets/images/WhatsApp_Image_2023-01-14_at_15.41.37.jpeg',
                             ).image,
                           ),
-                          borderRadius: BorderRadius.circular(22),
+                          borderRadius: BorderRadius.circular(22.0),
                         ),
                         child: Align(
-                          alignment: AlignmentDirectional(0, 0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: AutoSizeText(
                             'Apasă aici pentru a vedea afirmația/provocarea zilei',
                             textAlign: TextAlign.center,
@@ -1169,7 +1176,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   fontFamily: 'Nunito Sans',
                                   color:
                                       FlutterFlowTheme.of(context).primaryText,
-                                  fontSize: 26,
+                                  fontSize: 26.0,
                                 ),
                           ),
                         ),
@@ -1183,7 +1190,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       width: MediaQuery.of(context).size.width * 0.9,
                       height: MediaQuery.of(context).size.height * 0.2,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(22),
+                        borderRadius: BorderRadius.circular(22.0),
                       ),
                       child: InkWell(
                         onTap: () async {
@@ -1242,8 +1249,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           }
                         },
                         child: Container(
-                          width: 100,
-                          height: 100,
+                          width: 100.0,
+                          height: 100.0,
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               fit: BoxFit.cover,
@@ -1253,15 +1260,15 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             ),
                             boxShadow: [
                               BoxShadow(
-                                blurRadius: 4,
+                                blurRadius: 4.0,
                                 color: Color(0x33000000),
-                                offset: Offset(0, 2),
+                                offset: Offset(0.0, 2.0),
                               )
                             ],
-                            borderRadius: BorderRadius.circular(22),
+                            borderRadius: BorderRadius.circular(22.0),
                           ),
                           child: Align(
-                            alignment: AlignmentDirectional(0, 0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: AutoSizeText(
                               'Apasă aici pentru a\nvedea afirmația zilei',
                               textAlign: TextAlign.center,
@@ -1271,7 +1278,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     fontFamily: 'Nunito Sans',
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,
-                                    fontSize: 26,
+                                    fontSize: 26.0,
                                   ),
                             ),
                           ),
@@ -1280,7 +1287,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     ),
                   ),
                 Container(
-                  width: 100,
+                  width: 100.0,
                   height: MediaQuery.of(context).size.height * 0.02,
                   decoration: BoxDecoration(),
                 ),
@@ -1296,7 +1303,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         'Meditații',
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Nunito Sans',
-                              fontSize: 16,
+                              fontSize: 16.0,
                             ),
                       ),
                       InkWell(
@@ -1316,7 +1323,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 fontFamily: 'Nunito Sans',
                                 color:
                                     FlutterFlowTheme.of(context).secondaryText,
-                                fontSize: 14,
+                                fontSize: 14.0,
                                 fontWeight: FontWeight.w500,
                               ),
                         ),
@@ -1325,9 +1332,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(1, 1),
+                  alignment: AlignmentDirectional(1.0, 1.0),
                   child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                     child: Container(
                       width: MediaQuery.of(context).size.width * 0.95,
                       height: MediaQuery.of(context).size.height * 0.27,
@@ -1342,8 +1350,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           if (!snapshot.hasData) {
                             return Center(
                               child: SizedBox(
-                                width: 50,
-                                height: 50,
+                                width: 50.0,
+                                height: 50.0,
                                 child: CircularProgressIndicator(
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryColor,
@@ -1361,10 +1369,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               final listViewMeditationsRecord =
                                   listViewMeditationsRecordList[listViewIndex];
                               return Align(
-                                alignment: AlignmentDirectional(0, 0),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      0, 0, 15, 0),
+                                      0.0, 0.0, 15.0, 0.0),
                                   child: Container(
                                     width: MediaQuery.of(context).size.width *
                                         0.35,
@@ -1375,27 +1383,29 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           .secondaryColor,
                                       boxShadow: [
                                         BoxShadow(
-                                          blurRadius: 4,
+                                          blurRadius: 4.0,
                                           color: Color(0x33000000),
-                                          offset: Offset(0, 2),
+                                          offset: Offset(0.0, 2.0),
                                         )
                                       ],
-                                      borderRadius: BorderRadius.circular(22),
+                                      borderRadius: BorderRadius.circular(22.0),
                                       shape: BoxShape.rectangle,
                                     ),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.min,
                                       children: [
                                         Container(
-                                          width:
-                                              MediaQuery.of(context).size.width,
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width *
+                                              1.0,
                                           height: MediaQuery.of(context)
                                                   .size
                                                   .height *
                                               0.12,
                                           decoration: BoxDecoration(
                                             borderRadius:
-                                                BorderRadius.circular(22),
+                                                BorderRadius.circular(22.0),
                                           ),
                                           child: Container(
                                             width: double.infinity,
@@ -1476,7 +1486,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                       child: ClipRRect(
                                                         borderRadius:
                                                             BorderRadius
-                                                                .circular(22),
+                                                                .circular(22.0),
                                                         child:
                                                             CachedNetworkImage(
                                                           imageUrl:
@@ -1568,7 +1578,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                       child: ClipRRect(
                                                         borderRadius:
                                                             BorderRadius
-                                                                .circular(22),
+                                                                .circular(22.0),
                                                         child:
                                                             CachedNetworkImage(
                                                           imageUrl:
@@ -1589,7 +1599,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  0, 10, 0, 0),
+                                                  0.0, 10.0, 0.0, 0.0),
                                           child: Container(
                                             width: MediaQuery.of(context)
                                                     .size
@@ -1601,8 +1611,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 0.05,
                                             decoration: BoxDecoration(),
                                             child: Align(
-                                              alignment:
-                                                  AlignmentDirectional(0, 0),
+                                              alignment: AlignmentDirectional(
+                                                  0.0, 0.0),
                                               child: Text(
                                                 listViewMeditationsRecord.name!,
                                                 textAlign: TextAlign.center,
@@ -1615,7 +1625,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .secondaryText,
-                                                      fontSize: 14,
+                                                      fontSize: 14.0,
                                                     ),
                                               ),
                                             ),
@@ -1640,7 +1650,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                               0.04,
                                           decoration: BoxDecoration(
                                             borderRadius:
-                                                BorderRadius.circular(32),
+                                                BorderRadius.circular(32.0),
                                           ),
                                           child: FFButtonWidget(
                                             onPressed: () async {
@@ -1694,11 +1704,15 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             text: 'Asculta',
                                             icon: Icon(
                                               Icons.play_circle_fill,
-                                              size: 18,
+                                              size: 18.0,
                                             ),
                                             options: FFButtonOptions(
                                               width: double.infinity,
                                               height: double.infinity,
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                              iconPadding: EdgeInsetsDirectional
+                                                  .fromSTEB(0.0, 0.0, 0.0, 0.0),
                                               color: Color(0xFF6210AD),
                                               textStyle: FlutterFlowTheme.of(
                                                       context)
@@ -1708,14 +1722,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                     color: FlutterFlowTheme.of(
                                                             context)
                                                         .primaryText,
-                                                    fontSize: 8,
+                                                    fontSize: 8.0,
                                                   ),
                                               borderSide: BorderSide(
                                                 color: Colors.transparent,
-                                                width: 1,
+                                                width: 1.0,
                                               ),
                                               borderRadius:
-                                                  BorderRadius.circular(32),
+                                                  BorderRadius.circular(32.0),
                                             ),
                                           ),
                                         ),
@@ -1733,12 +1747,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   ),
                 ),
                 Container(
-                  width: 100,
+                  width: 100.0,
                   height: MediaQuery.of(context).size.height * 0.02,
                   decoration: BoxDecoration(),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
                   child: Container(
                     width: MediaQuery.of(context).size.width * 0.9,
                     height: MediaQuery.of(context).size.height * 0.04,
@@ -1754,7 +1768,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           style:
                               FlutterFlowTheme.of(context).bodyText1.override(
                                     fontFamily: 'Nunito Sans',
-                                    fontSize: 16,
+                                    fontSize: 16.0,
                                     fontWeight: FontWeight.w600,
                                   ),
                         ),
@@ -1792,11 +1806,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               'assets/images/WhatsApp_Image_2023-01-14_at_15.41.37.jpeg',
                             ).image,
                           ),
-                          borderRadius: BorderRadius.circular(22),
+                          borderRadius: BorderRadius.circular(22.0),
                         ),
                         child: Container(
-                          width: 100,
-                          height: 100,
+                          width: 100.0,
+                          height: 100.0,
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               fit: BoxFit.cover,
@@ -1806,15 +1820,15 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             ),
                             boxShadow: [
                               BoxShadow(
-                                blurRadius: 4,
+                                blurRadius: 4.0,
                                 color: Color(0x33000000),
-                                offset: Offset(0, 2),
+                                offset: Offset(0.0, 2.0),
                               )
                             ],
-                            borderRadius: BorderRadius.circular(22),
+                            borderRadius: BorderRadius.circular(22.0),
                           ),
                           child: Align(
-                            alignment: AlignmentDirectional(0, 0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: AutoSizeText(
                               'Apasă aici pentru a vedea afirmația/provocarea zilei',
                               textAlign: TextAlign.center,
@@ -1824,7 +1838,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     fontFamily: 'Nunito Sans',
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,
-                                    fontSize: 26,
+                                    fontSize: 26.0,
                                   ),
                             ),
                           ),
@@ -1839,7 +1853,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       width: MediaQuery.of(context).size.width * 0.9,
                       height: MediaQuery.of(context).size.height * 0.2,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(22),
+                        borderRadius: BorderRadius.circular(22.0),
                       ),
                       child: InkWell(
                         onTap: () async {
@@ -1898,8 +1912,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           }
                         },
                         child: Container(
-                          width: 100,
-                          height: 100,
+                          width: 100.0,
+                          height: 100.0,
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               fit: BoxFit.cover,
@@ -1909,15 +1923,15 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             ),
                             boxShadow: [
                               BoxShadow(
-                                blurRadius: 4,
+                                blurRadius: 4.0,
                                 color: Color(0x33000000),
-                                offset: Offset(0, 2),
+                                offset: Offset(0.0, 2.0),
                               )
                             ],
-                            borderRadius: BorderRadius.circular(22),
+                            borderRadius: BorderRadius.circular(22.0),
                           ),
                           child: Align(
-                            alignment: AlignmentDirectional(0, 0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: AutoSizeText(
                               'Apasă aici pentru a\nvedea provocarea zilei',
                               textAlign: TextAlign.center,
@@ -1927,7 +1941,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     fontFamily: 'Nunito Sans',
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,
-                                    fontSize: 26,
+                                    fontSize: 26.0,
                                     fontWeight: FontWeight.w600,
                                   ),
                             ),
@@ -1937,7 +1951,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     ),
                   ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                   child: Container(
                     width: MediaQuery.of(context).size.width * 0.9,
                     height: MediaQuery.of(context).size.height * 0.04,
@@ -1951,7 +1965,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           style:
                               FlutterFlowTheme.of(context).bodyText1.override(
                                     fontFamily: 'Nunito Sans',
-                                    fontSize: 16,
+                                    fontSize: 16.0,
                                   ),
                         ),
                         InkWell(
@@ -1978,12 +1992,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   ),
                 ),
                 Container(
-                  width: 100,
+                  width: 100.0,
                   height: MediaQuery.of(context).size.height * 0.01,
                   decoration: BoxDecoration(),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.8, 0),
+                  alignment: AlignmentDirectional(0.8, 0.0),
                   child: Container(
                     width: MediaQuery.of(context).size.width * 0.95,
                     height: MediaQuery.of(context).size.height * 0.14,
@@ -1997,8 +2011,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         if (!snapshot.hasData) {
                           return Center(
                             child: SizedBox(
-                              width: 50,
-                              height: 50,
+                              width: 50.0,
+                              height: 50.0,
                               child: CircularProgressIndicator(
                                 color:
                                     FlutterFlowTheme.of(context).secondaryColor,
@@ -2021,10 +2035,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 final categoriesItem =
                                     categories[categoriesIndex];
                                 return Align(
-                                  alignment: AlignmentDirectional(0, 0),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 8, 0),
+                                        0.0, 0.0, 8.0, 0.0),
                                     child: InkWell(
                                       onTap: () async {
                                         if (getJsonField(
@@ -2066,13 +2080,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                               .alternate,
                                           boxShadow: [
                                             BoxShadow(
-                                              blurRadius: 4,
+                                              blurRadius: 4.0,
                                               color: Color(0x33000000),
-                                              offset: Offset(0, 2),
+                                              offset: Offset(0.0, 2.0),
                                             )
                                           ],
                                           borderRadius:
-                                              BorderRadius.circular(20),
+                                              BorderRadius.circular(20.0),
                                         ),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -2081,10 +2095,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           children: [
                                             ClipRRect(
                                               borderRadius: BorderRadius.only(
-                                                bottomLeft: Radius.circular(20),
-                                                bottomRight: Radius.circular(0),
-                                                topLeft: Radius.circular(20),
-                                                topRight: Radius.circular(0),
+                                                bottomLeft:
+                                                    Radius.circular(20.0),
+                                                bottomRight:
+                                                    Radius.circular(0.0),
+                                                topLeft: Radius.circular(20.0),
+                                                topRight: Radius.circular(0.0),
                                               ),
                                               child: Image.network(
                                                 valueOrDefault<String>(
@@ -2094,11 +2110,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   ),
                                                   'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg',
                                                 ),
-                                                width: 120,
+                                                width: 120.0,
                                                 height: MediaQuery.of(context)
                                                         .size
                                                         .height *
-                                                    1,
+                                                    1.0,
                                                 fit: BoxFit.fitHeight,
                                               ),
                                             ),
@@ -2110,7 +2126,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                               height: MediaQuery.of(context)
                                                       .size
                                                       .height *
-                                                  1,
+                                                  1.0,
                                               decoration: BoxDecoration(),
                                             ),
                                             Column(
@@ -2132,11 +2148,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   ),
                                                   alignment:
                                                       AlignmentDirectional(
-                                                          0, 0),
+                                                          0.0, 0.0),
                                                   child: Align(
                                                     alignment:
                                                         AlignmentDirectional(
-                                                            -0.9, 0),
+                                                            -0.9, 0.0),
                                                     child: Text(
                                                       getJsonField(
                                                         categoriesItem,
@@ -2153,7 +2169,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'Nunito Sans',
-                                                            fontSize: 25,
+                                                            fontSize: 25.0,
                                                             fontWeight:
                                                                 FontWeight.w600,
                                                           ),
@@ -2178,7 +2194,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   ),
                 ),
                 Container(
-                  width: 100,
+                  width: 100.0,
                   height: MediaQuery.of(context).size.height * 0.02,
                   decoration: BoxDecoration(),
                 ),
@@ -2194,26 +2210,26 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         'Calendar Lunar',
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Nunito Sans',
-                              fontSize: 16,
+                              fontSize: 16.0,
                             ),
                       ),
                     ],
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                   child: Container(
                     width: MediaQuery.of(context).size.width * 0.9,
                     height: MediaQuery.of(context).size.height * 0.25,
                     decoration: BoxDecoration(
                       boxShadow: [
                         BoxShadow(
-                          blurRadius: 4,
+                          blurRadius: 4.0,
                           color: Color(0x33000000),
-                          offset: Offset(0, 2),
+                          offset: Offset(0.0, 2.0),
                         )
                       ],
-                      borderRadius: BorderRadius.circular(45),
+                      borderRadius: BorderRadius.circular(45.0),
                     ),
                     child: InkWell(
                       onTap: () async {
@@ -2252,11 +2268,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         }
                       },
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(30),
+                        borderRadius: BorderRadius.circular(30.0),
                         child: Image.asset(
                           'assets/images/calendarastrologic2.png',
-                          width: 100,
-                          height: 100,
+                          width: 100.0,
+                          height: 100.0,
                           fit: BoxFit.fitWidth,
                         ),
                       ),
@@ -2264,7 +2280,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                   child: Container(
                     width: MediaQuery.of(context).size.width * 0.9,
                     height: MediaQuery.of(context).size.height * 0.04,
@@ -2282,8 +2298,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             if (!snapshot.hasData) {
                               return Center(
                                 child: SizedBox(
-                                  width: 50,
-                                  height: 50,
+                                  width: 50.0,
+                                  height: 50.0,
                                   child: CircularProgressIndicator(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryColor,
@@ -2299,7 +2315,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   .bodyText1
                                   .override(
                                     fontFamily: 'Nunito Sans',
-                                    fontSize: 16,
+                                    fontSize: 16.0,
                                   ),
                             );
                           },
@@ -2309,19 +2325,19 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                   child: Container(
                     width: MediaQuery.of(context).size.width * 0.9,
                     height: MediaQuery.of(context).size.height * 0.25,
                     decoration: BoxDecoration(
                       boxShadow: [
                         BoxShadow(
-                          blurRadius: 4,
+                          blurRadius: 4.0,
                           color: Color(0x33000000),
-                          offset: Offset(0, 2),
+                          offset: Offset(0.0, 2.0),
                         )
                       ],
-                      borderRadius: BorderRadius.circular(45),
+                      borderRadius: BorderRadius.circular(45.0),
                     ),
                     child: InkWell(
                       onTap: () async {
@@ -2360,11 +2376,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         }
                       },
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(30),
+                        borderRadius: BorderRadius.circular(30.0),
                         child: Image.asset(
                           'assets/images/calendarmenstrual2.png',
-                          width: 100,
-                          height: 100,
+                          width: 100.0,
+                          height: 100.0,
                           fit: BoxFit.fitWidth,
                         ),
                       ),
@@ -2372,7 +2388,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                   child: Container(
                     width: MediaQuery.of(context).size.width * 0.9,
                     height: MediaQuery.of(context).size.height * 0.04,
@@ -2386,7 +2402,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           style:
                               FlutterFlowTheme.of(context).bodyText1.override(
                                     fontFamily: 'Nunito Sans',
-                                    fontSize: 16,
+                                    fontSize: 16.0,
                                   ),
                         ),
                         FutureBuilder<List<UsersRecord>>(
@@ -2400,8 +2416,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             if (!snapshot.hasData) {
                               return Center(
                                 child: SizedBox(
-                                  width: 50,
-                                  height: 50,
+                                  width: 50.0,
+                                  height: 50.0,
                                   child: CircularProgressIndicator(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryColor,
@@ -2467,9 +2483,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(1, 0),
+                  alignment: AlignmentDirectional(1.0, 0.0),
                   child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 50),
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 50.0),
                     child: Container(
                       width: MediaQuery.of(context).size.width * 0.95,
                       height: MediaQuery.of(context).size.height * 0.15,
@@ -2506,7 +2523,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   listViewUsersRecordList[listViewIndex];
                               return Container(
                                 width: MediaQuery.of(context).size.width * 0.2,
-                                height: MediaQuery.of(context).size.height * 1,
+                                height:
+                                    MediaQuery.of(context).size.height * 1.0,
                                 decoration: BoxDecoration(
                                   shape: BoxShape.rectangle,
                                 ),
@@ -2547,7 +2565,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 5, 0, 0),
+                                          0.0, 5.0, 0.0, 0.0),
                                       child: AutoSizeText(
                                         listViewUsersRecord.displayName!,
                                         textAlign: TextAlign.center,
@@ -2555,7 +2573,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             .bodyText1
                                             .override(
                                               fontFamily: 'Nunito Sans',
-                                              fontSize: 12,
+                                              fontSize: 12.0,
                                             ),
                                       ),
                                     ),
@@ -2571,11 +2589,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   ),
                 ),
                 Container(
-                  width: 1,
-                  height: 1,
+                  width: 1.0,
+                  height: 1.0,
                   child: custom_widgets.SetPortrait(
-                    width: 1,
-                    height: 1,
+                    width: 1.0,
+                    height: 1.0,
                   ),
                 ),
               ],

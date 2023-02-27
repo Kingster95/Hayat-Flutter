@@ -1,9 +1,9 @@
-import '../auth/auth_util.dart';
-import '../backend/backend.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
-import '../menstrual_calendar/menstrual_calendar_widget.dart';
+import '/auth/auth_util.dart';
+import '/backend/backend.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import '/menstrual_calendar/menstrual_calendar_widget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -49,7 +49,7 @@ class _ModifyCycleWidgetState extends State<ModifyCycleWidget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: AlignmentDirectional(0, 0),
+      alignment: AlignmentDirectional(0.0, 0.0),
       child: Container(
         width: MediaQuery.of(context).size.width * 0.8,
         child: Form(
@@ -61,14 +61,14 @@ class _ModifyCycleWidgetState extends State<ModifyCycleWidget> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Align(
-                alignment: AlignmentDirectional(0, 0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Container(
                   width: MediaQuery.of(context).size.width * 0.8,
                   height: MediaQuery.of(context).size.height * 0.07,
                   decoration: BoxDecoration(),
-                  alignment: AlignmentDirectional(-1, 0),
+                  alignment: AlignmentDirectional(-1.0, 0.0),
                   child: Align(
-                    alignment: AlignmentDirectional(0, 0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Text(
                       'Durata ciclu menstrual ( in zile )',
                       textAlign: TextAlign.start,
@@ -78,22 +78,22 @@ class _ModifyCycleWidgetState extends State<ModifyCycleWidget> {
                 ),
               ),
               Container(
-                width: 100,
+                width: 100.0,
                 height: MediaQuery.of(context).size.height * 0.025,
                 decoration: BoxDecoration(),
               ),
               Align(
-                alignment: AlignmentDirectional(-1, 0),
+                alignment: AlignmentDirectional(-1.0, 0.0),
                 child: Container(
                   width: MediaQuery.of(context).size.width * 0.8,
                   height: MediaQuery.of(context).size.height * 0.09,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(22),
+                    borderRadius: BorderRadius.circular(22.0),
                     border: Border.all(
                       color: FlutterFlowTheme.of(context).secondaryText,
                     ),
                   ),
-                  alignment: AlignmentDirectional(0, 0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: TextFormField(
                     controller: _model.textController,
                     obscureText: false,
@@ -107,7 +107,7 @@ class _ModifyCycleWidgetState extends State<ModifyCycleWidget> {
                     style: FlutterFlowTheme.of(context).bodyText1.override(
                           fontFamily: 'Nunito Sans',
                           color: FlutterFlowTheme.of(context).secondaryText,
-                          fontSize: 12,
+                          fontSize: 12.0,
                           fontWeight: FontWeight.normal,
                         ),
                     textAlign: TextAlign.center,
@@ -118,19 +118,19 @@ class _ModifyCycleWidgetState extends State<ModifyCycleWidget> {
                 ),
               ),
               Container(
-                width: 100,
+                width: 100.0,
                 height: MediaQuery.of(context).size.height * 0.04,
                 decoration: BoxDecoration(),
               ),
               Align(
-                alignment: AlignmentDirectional(0, 0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Container(
                   width: MediaQuery.of(context).size.width * 0.8,
                   height: MediaQuery.of(context).size.height * 0.07,
                   decoration: BoxDecoration(),
-                  alignment: AlignmentDirectional(-1, 0),
+                  alignment: AlignmentDirectional(-1.0, 0.0),
                   child: Align(
-                    alignment: AlignmentDirectional(0, 0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Text(
                       'Prima zi a ultimului ciclu menstrual',
                       textAlign: TextAlign.start,
@@ -143,12 +143,12 @@ class _ModifyCycleWidgetState extends State<ModifyCycleWidget> {
                 ),
               ),
               Container(
-                width: 100,
+                width: 100.0,
                 height: MediaQuery.of(context).size.height * 0.025,
                 decoration: BoxDecoration(),
               ),
               Align(
-                alignment: AlignmentDirectional(0, 0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Container(
                   width: MediaQuery.of(context).size.width * 0.5,
                   height: MediaQuery.of(context).size.height * 0.07,
@@ -175,39 +175,43 @@ class _ModifyCycleWidgetState extends State<ModifyCycleWidget> {
                     text: 'Apasa pentru a alege',
                     icon: FaIcon(
                       FontAwesomeIcons.calendarTimes,
-                      size: 16,
+                      size: 16.0,
                     ),
                     options: FFButtonOptions(
                       width: double.infinity,
                       height: double.infinity,
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      iconPadding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).alternate,
                       textStyle:
                           FlutterFlowTheme.of(context).subtitle2.override(
                                 fontFamily: 'Nunito Sans',
                                 color: FlutterFlowTheme.of(context).primaryText,
-                                fontSize: 13,
+                                fontSize: 13.0,
                               ),
                       borderSide: BorderSide(
                         color: Colors.transparent,
-                        width: 1,
+                        width: 1.0,
                       ),
-                      borderRadius: BorderRadius.circular(8),
+                      borderRadius: BorderRadius.circular(8.0),
                     ),
                   ),
                 ),
               ),
               Container(
-                width: 100,
+                width: 100.0,
                 height: MediaQuery.of(context).size.height * 0.05,
                 decoration: BoxDecoration(),
               ),
               Align(
-                alignment: AlignmentDirectional(0, 0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Container(
                   width: MediaQuery.of(context).size.width * 0.8,
                   height: MediaQuery.of(context).size.height * 0.07,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
+                    borderRadius: BorderRadius.circular(50.0),
                   ),
                   child: FFButtonWidget(
                     onPressed: () async {
@@ -231,18 +235,22 @@ class _ModifyCycleWidgetState extends State<ModifyCycleWidget> {
                     },
                     text: 'Salveaza',
                     options: FFButtonOptions(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      iconPadding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).alternate,
                       textStyle:
                           FlutterFlowTheme.of(context).subtitle2.override(
                                 fontFamily: 'Nunito Sans',
                                 color: Colors.white,
-                                fontSize: 13,
+                                fontSize: 13.0,
                               ),
                       borderSide: BorderSide(
                         color: Colors.transparent,
-                        width: 1,
+                        width: 1.0,
                       ),
-                      borderRadius: BorderRadius.circular(50),
+                      borderRadius: BorderRadius.circular(50.0),
                     ),
                   ),
                 ),

@@ -1,9 +1,9 @@
-import '../auth/auth_util.dart';
-import '../backend/backend.dart';
-import '../chat_page/chat_page_widget.dart';
-import '../flutter_flow/chat/index.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
+import '/auth/auth_util.dart';
+import '/backend/backend.dart';
+import '/chat_page/chat_page_widget.dart';
+import '/flutter_flow/chat/index.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -50,16 +50,16 @@ class _AllChatsWidgetState extends State<AllChatsWidget> {
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Nunito Sans',
                 color: FlutterFlowTheme.of(context).primaryText,
-                fontSize: 22,
+                fontSize: 22.0,
               ),
         ),
         actions: [],
         centerTitle: false,
-        elevation: 0,
+        elevation: 0.0,
       ),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
+          padding: EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 0.0),
           child: StreamBuilder<List<ChatsRecord>>(
             stream: queryChatsRecord(
               queryBuilder: (chatsRecord) => chatsRecord
@@ -71,8 +71,8 @@ class _AllChatsWidgetState extends State<AllChatsWidget> {
               if (!snapshot.hasData) {
                 return Center(
                   child: SizedBox(
-                    width: 40,
-                    height: 40,
+                    width: 40.0,
+                    height: 40.0,
                     child: CircularProgressIndicator(
                       color: Color(0xFFEBB9A9),
                     ),
@@ -97,15 +97,15 @@ class _AllChatsWidgetState extends State<AllChatsWidget> {
                   final listViewChatsRecord =
                       listViewChatsRecordList[listViewIndex];
                   return Container(
-                    width: 100,
-                    height: 100,
+                    width: 100.0,
+                    height: 100.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).primaryBackground,
                     ),
                     child: Stack(
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(0, 0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: StreamBuilder<FFChatInfo>(
                             stream: FFChatManager.instance
                                 .getChatInfo(chatRecord: listViewChatsRecord),
@@ -139,25 +139,25 @@ class _AllChatsWidgetState extends State<AllChatsWidget> {
                                   color:
                                       FlutterFlowTheme.of(context).primaryText,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 14,
+                                  fontSize: 14.0,
                                 ),
                                 dateTextStyle: TextStyle(
                                   fontFamily: 'JosefinSans',
                                   color:
                                       FlutterFlowTheme.of(context).primaryText,
                                   fontWeight: FontWeight.normal,
-                                  fontSize: 14,
+                                  fontSize: 14.0,
                                 ),
                                 previewTextStyle: TextStyle(
                                   fontFamily: 'JosefinSans',
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryText,
                                   fontWeight: FontWeight.normal,
-                                  fontSize: 14,
+                                  fontSize: 14.0,
                                 ),
-                                contentPadding:
-                                    EdgeInsetsDirectional.fromSTEB(3, 3, 3, 3),
-                                borderRadius: BorderRadius.circular(0),
+                                contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                    3.0, 3.0, 3.0, 3.0),
+                                borderRadius: BorderRadius.circular(0.0),
                               );
                             },
                           ),

@@ -1,8 +1,8 @@
-import '../backend/backend.dart';
-import '../flutter_flow/chat/index.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
+import '/backend/backend.dart';
+import '/flutter_flow/chat/index.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -74,13 +74,13 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
         automaticallyImplyLeading: false,
         leading: FlutterFlowIconButton(
           borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
+          borderRadius: 30.0,
+          borderWidth: 1.0,
+          buttonSize: 60.0,
           icon: Icon(
             Icons.arrow_back,
             color: FlutterFlowTheme.of(context).secondaryText,
-            size: 25,
+            size: 25.0,
           ),
           onPressed: () async {
             Navigator.pop(context);
@@ -93,7 +93,7 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
               style: FlutterFlowTheme.of(context).bodyText1.override(
                     fontFamily: 'Lexend Deca',
                     color: FlutterFlowTheme.of(context).secondaryText,
-                    fontSize: 16,
+                    fontSize: 16.0,
                     fontWeight: FontWeight.bold,
                   ),
             ),
@@ -103,7 +103,7 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
           Visibility(
             visible: false,
             child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
               child: InkWell(
                 onTap: () async {
                   ScaffoldMessenger.of(context).showSnackBar(
@@ -120,14 +120,14 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                 child: Icon(
                   Icons.person_add,
                   color: Colors.black,
-                  size: 24,
+                  size: 24.0,
                 ),
               ),
             ),
           ),
         ],
         centerTitle: false,
-        elevation: 0,
+        elevation: 0.0,
       ),
       body: SafeArea(
         child: StreamBuilder<FFChatInfo>(
@@ -147,39 +147,39 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                     border: Border.all(
                       color: Colors.transparent,
                     ),
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(15.0),
                   ),
                   otherUsersBoxDecoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).alternate,
                     border: Border.all(
                       color: Colors.transparent,
                     ),
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(15.0),
                   ),
                   currentUserTextStyle: GoogleFonts.getFont(
                     'Poppins',
                     color: Colors.white,
                     fontWeight: FontWeight.normal,
-                    fontSize: 14,
+                    fontSize: 14.0,
                     fontStyle: FontStyle.normal,
                   ),
                   otherUsersTextStyle: GoogleFonts.getFont(
                     'Poppins',
                     color: FlutterFlowTheme.of(context).primaryText,
                     fontWeight: FontWeight.w500,
-                    fontSize: 14,
+                    fontSize: 14.0,
                   ),
                   inputHintTextStyle: GoogleFonts.getFont(
                     'DM Sans',
                     color: FlutterFlowTheme.of(context).secondaryText,
                     fontWeight: FontWeight.normal,
-                    fontSize: 14,
+                    fontSize: 14.0,
                   ),
                   inputTextStyle: GoogleFonts.getFont(
                     'Poppins',
                     color: Colors.black,
                     fontWeight: FontWeight.normal,
-                    fontSize: 14,
+                    fontSize: 14.0,
                   ),
                   emptyChatWidget: Center(
                     child: Image.asset(
@@ -190,8 +190,8 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                 )
               : Center(
                   child: SizedBox(
-                    width: 50,
-                    height: 50,
+                    width: 50.0,
+                    height: 50.0,
                     child: CircularProgressIndicator(
                       color: FlutterFlowTheme.of(context).secondaryColor,
                     ),

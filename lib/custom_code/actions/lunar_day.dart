@@ -1,9 +1,9 @@
 // Automatic FlutterFlow imports
-import '../../backend/backend.dart';
-import '../../flutter_flow/flutter_flow_theme.dart';
-import '../../flutter_flow/flutter_flow_util.dart';
+import '/backend/backend.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'index.dart'; // Imports other custom actions
-import '../../flutter_flow/custom_functions.dart'; // Imports custom functions
+import '/flutter_flow/custom_functions.dart'; // Imports custom functions
 import 'package:flutter/material.dart';
 // Begin custom action code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
@@ -12,21 +12,25 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'dart:math';
 
-double julianDay(int year, int month, int day, double hours) {
-  int a = (14 - month) ~/ 12;
-  int y = year + 4800 - a;
-  int m = month + 12 * a - 3;
-  int jdn =
-      day + (153 * m + 2) ~/ 5 + 365 * y + y ~/ 4 - y ~/ 100 + y ~/ 400 - 32045;
-
-  return jdn + (hours - 12) / 24;
-}
-
 int daysFromLastFullMoon(DateTime date) {
-  double jd = julianDay(
-      date.year, date.month, date.day, date.hour + date.minute / 60.0);
-
-  return (jd % 29.755).floor();
+  double Y = date.year.toDouble();
+  double M = date.month.toDouble();
+  double D = date.day.toDouble();
+  if (M == 1 || M == 2) {
+    Y--;
+    M = M + 12;
+  }
+  double A = Y / 100;
+  double B = A / 4;
+  double C = 2 - A + B;
+  double E = 365.25 * (Y + 4716);
+  double F = 30.6001 * (M + 1);
+  double JD = C + D + E + F - 1524.5;
+  double daysSinceNew = JD - 2451549.5;
+  double newMoons = daysSinceNew / 29.53;
+  double fractional = newMoons - newMoons.floor();
+  double moonDay = fractional * 29.53;
+  return moonDay.round();
 }
 
 Future<Map<String, dynamic>> fetchAstronomyData(

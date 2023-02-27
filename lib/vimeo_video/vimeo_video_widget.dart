@@ -1,9 +1,9 @@
-import '../flutter_flow/flutter_flow_icon_button.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'dart:ui';
-import '../custom_code/actions/index.dart' as actions;
-import '../custom_code/widgets/index.dart' as custom_widgets;
+import '/custom_code/actions/index.dart' as actions;
+import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -59,27 +59,27 @@ class _VimeoVideoWidgetState extends State<VimeoVideoWidget> {
         child: GestureDetector(
           onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
           child: Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height * 1,
+            width: MediaQuery.of(context).size.width * 1.0,
+            height: MediaQuery.of(context).size.height * 1.0,
             decoration: BoxDecoration(
               color: FlutterFlowTheme.of(context).primaryBackground,
             ),
             child: ClipRect(
               child: ImageFiltered(
                 imageFilter: ImageFilter.blur(
-                  sigmaX: 0,
-                  sigmaY: 0,
+                  sigmaX: 0.0,
+                  sigmaY: 0.0,
                 ),
                 child: Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0, 0),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: MediaQuery.of(context).size.height * 1,
+                        width: MediaQuery.of(context).size.width * 1.0,
+                        height: MediaQuery.of(context).size.height * 1.0,
                         child: custom_widgets.VimeoVideo(
-                          width: MediaQuery.of(context).size.width,
-                          height: MediaQuery.of(context).size.height * 1,
+                          width: MediaQuery.of(context).size.width * 1.0,
+                          height: MediaQuery.of(context).size.height * 1.0,
                           videoId: widget.videoID!,
                           referrer: 'https://artadeafifemeie.ro',
                         ),
@@ -87,13 +87,13 @@ class _VimeoVideoWidgetState extends State<VimeoVideoWidget> {
                     ),
                     FlutterFlowIconButton(
                       borderColor: Colors.transparent,
-                      borderRadius: 30,
-                      borderWidth: 1,
-                      buttonSize: 45,
+                      borderRadius: 30.0,
+                      borderWidth: 1.0,
+                      buttonSize: 45.0,
                       icon: Icon(
                         Icons.keyboard_backspace_sharp,
                         color: FlutterFlowTheme.of(context).primaryText,
-                        size: 45,
+                        size: 45.0,
                       ),
                       onPressed: () async {
                         Navigator.pop(context);

@@ -1,9 +1,9 @@
-import '../backend/api_requests/api_calls.dart';
-import '../category_courses/category_courses_widget.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../meditations/meditations_widget.dart';
+import '/backend/api_requests/api_calls.dart';
+import '/category_courses/category_courses_widget.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/meditations/meditations_widget.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

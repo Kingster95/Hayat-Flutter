@@ -1,15 +1,15 @@
 // Automatic FlutterFlow imports
-import '../../backend/backend.dart';
-import '../../flutter_flow/flutter_flow_theme.dart';
-import '../../flutter_flow/flutter_flow_util.dart';
+import '/backend/backend.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'index.dart'; // Imports other custom widgets
-import '../actions/index.dart'; // Imports custom actions
-import '../../flutter_flow/custom_functions.dart'; // Imports custom functions
+import '/custom_code/actions/index.dart'; // Imports custom actions
+import '/flutter_flow/custom_functions.dart'; // Imports custom functions
 import 'package:flutter/material.dart';
 // Begin custom widget code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
-import 'package:aplicatie/lunar_day/lunar_day_widget.dart';
+import 'package:hayat/lunar_day/lunar_day_widget.dart';
 
 import 'dart:convert';
 
@@ -21,10 +21,24 @@ import 'package:sunrise_sunset_calc/sunrise_sunset_calc.dart';
 import 'package:http/http.dart' as http;
 
 int moonAgeForToday(DateTime date) {
-  double jd = julianDay(
-      date.year, date.month, date.day, date.hour + date.minute / 60.0);
-
-  return (jd % 29.755).floor();
+  double Y = date.year.toDouble();
+  double M = date.month.toDouble();
+  double D = date.day.toDouble();
+  if (M == 1 || M == 2) {
+    Y--;
+    M = M + 12;
+  }
+  double A = Y / 100;
+  double B = A / 4;
+  double C = 2 - A + B;
+  double E = 365.25 * (Y + 4716);
+  double F = 30.6001 * (M + 1);
+  double JD = C + D + E + F - 1524.5;
+  double daysSinceNew = JD - 2451549.5;
+  double newMoons = daysSinceNew / 29.53;
+  double fractional = newMoons - newMoons.floor();
+  double moonDay = fractional * 29.53;
+  return moonDay.round();
 }
 
 class AstrologicalCalendar extends StatefulWidget {

@@ -1,9 +1,9 @@
-import '../auth/auth_util.dart';
-import '../backend/backend.dart';
-import '../backend/stripe/payment_manager.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
+import '/auth/auth_util.dart';
+import '/backend/backend.dart';
+import '/backend/stripe/payment_manager.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -46,27 +46,27 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: AlignmentDirectional(0, 0),
+      alignment: AlignmentDirectional(0.0, 0.0),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Align(
-            alignment: AlignmentDirectional(0, 0),
+            alignment: AlignmentDirectional(0.0, 0.0),
             child: Container(
               width: MediaQuery.of(context).size.width * 0.9,
               height: MediaQuery.of(context).size.height * 0.5,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(45),
+                borderRadius: BorderRadius.circular(45.0),
               ),
               child: Align(
-                alignment: AlignmentDirectional(0, 0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0, 0),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: Container(
                         width: MediaQuery.of(context).size.width * 0.9,
                         height: MediaQuery.of(context).size.height * 0.5,
@@ -77,11 +77,11 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                               'assets/images/Calendar_astrologic.png',
                             ).image,
                           ),
-                          borderRadius: BorderRadius.circular(45),
+                          borderRadius: BorderRadius.circular(45.0),
                         ),
-                        alignment: AlignmentDirectional(0, 0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Align(
-                          alignment: AlignmentDirectional(0, 0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Container(
                             width: MediaQuery.of(context).size.width * 0.8,
                             height: MediaQuery.of(context).size.height * 0.4,
@@ -91,7 +91,7 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(0, 0),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Container(
                                     width:
                                         MediaQuery.of(context).size.width * 0.9,
@@ -106,7 +106,7 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                                           .bodyText1
                                           .override(
                                             fontFamily: 'Nunito Sans',
-                                            fontSize: 38,
+                                            fontSize: 38.0,
                                             fontWeight: FontWeight.bold,
                                           ),
                                     ),
@@ -134,7 +134,7 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                                           fontFamily: 'Nunito Sans',
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryText,
-                                          fontSize: 22,
+                                          fontSize: 22.0,
                                           fontWeight: FontWeight.w500,
                                         ),
                                   ),
@@ -147,7 +147,7 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                                   decoration: BoxDecoration(),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(-0.5, 0),
+                                  alignment: AlignmentDirectional(-0.5, 0.0),
                                   child: Container(
                                     width:
                                         MediaQuery.of(context).size.width * 0.7,
@@ -161,7 +161,7 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                                           .override(
                                             fontFamily: 'Nunito Sans',
                                             color: Color(0xFFB8B8B8),
-                                            fontSize: 18,
+                                            fontSize: 18.0,
                                             fontWeight: FontWeight.w500,
                                           ),
                                     ),
@@ -175,16 +175,16 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                                   decoration: BoxDecoration(),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(0, 0),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Container(
                                     width: MediaQuery.of(context).size.width *
                                         0.65,
                                     height: MediaQuery.of(context).size.height *
                                         0.05,
                                     decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
+                                      borderRadius: BorderRadius.circular(20.0),
                                     ),
-                                    alignment: AlignmentDirectional(0, 0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
                                         final paymentResponse =
@@ -236,6 +236,11 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                                       options: FFButtonOptions(
                                         width: double.infinity,
                                         height: double.infinity,
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 0.0, 0.0, 0.0),
+                                        iconPadding:
+                                            EdgeInsetsDirectional.fromSTEB(
+                                                0.0, 0.0, 0.0, 0.0),
                                         color: Color(0xFF5F4D7D),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .subtitle2
@@ -244,13 +249,14 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
-                                              fontSize: 18,
+                                              fontSize: 18.0,
                                             ),
                                         borderSide: BorderSide(
                                           color: Colors.transparent,
-                                          width: 1,
+                                          width: 1.0,
                                         ),
-                                        borderRadius: BorderRadius.circular(8),
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
                                       ),
                                     ),
                                   ),
@@ -275,7 +281,7 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
               style: FlutterFlowTheme.of(context).bodyText1.override(
                     fontFamily: 'Nunito Sans',
                     color: FlutterFlowTheme.of(context).secondaryText,
-                    fontSize: 18,
+                    fontSize: 18.0,
                   ),
             ),
           ),

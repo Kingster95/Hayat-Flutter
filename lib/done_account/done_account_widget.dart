@@ -1,8 +1,8 @@
-import '../auth/auth_util.dart';
-import '../flutter_flow/flutter_flow_animations.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../main.dart';
+import '/auth/auth_util.dart';
+import '/flutter_flow/flutter_flow_animations.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -34,8 +34,8 @@ class _DoneAccountWidgetState extends State<DoneAccountWidget>
           curve: Curves.linear,
           delay: 0.ms,
           duration: 1000.ms,
-          begin: 0,
-          end: 1,
+          begin: 0.0,
+          end: 1.0,
         ),
       ],
     ),
@@ -80,13 +80,13 @@ class _DoneAccountWidgetState extends State<DoneAccountWidget>
             mainAxisSize: MainAxisSize.max,
             children: [
               Container(
-                width: MediaQuery.of(context).size.width,
+                width: MediaQuery.of(context).size.width * 1.0,
                 height: MediaQuery.of(context).size.height * 0.4,
                 decoration: BoxDecoration(),
-                alignment: AlignmentDirectional(0, 0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Container(
-                  width: 36,
-                  height: 36,
+                  width: 36.0,
+                  height: 36.0,
                   decoration: BoxDecoration(
                     shape: BoxShape.rectangle,
                   ),
@@ -94,8 +94,8 @@ class _DoneAccountWidgetState extends State<DoneAccountWidget>
                     visible: false,
                     child: AuthUserStreamWidget(
                       builder: (context) => Container(
-                        width: 48,
-                        height: 48,
+                        width: 48.0,
+                        height: 48.0,
                         clipBehavior: Clip.antiAlias,
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
@@ -116,12 +116,12 @@ class _DoneAccountWidgetState extends State<DoneAccountWidget>
                   color: FlutterFlowTheme.of(context).secondaryColor,
                   boxShadow: [
                     BoxShadow(
-                      blurRadius: 4,
+                      blurRadius: 4.0,
                       color: Color(0x33000000),
-                      offset: Offset(0, 2),
+                      offset: Offset(0.0, 2.0),
                     )
                   ],
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(15.0),
                 ),
                 alignment: AlignmentDirectional(-0.0, -0.19999999999999996),
                 child: Column(
@@ -130,14 +130,15 @@ class _DoneAccountWidgetState extends State<DoneAccountWidget>
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                       child: Text(
                         'Felicitări!',
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Nunito Sans',
                               color: FlutterFlowTheme.of(context).primaryText,
-                              fontSize: 22,
+                              fontSize: 22.0,
                               fontWeight: FontWeight.w500,
                             ),
                       ),
@@ -152,12 +153,13 @@ class _DoneAccountWidgetState extends State<DoneAccountWidget>
                           ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0, 0),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
                         child: Container(
-                          width: 60,
-                          height: 60,
+                          width: 60.0,
+                          height: 60.0,
                           clipBehavior: Clip.antiAlias,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,

@@ -1,8 +1,8 @@
-import '../backend/backend.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_video_player.dart';
+import '/backend/backend.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -53,13 +53,13 @@ class _MedPageWidgetState extends State<MedPageWidget> {
         automaticallyImplyLeading: false,
         leading: FlutterFlowIconButton(
           borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
+          borderRadius: 30.0,
+          borderWidth: 1.0,
+          buttonSize: 60.0,
           icon: Icon(
             Icons.arrow_back_rounded,
             color: FlutterFlowTheme.of(context).primaryText,
-            size: 25,
+            size: 25.0,
           ),
           onPressed: () async {
             Navigator.pop(context);
@@ -70,12 +70,12 @@ class _MedPageWidgetState extends State<MedPageWidget> {
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Nunito Sans',
                 color: Colors.white,
-                fontSize: 22,
+                fontSize: 22.0,
               ),
         ),
         actions: [],
         centerTitle: false,
-        elevation: 0,
+        elevation: 0.0,
       ),
       body: SafeArea(
         child: GestureDetector(
@@ -86,9 +86,10 @@ class _MedPageWidgetState extends State<MedPageWidget> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Align(
-                  alignment: AlignmentDirectional(0, 0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                     child: Container(
                       width: MediaQuery.of(context).size.width * 0.999,
                       height: MediaQuery.of(context).size.height * 0.3,
@@ -96,7 +97,7 @@ class _MedPageWidgetState extends State<MedPageWidget> {
                         color: FlutterFlowTheme.of(context).primaryBackground,
                       ),
                       child: Align(
-                        alignment: AlignmentDirectional(0, 0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: FlutterFlowVideoPlayer(
                           path: '${widget.meditation!.video}',
                           videoType: VideoType.network,
@@ -111,7 +112,7 @@ class _MedPageWidgetState extends State<MedPageWidget> {
                   ),
                 ),
                 Container(
-                  width: 100,
+                  width: 100.0,
                   height: MediaQuery.of(context).size.height * 0.01,
                   decoration: BoxDecoration(),
                 ),
@@ -120,28 +121,29 @@ class _MedPageWidgetState extends State<MedPageWidget> {
                   height: MediaQuery.of(context).size.height * 0.1,
                   decoration: BoxDecoration(),
                   child: Align(
-                    alignment: AlignmentDirectional(0, 0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Text(
                       widget.meditation!.name!,
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Nunito Sans',
-                            fontSize: 26,
+                            fontSize: 26.0,
                             fontWeight: FontWeight.w500,
                           ),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 45),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 45.0),
                   child: Container(
                     width: MediaQuery.of(context).size.width * 0.95,
                     decoration: BoxDecoration(
                       color: Color(0x36CDCDCD),
-                      borderRadius: BorderRadius.circular(32),
+                      borderRadius: BorderRadius.circular(32.0),
                     ),
-                    alignment: AlignmentDirectional(0, 0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(5, 25, 5, 25),
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(5.0, 25.0, 5.0, 25.0),
                       child: Container(
                         width: MediaQuery.of(context).size.width * 0.85,
                         decoration: BoxDecoration(),

@@ -1,10 +1,10 @@
-import '../backend/api_requests/api_calls.dart';
-import '../course_page/course_page_widget.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
-import '../custom_code/actions/index.dart' as actions;
+import '/backend/api_requests/api_calls.dart';
+import '/course_page/course_page_widget.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/actions/index.dart' as actions;
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -65,13 +65,13 @@ class _CategoryCoursesWidgetState extends State<CategoryCoursesWidget> {
         automaticallyImplyLeading: false,
         leading: FlutterFlowIconButton(
           borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
+          borderRadius: 30.0,
+          borderWidth: 1.0,
+          buttonSize: 60.0,
           icon: Icon(
             Icons.arrow_back,
             color: FlutterFlowTheme.of(context).primaryText,
-            size: 25,
+            size: 25.0,
           ),
           onPressed: () async {
             Navigator.pop(context);
@@ -82,19 +82,19 @@ class _CategoryCoursesWidgetState extends State<CategoryCoursesWidget> {
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Nunito Sans',
                 color: FlutterFlowTheme.of(context).primaryText,
-                fontSize: 22,
+                fontSize: 22.0,
                 fontWeight: FontWeight.w500,
               ),
         ),
         actions: [],
         centerTitle: false,
-        elevation: 0,
+        elevation: 0.0,
       ),
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
           child: Align(
-            alignment: AlignmentDirectional(0, 0),
+            alignment: AlignmentDirectional(0.0, 0.0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -102,19 +102,119 @@ class _CategoryCoursesWidgetState extends State<CategoryCoursesWidget> {
                 children: [
                   Stack(
                     children: [
+                      if (widget.categoryId == '7')
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 15.0, 0.0, 0.0),
+                          child: Container(
+                            width: MediaQuery.of(context).size.width * 0.9,
+                            height: MediaQuery.of(context).size.height * 0.9,
+                            decoration: BoxDecoration(),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Container(
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.9,
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.15,
+                                  decoration: BoxDecoration(),
+                                  child: Align(
+                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    child: Text(
+                                      'Pentru sedintele\nindividuale apelati la\nnumarul afisat mai jos',
+                                      textAlign: TextAlign.center,
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Nunito Sans',
+                                            fontSize: 27.0,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: 100.0,
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.03,
+                                  decoration: BoxDecoration(),
+                                ),
+                                Align(
+                                  alignment: AlignmentDirectional(0.0, -0.95),
+                                  child: Container(
+                                    width:
+                                        MediaQuery.of(context).size.width * 0.7,
+                                    height: MediaQuery.of(context).size.height *
+                                        0.07,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(32.0),
+                                    ),
+                                    child: FFButtonWidget(
+                                      onPressed: () async {
+                                        await launchUrl(Uri(
+                                          scheme: 'tel',
+                                          path: '0748242351',
+                                        ));
+                                      },
+                                      text: '0748242351',
+                                      options: FFButtonOptions(
+                                        width: double.infinity,
+                                        height: double.infinity,
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 0.0, 0.0, 0.0),
+                                        iconPadding:
+                                            EdgeInsetsDirectional.fromSTEB(
+                                                0.0, 0.0, 0.0, 0.0),
+                                        color: FlutterFlowTheme.of(context)
+                                            .alternate,
+                                        textStyle: FlutterFlowTheme.of(context)
+                                            .subtitle2
+                                            .override(
+                                              fontFamily: 'Nunito Sans',
+                                              color: Colors.white,
+                                              fontSize: 20.0,
+                                            ),
+                                        borderSide: BorderSide(
+                                          color: Colors.transparent,
+                                          width: 1.0,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(32.0),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: 100.0,
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.05,
+                                  decoration: BoxDecoration(),
+                                ),
+                                Image.asset(
+                                  'assets/images/Group_33295_2.png',
+                                  width: double.infinity,
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.61,
+                                  fit: BoxFit.contain,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                       if (widget.categoryId != '7')
                         Align(
-                          alignment: AlignmentDirectional(0, 0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 15, 0, 45),
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 15.0, 0.0, 45.0),
                             child: Container(
                               width: MediaQuery.of(context).size.width * 0.9,
                               height: MediaQuery.of(context).size.height * 0.9,
                               decoration: BoxDecoration(),
                               child: Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 50),
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 50.0),
                                 child: FutureBuilder<ApiCallResponse>(
                                   future: (_model.apiRequestCompleter ??=
                                           Completer<ApiCallResponse>()
@@ -128,8 +228,8 @@ class _CategoryCoursesWidgetState extends State<CategoryCoursesWidget> {
                                     if (!snapshot.hasData) {
                                       return Center(
                                         child: SizedBox(
-                                          width: 50,
-                                          height: 50,
+                                          width: 50.0,
+                                          height: 50.0,
                                           child: CircularProgressIndicator(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryColor,
@@ -163,7 +263,8 @@ class _CategoryCoursesWidgetState extends State<CategoryCoursesWidget> {
                                                   categories[categoriesIndex];
                                               return Padding(
                                                 padding: EdgeInsetsDirectional
-                                                    .fromSTEB(0, 0, 0, 15),
+                                                    .fromSTEB(
+                                                        0.0, 0.0, 0.0, 15.0),
                                                 child: InkWell(
                                                   onTap: () async {
                                                     _model.check = await actions
@@ -176,36 +277,18 @@ class _CategoryCoursesWidgetState extends State<CategoryCoursesWidget> {
                                                         r'''$.id''',
                                                       ).toString(),
                                                     );
-                                                    if (widget.categoryId ==
-                                                        '5') {
-                                                      await Navigator.push(
-                                                        context,
-                                                        MaterialPageRoute(
-                                                          builder: (context) =>
-                                                              CoursePageWidget(
-                                                            body:
-                                                                categoriesItem,
-                                                            unlocked:
-                                                                _model.check,
-                                                            med: true,
-                                                          ),
+                                                    await Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            CoursePageWidget(
+                                                          body: categoriesItem,
+                                                          unlocked:
+                                                              _model.check,
+                                                          med: false,
                                                         ),
-                                                      );
-                                                    } else {
-                                                      await Navigator.push(
-                                                        context,
-                                                        MaterialPageRoute(
-                                                          builder: (context) =>
-                                                              CoursePageWidget(
-                                                            body:
-                                                                categoriesItem,
-                                                            unlocked:
-                                                                _model.check,
-                                                            med: false,
-                                                          ),
-                                                        ),
-                                                      );
-                                                    }
+                                                      ),
+                                                    );
 
                                                     setState(() {});
                                                   },
@@ -227,15 +310,16 @@ class _CategoryCoursesWidgetState extends State<CategoryCoursesWidget> {
                                                               .alternate,
                                                       boxShadow: [
                                                         BoxShadow(
-                                                          blurRadius: 4,
+                                                          blurRadius: 4.0,
                                                           color:
                                                               Color(0x33000000),
-                                                          offset: Offset(0, 2),
+                                                          offset:
+                                                              Offset(0.0, 2.0),
                                                         )
                                                       ],
                                                       borderRadius:
                                                           BorderRadius.circular(
-                                                              32),
+                                                              32.0),
                                                     ),
                                                     child: Row(
                                                       mainAxisSize:
@@ -249,16 +333,16 @@ class _CategoryCoursesWidgetState extends State<CategoryCoursesWidget> {
                                                               BorderRadius.only(
                                                             bottomLeft:
                                                                 Radius.circular(
-                                                                    22),
+                                                                    22.0),
                                                             bottomRight:
                                                                 Radius.circular(
-                                                                    0),
+                                                                    0.0),
                                                             topLeft:
                                                                 Radius.circular(
-                                                                    22),
+                                                                    22.0),
                                                             topRight:
                                                                 Radius.circular(
-                                                                    0),
+                                                                    0.0),
                                                           ),
                                                           child: Image.network(
                                                             valueOrDefault<
@@ -269,12 +353,12 @@ class _CategoryCoursesWidgetState extends State<CategoryCoursesWidget> {
                                                               ),
                                                               'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg',
                                                             ),
-                                                            width: 120,
+                                                            width: 120.0,
                                                             height: MediaQuery.of(
                                                                         context)
                                                                     .size
                                                                     .height *
-                                                                1,
+                                                                1.0,
                                                             fit: BoxFit.cover,
                                                           ),
                                                         ),
@@ -288,7 +372,7 @@ class _CategoryCoursesWidgetState extends State<CategoryCoursesWidget> {
                                                                       context)
                                                                   .size
                                                                   .height *
-                                                              1,
+                                                              1.0,
                                                           decoration:
                                                               BoxDecoration(),
                                                         ),
@@ -317,12 +401,12 @@ class _CategoryCoursesWidgetState extends State<CategoryCoursesWidget> {
                                                               ),
                                                               alignment:
                                                                   AlignmentDirectional(
-                                                                      0, 0),
+                                                                      0.0, 0.0),
                                                               child: Align(
                                                                 alignment:
                                                                     AlignmentDirectional(
                                                                         -0.95,
-                                                                        0),
+                                                                        0.0),
                                                                 child: Text(
                                                                   valueOrDefault<
                                                                       String>(
@@ -342,7 +426,7 @@ class _CategoryCoursesWidgetState extends State<CategoryCoursesWidget> {
                                                                         fontFamily:
                                                                             'Nunito Sans',
                                                                         fontSize:
-                                                                            16,
+                                                                            16.0,
                                                                         fontWeight:
                                                                             FontWeight.w600,
                                                                       ),
@@ -364,99 +448,6 @@ class _CategoryCoursesWidgetState extends State<CategoryCoursesWidget> {
                                   },
                                 ),
                               ),
-                            ),
-                          ),
-                        ),
-                      if (widget.categoryId == '7')
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
-                          child: Container(
-                            width: MediaQuery.of(context).size.width * 0.9,
-                            height: MediaQuery.of(context).size.height * 0.9,
-                            decoration: BoxDecoration(),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Container(
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.9,
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.15,
-                                  decoration: BoxDecoration(),
-                                  child: Align(
-                                    alignment: AlignmentDirectional(0, 0),
-                                    child: Text(
-                                      'Pentru sedintele\nindividuale apelati la\nnumarul afisat mai jos',
-                                      textAlign: TextAlign.center,
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'Nunito Sans',
-                                            fontSize: 27,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  width: 100,
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.03,
-                                  decoration: BoxDecoration(),
-                                ),
-                                Align(
-                                  alignment: AlignmentDirectional(0, -0.95),
-                                  child: Container(
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.7,
-                                    height: MediaQuery.of(context).size.height *
-                                        0.07,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(32),
-                                    ),
-                                    child: FFButtonWidget(
-                                      onPressed: () async {
-                                        await launchUrl(Uri(
-                                          scheme: 'tel',
-                                          path: '0748242351',
-                                        ));
-                                      },
-                                      text: '0748242351',
-                                      options: FFButtonOptions(
-                                        width: double.infinity,
-                                        height: double.infinity,
-                                        color: FlutterFlowTheme.of(context)
-                                            .alternate,
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .subtitle2
-                                            .override(
-                                              fontFamily: 'Nunito Sans',
-                                              color: Colors.white,
-                                              fontSize: 20,
-                                            ),
-                                        borderSide: BorderSide(
-                                          color: Colors.transparent,
-                                          width: 1,
-                                        ),
-                                        borderRadius: BorderRadius.circular(32),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  width: 100,
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.05,
-                                  decoration: BoxDecoration(),
-                                ),
-                                Image.asset(
-                                  'assets/images/Group_33295_2.png',
-                                  width: double.infinity,
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.61,
-                                  fit: BoxFit.contain,
-                                ),
-                              ],
                             ),
                           ),
                         ),
