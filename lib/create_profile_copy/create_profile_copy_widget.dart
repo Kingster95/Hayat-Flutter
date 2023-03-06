@@ -1,6 +1,7 @@
 import '/auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/firebase_storage/storage.dart';
+import '/components/delete_account_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -626,9 +627,42 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                   borderRadius: BorderRadius.circular(22.0),
                 ),
               ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                child: Container(
+                  width: MediaQuery.of(context).size.width * 0.85,
+                  height: MediaQuery.of(context).size.height * 0.05,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(22.0),
+                  ),
+                  child: Align(
+                    alignment: AlignmentDirectional(0.0, 0.0),
+                    child: InkWell(
+                      onTap: () async {
+                        await signOut();
+                        await Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => WelcomeWidget(),
+                          ),
+                          (r) => false,
+                        );
+                      },
+                      child: Text(
+                        'Ieși din cont.',
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                              fontFamily: 'Nunito Sans',
+                              color: FlutterFlowTheme.of(context).secondaryText,
+                              fontSize: 16.0,
+                            ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
               Container(
                 width: MediaQuery.of(context).size.width * 0.85,
-                height: MediaQuery.of(context).size.height * 0.07,
+                height: MediaQuery.of(context).size.height * 0.05,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(22.0),
                 ),
@@ -636,19 +670,23 @@ class _CreateProfileCopyWidgetState extends State<CreateProfileCopyWidget> {
                   alignment: AlignmentDirectional(0.0, 0.0),
                   child: InkWell(
                     onTap: () async {
-                      await signOut();
-                      await Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => WelcomeWidget(),
-                        ),
-                      );
+                      await showModalBottomSheet(
+                        isScrollControlled: true,
+                        backgroundColor: Colors.transparent,
+                        context: context,
+                        builder: (context) {
+                          return Padding(
+                            padding: MediaQuery.of(context).viewInsets,
+                            child: DeleteAccountWidget(),
+                          );
+                        },
+                      ).then((value) => setState(() {}));
                     },
                     child: Text(
-                      'Ieși din cont.',
+                      'Sterge Cont.',
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Nunito Sans',
-                            color: FlutterFlowTheme.of(context).secondaryText,
+                            color: Color(0xFF800909),
                             fontSize: 16.0,
                           ),
                     ),

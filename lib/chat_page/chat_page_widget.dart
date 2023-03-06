@@ -1,4 +1,6 @@
 import '/backend/backend.dart';
+import '/components/block_widget.dart';
+import '/components/report_widget.dart';
 import '/flutter_flow/chat/index.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -88,14 +90,103 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
         ),
         title: Stack(
           children: [
-            Text(
-              widget.chatUser!.displayName!,
-              style: FlutterFlowTheme.of(context).bodyText1.override(
-                    fontFamily: 'Lexend Deca',
-                    color: FlutterFlowTheme.of(context).secondaryText,
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.bold,
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  widget.chatUser!.displayName!,
+                  style: FlutterFlowTheme.of(context).bodyText1.override(
+                        fontFamily: 'Lexend Deca',
+                        color: FlutterFlowTheme.of(context).secondaryText,
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.4,
+                  height: MediaQuery.of(context).size.height * 0.06,
+                  decoration: BoxDecoration(),
+                  alignment: AlignmentDirectional(0.0, 0.0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      InkWell(
+                        onTap: () async {
+                          await showModalBottomSheet(
+                            isScrollControlled: true,
+                            backgroundColor: Colors.transparent,
+                            context: context,
+                            builder: (context) {
+                              return Padding(
+                                padding: MediaQuery.of(context).viewInsets,
+                                child: ReportWidget(
+                                  username: widget.chatUser!.displayName,
+                                ),
+                              );
+                            },
+                          ).then((value) => setState(() {}));
+                        },
+                        child: Container(
+                          width: MediaQuery.of(context).size.width * 0.15,
+                          height: MediaQuery.of(context).size.height * 0.04,
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.of(context).secondaryColor,
+                            borderRadius: BorderRadius.circular(12.0),
+                          ),
+                          alignment: AlignmentDirectional(0.0, 0.0),
+                          child: Text(
+                            'Report',
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Nunito Sans',
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                    ),
+                          ),
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () async {
+                          await showModalBottomSheet(
+                            isScrollControlled: true,
+                            backgroundColor: Colors.transparent,
+                            context: context,
+                            builder: (context) {
+                              return Padding(
+                                padding: MediaQuery.of(context).viewInsets,
+                                child: BlockWidget(
+                                  username: widget.chatUser!.displayName,
+                                  chatRef: widget.chatRef,
+                                ),
+                              );
+                            },
+                          ).then((value) => setState(() {}));
+                        },
+                        child: Container(
+                          width: MediaQuery.of(context).size.width * 0.15,
+                          height: MediaQuery.of(context).size.height * 0.04,
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.of(context).secondaryColor,
+                            borderRadius: BorderRadius.circular(12.0),
+                          ),
+                          alignment: AlignmentDirectional(0.0, 0.0),
+                          child: Text(
+                            'Block',
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Nunito Sans',
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                    ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
+                ),
+              ],
             ),
           ],
         ),

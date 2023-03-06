@@ -5,6 +5,10 @@
       "queryScope": "COLLECTION",
       "fields": [
         {
+          "fieldPath": "blocked",
+          "order": "ASCENDING"
+        },
+        {
           "fieldPath": "users",
           "arrayConfig": "CONTAINS"
         },
@@ -25,6 +29,20 @@
         {
           "fieldPath": "index",
           "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "chats",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "users",
+          "arrayConfig": "CONTAINS"
+        },
+        {
+          "fieldPath": "last_message_time",
+          "order": "DESCENDING"
         }
       ]
     },

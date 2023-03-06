@@ -64,6 +64,7 @@ class _AllChatsWidgetState extends State<AllChatsWidget> {
             stream: queryChatsRecord(
               queryBuilder: (chatsRecord) => chatsRecord
                   .where('users', arrayContains: currentUserReference)
+                  .where('blocked', isEqualTo: false)
                   .orderBy('last_message_time', descending: true),
             ),
             builder: (context, snapshot) {

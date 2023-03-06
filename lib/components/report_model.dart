@@ -1,16 +1,13 @@
-import '/backend/backend.dart';
-import '/components/block_widget.dart';
-import '/components/report_widget.dart';
-import '/flutter_flow/chat/index.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-class ChatPageModel extends FlutterFlowModel {
+class ReportModel extends FlutterFlowModel {
   /// Initialization and disposal methods.
 
   void initState(BuildContext context) {}

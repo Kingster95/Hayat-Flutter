@@ -299,7 +299,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                             FlutterFlowTheme.of(context).alternate,
                       ),
                       child: Checkbox(
-                        value: _model.checkboxValue ??= true,
+                        value: _model.checkboxValue ??= false,
                         onChanged: (newValue) async {
                           setState(() => _model.checkboxValue = newValue!);
                         },
@@ -307,15 +307,45 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                             FlutterFlowTheme.of(context).secondaryColor,
                       ),
                     ),
-                    Text(
-                      'Tine-mă minte',
-                      textAlign: TextAlign.start,
-                      style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Poppins',
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.w500,
-                            lineHeight: 2.0,
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Sunt de Acord cu',
+                          textAlign: TextAlign.start,
+                          style:
+                              FlutterFlowTheme.of(context).bodyText1.override(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.w500,
+                                    lineHeight: 2.0,
+                                  ),
+                        ),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              5.0, 0.0, 0.0, 0.0),
+                          child: InkWell(
+                            onTap: () async {
+                              await launchURL(
+                                  'https://artadeafifemeie.ro/prelucrare-date');
+                            },
+                            child: Text(
+                              'Termenii si Conditiile',
+                              textAlign: TextAlign.start,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'Poppins',
+                                    color: Color(0xFF6F1AB6),
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.bold,
+                                    lineHeight: 2.0,
+                                  ),
+                            ),
                           ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
@@ -336,55 +366,58 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                     borderRadius: BorderRadius.circular(22.0),
                   ),
                   child: FFButtonWidget(
-                    onPressed: () async {
-                      if (_model.formKey.currentState == null ||
-                          !_model.formKey.currentState!.validate()) {
-                        return;
-                      }
-                      _model.apiResultfo2 = await LoginCall.call(
-                        email: _model.emailFieldController.text,
-                        password: _model.passwordFieldController.text,
-                      );
-                      if ((_model.apiResultfo2?.succeeded ?? true)) {
-                        if (getJsonField(
-                              (_model.apiResultfo2?.jsonBody ?? ''),
-                              r'''$.message''',
-                            ) ==
-                            'Emailul nu este asociat cu un cont') {
-                          await Navigator.pushAndRemoveUntil(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => CreateProfileWidget(
-                                password: _model.passwordFieldController.text,
-                                email: _model.emailFieldController.text,
-                                existing: false,
-                              ),
-                            ),
-                            (r) => false,
-                          );
-                        } else {
-                          final user = await signInWithEmail(
-                            context,
-                            _model.emailFieldController.text,
-                            _model.passwordFieldController.text,
-                          );
-                          if (user == null) {
-                            return;
-                          }
+                    onPressed: !_model.checkboxValue!
+                        ? null
+                        : () async {
+                            if (_model.formKey.currentState == null ||
+                                !_model.formKey.currentState!.validate()) {
+                              return;
+                            }
+                            _model.apiResultfo2 = await LoginCall.call(
+                              email: _model.emailFieldController.text,
+                              password: _model.passwordFieldController.text,
+                            );
+                            if ((_model.apiResultfo2?.succeeded ?? true)) {
+                              if (getJsonField(
+                                    (_model.apiResultfo2?.jsonBody ?? ''),
+                                    r'''$.message''',
+                                  ) ==
+                                  'Emailul nu este asociat cu un cont') {
+                                await Navigator.pushAndRemoveUntil(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => CreateProfileWidget(
+                                      password:
+                                          _model.passwordFieldController.text,
+                                      email: _model.emailFieldController.text,
+                                      existing: false,
+                                    ),
+                                  ),
+                                  (r) => false,
+                                );
+                              } else {
+                                final user = await signInWithEmail(
+                                  context,
+                                  _model.emailFieldController.text,
+                                  _model.passwordFieldController.text,
+                                );
+                                if (user == null) {
+                                  return;
+                                }
 
-                          await Navigator.pushAndRemoveUntil(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  NavBarPage(initialPage: 'HomePage'),
-                            ),
-                            (r) => false,
-                          );
-                        }
-                      }
+                                await Navigator.pushAndRemoveUntil(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        NavBarPage(initialPage: 'HomePage'),
+                                  ),
+                                  (r) => false,
+                                );
+                              }
+                            }
 
-                      setState(() {});
-                    },
+                            setState(() {});
+                          },
                     text: 'Inscrie-mă',
                     options: FFButtonOptions(
                       height: 40.0,
@@ -399,6 +432,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                         width: 1.0,
                       ),
                       borderRadius: BorderRadius.circular(20.0),
+                      disabledColor: Color(0x5ACDCDCD),
                     ),
                   ),
                 ),

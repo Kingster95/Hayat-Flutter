@@ -45,6 +45,8 @@ abstract class ChatsRecord implements Built<ChatsRecord, ChatsRecordBuilder> {
   @BuiltValueField(wireName: 'phone_number')
   String? get phoneNumber;
 
+  bool? get blocked;
+
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference? get ffRef;
   DocumentReference get reference => ffRef!;
@@ -57,7 +59,8 @@ abstract class ChatsRecord implements Built<ChatsRecord, ChatsRecordBuilder> {
     ..displayName = ''
     ..photoUrl = ''
     ..uid = ''
-    ..phoneNumber = '';
+    ..phoneNumber = ''
+    ..blocked = false;
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('chats');
@@ -92,6 +95,7 @@ Map<String, dynamic> createChatsRecordData({
   String? uid,
   DateTime? createdTime,
   String? phoneNumber,
+  bool? blocked,
 }) {
   final firestoreData = serializers.toFirestore(
     ChatsRecord.serializer,
@@ -109,7 +113,8 @@ Map<String, dynamic> createChatsRecordData({
         ..photoUrl = photoUrl
         ..uid = uid
         ..createdTime = createdTime
-        ..phoneNumber = phoneNumber,
+        ..phoneNumber = phoneNumber
+        ..blocked = blocked,
     ),
   );
 

@@ -119,6 +119,13 @@ class _$ChatsRecordSerializer implements StructuredSerializer<ChatsRecord> {
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.blocked;
+    if (value != null) {
+      result
+        ..add('blocked')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
+    }
     value = object.ffRef;
     if (value != null) {
       result
@@ -205,6 +212,10 @@ class _$ChatsRecordSerializer implements StructuredSerializer<ChatsRecord> {
           result.phoneNumber = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
+        case 'blocked':
+          result.blocked = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool?;
+          break;
         case 'Document__Reference__Field':
           result.ffRef = serializers.deserialize(value,
               specifiedType: const FullType(DocumentReference, const [
@@ -246,6 +257,8 @@ class _$ChatsRecord extends ChatsRecord {
   @override
   final String? phoneNumber;
   @override
+  final bool? blocked;
+  @override
   final DocumentReference<Object?>? ffRef;
 
   factory _$ChatsRecord([void Function(ChatsRecordBuilder)? updates]) =>
@@ -265,6 +278,7 @@ class _$ChatsRecord extends ChatsRecord {
       this.uid,
       this.createdTime,
       this.phoneNumber,
+      this.blocked,
       this.ffRef})
       : super._();
 
@@ -292,6 +306,7 @@ class _$ChatsRecord extends ChatsRecord {
         uid == other.uid &&
         createdTime == other.createdTime &&
         phoneNumber == other.phoneNumber &&
+        blocked == other.blocked &&
         ffRef == other.ffRef;
   }
 
@@ -309,19 +324,23 @@ class _$ChatsRecord extends ChatsRecord {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc($jc(0, users.hashCode),
-                                                        userA.hashCode),
-                                                    userB.hashCode),
-                                                lastMessage.hashCode),
-                                            lastMessageTime.hashCode),
-                                        lastMessageSentBy.hashCode),
-                                    lastMessageSeenBy.hashCode),
-                                email.hashCode),
-                            displayName.hashCode),
-                        photoUrl.hashCode),
-                    uid.hashCode),
-                createdTime.hashCode),
-            phoneNumber.hashCode),
+                                                    $jc(
+                                                        $jc(
+                                                            $jc(0,
+                                                                users.hashCode),
+                                                            userA.hashCode),
+                                                        userB.hashCode),
+                                                    lastMessage.hashCode),
+                                                lastMessageTime.hashCode),
+                                            lastMessageSentBy.hashCode),
+                                        lastMessageSeenBy.hashCode),
+                                    email.hashCode),
+                                displayName.hashCode),
+                            photoUrl.hashCode),
+                        uid.hashCode),
+                    createdTime.hashCode),
+                phoneNumber.hashCode),
+            blocked.hashCode),
         ffRef.hashCode));
   }
 
@@ -341,6 +360,7 @@ class _$ChatsRecord extends ChatsRecord {
           ..add('uid', uid)
           ..add('createdTime', createdTime)
           ..add('phoneNumber', phoneNumber)
+          ..add('blocked', blocked)
           ..add('ffRef', ffRef))
         .toString();
   }
@@ -410,6 +430,10 @@ class ChatsRecordBuilder implements Builder<ChatsRecord, ChatsRecordBuilder> {
   String? get phoneNumber => _$this._phoneNumber;
   set phoneNumber(String? phoneNumber) => _$this._phoneNumber = phoneNumber;
 
+  bool? _blocked;
+  bool? get blocked => _$this._blocked;
+  set blocked(bool? blocked) => _$this._blocked = blocked;
+
   DocumentReference<Object?>? _ffRef;
   DocumentReference<Object?>? get ffRef => _$this._ffRef;
   set ffRef(DocumentReference<Object?>? ffRef) => _$this._ffRef = ffRef;
@@ -434,6 +458,7 @@ class ChatsRecordBuilder implements Builder<ChatsRecord, ChatsRecordBuilder> {
       _uid = $v.uid;
       _createdTime = $v.createdTime;
       _phoneNumber = $v.phoneNumber;
+      _blocked = $v.blocked;
       _ffRef = $v.ffRef;
       _$v = null;
     }
@@ -472,6 +497,7 @@ class ChatsRecordBuilder implements Builder<ChatsRecord, ChatsRecordBuilder> {
               uid: uid,
               createdTime: createdTime,
               phoneNumber: phoneNumber,
+              blocked: blocked,
               ffRef: ffRef);
     } catch (_) {
       late String _$failedField;
