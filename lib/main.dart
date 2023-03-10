@@ -14,7 +14,7 @@ import 'flutter_flow/internationalization.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'index.dart';
-
+import 'flutter_flow/revenue_cat_util.dart' as revenue_cat;
 import 'backend/stripe/payment_manager.dart';
 
 void main() async {
@@ -22,7 +22,11 @@ void main() async {
   await initFirebase();
 
   final appState = FFAppState(); // Initialize FFAppState
-
+  await revenue_cat.initialize(
+    "appl_hrrbtTDVDTtBESqWPHalydaHxCE",
+    "goog_GwlaMVJQpxxmbldOXxieFuWerfA",
+    debugLogEnabled: true,
+  );
   await initializeStripe();
 
   runApp(ChangeNotifierProvider(
@@ -48,7 +52,9 @@ class _MyAppState extends State<MyApp> {
   HayatFirebaseUser? initialUser;
   bool displaySplashImage = true;
 
-  final authUserSub = authenticatedUserStream.listen((_) {});
+  final authUserSub = authenticatedUserStream.listen((user) {
+    revenue_cat.login(user?.uid);
+  });
   final fcmTokenSub = fcmTokenUserStream.listen((_) {});
 
   @override

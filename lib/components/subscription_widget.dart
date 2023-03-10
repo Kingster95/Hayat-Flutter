@@ -4,6 +4,7 @@ import '/backend/stripe/payment_manager.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/revenue_cat_util.dart' as revenue_cat;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -185,8 +186,8 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                                       borderRadius: BorderRadius.circular(20.0),
                                     ),
                                     alignment: AlignmentDirectional(0.0, 0.0),
-                                    child: FFButtonWidget(
-                                      onPressed: () async {
+                                    child: InkWell(
+                                      onDoubleTap: () async {
                                         final paymentResponse =
                                             await processStripePayment(
                                           context,
@@ -232,31 +233,54 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
 
                                         setState(() {});
                                       },
-                                      text: 'Inscrie-te acum!',
-                                      options: FFButtonOptions(
-                                        width: double.infinity,
-                                        height: double.infinity,
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 0.0),
-                                        iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
-                                                0.0, 0.0, 0.0, 0.0),
-                                        color: Color(0xFF5F4D7D),
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .subtitle2
-                                            .override(
-                                              fontFamily: 'Nunito Sans',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryText,
-                                              fontSize: 18.0,
-                                            ),
-                                        borderSide: BorderSide(
-                                          color: Colors.transparent,
-                                          width: 1.0,
+                                      child: FFButtonWidget(
+                                        onPressed: () async {
+                                          if (isiOS) {
+                                            final isEntitled = await revenue_cat
+                                                .isEntitled('monthly_access');
+                                            if (isEntitled == null) {
+                                              return;
+                                            } else if (!isEntitled) {
+                                              await revenue_cat.loadOfferings();
+                                            }
+                                          } else {
+                                            final isEntitled = await revenue_cat
+                                                .isEntitled('monthly_access');
+                                            if (isEntitled == null) {
+                                              return;
+                                            } else if (!isEntitled) {
+                                              await revenue_cat.loadOfferings();
+                                            }
+                                          }
+                                        },
+                                        text: 'Inscrie-te acum!',
+                                        options: FFButtonOptions(
+                                          width: double.infinity,
+                                          height: double.infinity,
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 0.0, 0.0, 0.0),
+                                          iconPadding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 0.0, 0.0, 0.0),
+                                          color: Color(0xFF5F4D7D),
+                                          textStyle: FlutterFlowTheme.of(
+                                                  context)
+                                              .subtitle2
+                                              .override(
+                                                fontFamily: 'Nunito Sans',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryText,
+                                                fontSize: 18.0,
+                                              ),
+                                          borderSide: BorderSide(
+                                            color: Colors.transparent,
+                                            width: 1.0,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
                                         ),
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
                                       ),
                                     ),
                                   ),
