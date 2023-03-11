@@ -4,6 +4,8 @@ import '/backend/stripe/payment_manager.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/main.dart';
+import '/flutter_flow/revenue_cat_util.dart' as revenue_cat;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -118,7 +120,7 @@ class _BuyPackWidgetState extends State<BuyPackWidget> {
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 AutoSizeText(
-                                                  'Pachet de meditatii “ Like a Diva” .\nPrin aceste tehnici vei ieși la alt nivel, vei realiza saltul cuantic. Doar meditația te invata sa trăiești acum și aici, sa simți clipa, sa-ți calmezi mintea. \nMajoritatea oamenilor trăiesc in trecut sau viitor. Vina, regretele, dezamăgirile, despărțirile, durerea ne fac sa traim in trecut. Grijile, nelinistea pentru ziua de mâine ne fac sa trăim in viitor. Magia este posibila doar când accesezi starea acum și aici. Fericirea trăiește doar in aceasta stare. \nPachetul include următoarele meditatii: \n1. Pasarea Pheonix \n2. Puterea strămoșilor\n3. Reconectarea la puterea personală \n4. Programarea realității\n5. Vocația\n6. Dragostea de sine \n7. Conectarea la femeile puterii\n8. Meditația Stop HATE\n9. Meditația banilor \nPreț pachet: 2222 lei cu acces pe viața ( atâta timp cât va exista aplicația Hayat) \nAtenție! Oferta este valabilă pana pe 03.03.2023 \nÎncepând cu 04.03. 2023 pachetul va costa 3152 lei cu acces pentru 6 luni.\n\nAccesul in aplicație se face in baza abonamentului lunar de 7 euro.',
+                                                  'Pachet de meditatii “ Like a Diva” .\nPrin aceste tehnici vei ieși la alt nivel, vei realiza saltul cuantic. Doar meditația te invata sa trăiești acum și aici, sa simți clipa, sa-ți calmezi mintea. \nMajoritatea oamenilor trăiesc in trecut sau viitor. Vina, regretele, dezamăgirile, despărțirile, durerea ne fac sa traim in trecut. Grijile, nelinistea pentru ziua de mâine ne fac sa trăim in viitor. Magia este posibila doar când accesezi starea acum și aici. Fericirea trăiește doar in aceasta stare. \nPachetul include următoarele meditatii: \n1. Pasarea Pheonix \n2. Puterea strămoșilor\n3. Reconectarea la puterea personală \n4. Programarea realității\n5. Vocația\n6. Dragostea de sine \n7. Conectarea la femeile puterii\n8. Meditația Stop HATE\n9. Meditația banilor \nPreț pachet: 2222 lei cu acces pe viața ( atâta timp cât va exista aplicația Hayat) \nAtenție! Oferta este valabilă pana pe 03.03.2023 \nÎncepând cu 04.03. 2023 pachetul va costa 3152 lei cu acces pentru 6 luni.\n\nAccesul in aplicație se face in baza abonamentului lunar.',
                                                   textAlign: TextAlign.start,
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -154,65 +156,131 @@ class _BuyPackWidgetState extends State<BuyPackWidget> {
                                         ),
                                         child: FFButtonWidget(
                                           onPressed: () async {
-                                            final paymentResponse =
-                                                await processStripePayment(
-                                              context,
-                                              amount: 222200,
-                                              currency: 'RON',
-                                              customerEmail: currentUserEmail,
-                                              customerName:
-                                                  currentUserDisplayName,
-                                              description:
-                                                  'Pachet de meditatii “ Like a Diva”',
-                                              allowGooglePay: true,
-                                              allowApplePay: true,
-                                            );
-                                            if (paymentResponse.paymentId ==
-                                                null) {
-                                              if (paymentResponse
-                                                      .errorMessage !=
+                                            if (isiOS) {
+                                              final isEntitled =
+                                                  await revenue_cat.isEntitled(
+                                                      'monthly_access');
+                                              if (isEntitled == null) {
+                                                return;
+                                              } else if (!isEntitled) {
+                                                await revenue_cat
+                                                    .loadOfferings();
+                                              }
+
+                                              if (isEntitled) {
+                                                Navigator.pop(context);
+                                              } else {
+                                                _model.didPurchase =
+                                                    await revenue_cat
+                                                        .purchasePackage(
+                                                            revenue_cat
+                                                                .offerings!
+                                                                .current!
+                                                                .monthly!
+                                                                .identifier);
+                                                if (_model.didPurchase!) {
+                                                  await Navigator
+                                                      .pushAndRemoveUntil(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          NavBarPage(
+                                                              initialPage:
+                                                                  'HomePage'),
+                                                    ),
+                                                    (r) => false,
+                                                  );
+
+                                                  final usersUpdateData1 =
+                                                      createUsersRecordData(
+                                                    subscribed: true,
+                                                    subscriptionDate:
+                                                        getCurrentTimestamp,
+                                                  );
+                                                  await currentUserReference!
+                                                      .update(usersUpdateData1);
+                                                } else {
+                                                  ScaffoldMessenger.of(context)
+                                                      .showSnackBar(
+                                                    SnackBar(
+                                                      content: Text(
+                                                        'Tranzactie Esuata!',
+                                                        style: TextStyle(
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryText,
+                                                        ),
+                                                      ),
+                                                      duration: Duration(
+                                                          milliseconds: 4000),
+                                                      backgroundColor:
+                                                          Color(0x00000000),
+                                                    ),
+                                                  );
+                                                }
+                                              }
+                                            } else {
+                                              final paymentResponse =
+                                                  await processStripePayment(
+                                                context,
+                                                amount: 222200,
+                                                currency: 'RON',
+                                                customerEmail: currentUserEmail,
+                                                customerName:
+                                                    currentUserDisplayName,
+                                                description:
+                                                    'Pachet de meditatii “ Like a Diva”',
+                                                allowGooglePay: true,
+                                                allowApplePay: true,
+                                              );
+                                              if (paymentResponse.paymentId ==
                                                   null) {
-                                                showSnackbar(
-                                                  context,
-                                                  'Error: ${paymentResponse.errorMessage}',
+                                                if (paymentResponse
+                                                        .errorMessage !=
+                                                    null) {
+                                                  showSnackbar(
+                                                    context,
+                                                    'Error: ${paymentResponse.errorMessage}',
+                                                  );
+                                                }
+                                                return;
+                                              }
+                                              _model.paymentId =
+                                                  paymentResponse.paymentId!;
+
+                                              if (_model.paymentId != null &&
+                                                  _model.paymentId != '') {
+                                                final usersUpdateData2 = {
+                                                  'owned_meds':
+                                                      FFAppState().packMeds,
+                                                };
+                                                await currentUserReference!
+                                                    .update(usersUpdateData2);
+                                              } else {
+                                                await showDialog(
+                                                  context: context,
+                                                  builder:
+                                                      (alertDialogContext) {
+                                                    return AlertDialog(
+                                                      title: Text(
+                                                          'Detalii Tranzactie'),
+                                                      content: Text(
+                                                          'Plata nu a fost efectuata cu succes'),
+                                                      actions: [
+                                                        TextButton(
+                                                          onPressed: () =>
+                                                              Navigator.pop(
+                                                                  alertDialogContext),
+                                                          child: Text('Ok'),
+                                                        ),
+                                                      ],
+                                                    );
+                                                  },
                                                 );
                                               }
-                                              return;
-                                            }
-                                            _model.paymentId =
-                                                paymentResponse.paymentId!;
 
-                                            if (_model.paymentId != null &&
-                                                _model.paymentId != '') {
-                                              final usersUpdateData = {
-                                                'owned_meds':
-                                                    FFAppState().packMeds,
-                                              };
-                                              await currentUserReference!
-                                                  .update(usersUpdateData);
-                                            } else {
-                                              await showDialog(
-                                                context: context,
-                                                builder: (alertDialogContext) {
-                                                  return AlertDialog(
-                                                    title: Text(
-                                                        'Detalii Tranzactie'),
-                                                    content: Text(
-                                                        'Plata nu a fost efectuata cu succes'),
-                                                    actions: [
-                                                      TextButton(
-                                                        onPressed: () =>
-                                                            Navigator.pop(
-                                                                alertDialogContext),
-                                                        child: Text('Ok'),
-                                                      ),
-                                                    ],
-                                                  );
-                                                },
-                                              );
+                                              Navigator.pop(context);
                                             }
-
-                                            Navigator.pop(context);
 
                                             setState(() {});
                                           },

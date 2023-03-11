@@ -4,6 +4,7 @@ import '/backend/stripe/payment_manager.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/main.dart';
 import '/flutter_flow/revenue_cat_util.dart' as revenue_cat;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -128,7 +129,7 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                                   decoration: BoxDecoration(),
                                   alignment: AlignmentDirectional(-0.9, -0.4),
                                   child: Text(
-                                    '35 lei / luna',
+                                    '49,99 lei / luna',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyText1
                                         .override(
@@ -186,101 +187,143 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                                       borderRadius: BorderRadius.circular(20.0),
                                     ),
                                     alignment: AlignmentDirectional(0.0, 0.0),
-                                    child: InkWell(
-                                      onDoubleTap: () async {
-                                        final paymentResponse =
-                                            await processStripePayment(
-                                          context,
-                                          amount: 3500,
-                                          currency: 'RON',
-                                          customerEmail: currentUserEmail,
-                                          customerName: currentUserDisplayName,
-                                          description: 'Abonament Hayat',
-                                          allowGooglePay: true,
-                                          allowApplePay: true,
-                                          buttonColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .secondaryColor,
-                                          buttonTextColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primaryText,
-                                        );
-                                        if (paymentResponse.paymentId == null) {
-                                          if (paymentResponse.errorMessage !=
-                                              null) {
-                                            showSnackbar(
-                                              context,
-                                              'Error: ${paymentResponse.errorMessage}',
-                                            );
+                                    child: FFButtonWidget(
+                                      onPressed: () async {
+                                        if (isiOS) {
+                                          final isEntitled = await revenue_cat
+                                              .isEntitled('monthly_access');
+                                          if (isEntitled == null) {
+                                            return;
+                                          } else if (!isEntitled) {
+                                            await revenue_cat.loadOfferings();
                                           }
-                                          return;
-                                        }
-                                        _model.paymentId =
-                                            paymentResponse.paymentId!;
 
-                                        if (_model.paymentId != null &&
-                                            _model.paymentId != '') {
-                                          final usersUpdateData =
-                                              createUsersRecordData(
-                                            subscribed: true,
-                                            subscriptionDate:
-                                                getCurrentTimestamp,
+                                          if (isEntitled) {
+                                            Navigator.pop(context);
+                                          } else {
+                                            _model.didPurchase =
+                                                await revenue_cat
+                                                    .purchasePackage(revenue_cat
+                                                        .offerings!
+                                                        .current!
+                                                        .monthly!
+                                                        .identifier);
+                                            if (_model.didPurchase!) {
+                                              await Navigator
+                                                  .pushAndRemoveUntil(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      NavBarPage(
+                                                          initialPage:
+                                                              'HomePage'),
+                                                ),
+                                                (r) => false,
+                                              );
+
+                                              final usersUpdateData1 =
+                                                  createUsersRecordData(
+                                                subscribed: true,
+                                                subscriptionDate:
+                                                    getCurrentTimestamp,
+                                              );
+                                              await currentUserReference!
+                                                  .update(usersUpdateData1);
+                                            } else {
+                                              ScaffoldMessenger.of(context)
+                                                  .showSnackBar(
+                                                SnackBar(
+                                                  content: Text(
+                                                    'Tranzactie Esuata!',
+                                                    style: TextStyle(
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primaryText,
+                                                    ),
+                                                  ),
+                                                  duration: Duration(
+                                                      milliseconds: 4000),
+                                                  backgroundColor:
+                                                      Color(0x00000000),
+                                                ),
+                                              );
+                                            }
+                                          }
+                                        } else {
+                                          final paymentResponse =
+                                              await processStripePayment(
+                                            context,
+                                            amount: 4999,
+                                            currency: 'RON',
+                                            customerEmail: currentUserEmail,
+                                            customerName:
+                                                currentUserDisplayName,
+                                            description: 'Abonament Hayat',
+                                            allowGooglePay: true,
+                                            allowApplePay: true,
+                                            buttonColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .secondaryColor,
+                                            buttonTextColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryText,
                                           );
-                                          await currentUserReference!
-                                              .update(usersUpdateData);
-                                          Navigator.pop(context);
+                                          if (paymentResponse.paymentId ==
+                                              null) {
+                                            if (paymentResponse.errorMessage !=
+                                                null) {
+                                              showSnackbar(
+                                                context,
+                                                'Error: ${paymentResponse.errorMessage}',
+                                              );
+                                            }
+                                            return;
+                                          }
+                                          _model.paymentId =
+                                              paymentResponse.paymentId!;
+
+                                          if (_model.paymentId != null &&
+                                              _model.paymentId != '') {
+                                            final usersUpdateData2 =
+                                                createUsersRecordData(
+                                              subscribed: true,
+                                              subscriptionDate:
+                                                  getCurrentTimestamp,
+                                            );
+                                            await currentUserReference!
+                                                .update(usersUpdateData2);
+                                            Navigator.pop(context);
+                                          }
                                         }
 
                                         setState(() {});
                                       },
-                                      child: FFButtonWidget(
-                                        onPressed: () async {
-                                          if (isiOS) {
-                                            final isEntitled = await revenue_cat
-                                                .isEntitled('monthly_access');
-                                            if (isEntitled == null) {
-                                              return;
-                                            } else if (!isEntitled) {
-                                              await revenue_cat.loadOfferings();
-                                            }
-                                          } else {
-                                            final isEntitled = await revenue_cat
-                                                .isEntitled('monthly_access');
-                                            if (isEntitled == null) {
-                                              return;
-                                            } else if (!isEntitled) {
-                                              await revenue_cat.loadOfferings();
-                                            }
-                                          }
-                                        },
-                                        text: 'Inscrie-te acum!',
-                                        options: FFButtonOptions(
-                                          width: double.infinity,
-                                          height: double.infinity,
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 0.0, 0.0),
-                                          iconPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 0.0, 0.0),
-                                          color: Color(0xFF5F4D7D),
-                                          textStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .subtitle2
-                                              .override(
-                                                fontFamily: 'Nunito Sans',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryText,
-                                                fontSize: 18.0,
-                                              ),
-                                          borderSide: BorderSide(
-                                            color: Colors.transparent,
-                                            width: 1.0,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(8.0),
+                                      text: 'Inscrie-te acum!',
+                                      options: FFButtonOptions(
+                                        width: double.infinity,
+                                        height: double.infinity,
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 0.0, 0.0, 0.0),
+                                        iconPadding:
+                                            EdgeInsetsDirectional.fromSTEB(
+                                                0.0, 0.0, 0.0, 0.0),
+                                        color: Color(0xFF5F4D7D),
+                                        textStyle: FlutterFlowTheme.of(context)
+                                            .subtitle2
+                                            .override(
+                                              fontFamily: 'Nunito Sans',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryText,
+                                              fontSize: 18.0,
+                                            ),
+                                        borderSide: BorderSide(
+                                          color: Colors.transparent,
+                                          width: 1.0,
                                         ),
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
                                       ),
                                     ),
                                   ),
