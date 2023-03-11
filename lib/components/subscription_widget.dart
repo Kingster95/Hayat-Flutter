@@ -129,7 +129,11 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                                   decoration: BoxDecoration(),
                                   alignment: AlignmentDirectional(-0.9, -0.4),
                                   child: Text(
-                                    '49,99 lei / luna',
+                                    valueOrDefault<String>(
+                                      revenue_cat.offerings!.current!.monthly!
+                                          .storeProduct.priceString,
+                                      '5',
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyText1
                                         .override(
