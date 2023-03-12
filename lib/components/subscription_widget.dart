@@ -195,7 +195,7 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                                       onPressed: () async {
                                         if (isiOS) {
                                           final isEntitled = await revenue_cat
-                                              .isEntitled('monthly_access');
+                                              .isEntitled('abonament_lunar');
                                           if (isEntitled == null) {
                                             return;
                                           } else if (!isEntitled) {
