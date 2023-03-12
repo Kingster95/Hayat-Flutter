@@ -48,7 +48,7 @@
 	<key>NSPhotoLibraryUsageDescription</key>
     <string>In order to send pictures or videos in the chat page, this app requires permission to access your photo library, you can decline and not send media files.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-    <string>In order to use the social map and astrological calendar properly, this app requires permission to access your Location, you can decline and still use every other utility.</string>
+    <string>Need Location</string>
 	<key>PermissionGroupNotification</key>
     <string>In order to receive notifications. this app requires permission to access notifications.</string>
     <key>UIBackgroundModes</key>

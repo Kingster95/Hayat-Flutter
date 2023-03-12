@@ -129,11 +129,7 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                                   decoration: BoxDecoration(),
                                   alignment: AlignmentDirectional(-0.9, -0.4),
                                   child: Text(
-                                    valueOrDefault<String>(
-                                      revenue_cat.offerings!.current!.monthly!
-                                          .storeProduct.priceString,
-                                      '5',
-                                    ),
+                                    '49,99 lei / luna',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyText1
                                         .override(
@@ -297,6 +293,8 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                                             );
                                             await currentUserReference!
                                                 .update(usersUpdateData2);
+                                            Navigator.pop(context);
+                                          } else {
                                             Navigator.pop(context);
                                           }
                                         }
