@@ -4,7 +4,6 @@ import '/backend/stripe/payment_manager.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/main.dart';
 import '/flutter_flow/revenue_cat_util.dart' as revenue_cat;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -190,65 +189,45 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                                     child: FFButtonWidget(
                                       onPressed: () async {
                                         if (isiOS) {
-                                          final isEntitled = await revenue_cat
-                                              .isEntitled('abonament_lunar');
-                                          if (isEntitled == null) {
-                                            return;
-                                          } else if (!isEntitled) {
-                                            await revenue_cat.loadOfferings();
-                                          }
-
-                                          if (isEntitled) {
-                                            Navigator.pop(context);
-                                          } else {
-                                            _model.didPurchase =
-                                                await revenue_cat
-                                                    .purchasePackage(revenue_cat
-                                                        .offerings!
-                                                        .current!
-                                                        .monthly!
-                                                        .identifier);
-                                            if (_model.didPurchase!) {
-                                              await Navigator
-                                                  .pushAndRemoveUntil(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      NavBarPage(
-                                                          initialPage:
-                                                              'HomePage'),
-                                                ),
-                                                (r) => false,
-                                              );
-
-                                              final usersUpdateData1 =
-                                                  createUsersRecordData(
-                                                subscribed: true,
-                                                subscriptionDate:
-                                                    getCurrentTimestamp,
-                                              );
-                                              await currentUserReference!
-                                                  .update(usersUpdateData1);
-                                            } else {
-                                              ScaffoldMessenger.of(context)
-                                                  .showSnackBar(
-                                                SnackBar(
-                                                  content: Text(
-                                                    'Tranzactie Esuata!',
-                                                    style: TextStyle(
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .primaryText,
-                                                    ),
+                                          _model.didPurchase =
+                                              await revenue_cat.purchasePackage(
+                                                  'hayat_one_monthly');
+                                          if (_model.didPurchase!) {
+                                            ScaffoldMessenger.of(context)
+                                                .showSnackBar(
+                                              SnackBar(
+                                                content: Text(
+                                                  'Success',
+                                                  style: TextStyle(
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .primaryText,
                                                   ),
-                                                  duration: Duration(
-                                                      milliseconds: 4000),
-                                                  backgroundColor:
-                                                      Color(0x00000000),
                                                 ),
-                                              );
-                                            }
+                                                duration: Duration(
+                                                    milliseconds: 4000),
+                                                backgroundColor:
+                                                    Color(0x00000000),
+                                              ),
+                                            );
+                                          } else {
+                                            ScaffoldMessenger.of(context)
+                                                .showSnackBar(
+                                              SnackBar(
+                                                content: Text(
+                                                  'Failed',
+                                                  style: TextStyle(
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .primaryText,
+                                                  ),
+                                                ),
+                                                duration: Duration(
+                                                    milliseconds: 4000),
+                                                backgroundColor:
+                                                    Color(0x00000000),
+                                              ),
+                                            );
                                           }
                                         } else {
                                           final paymentResponse =
@@ -285,14 +264,14 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
 
                                           if (_model.paymentId != null &&
                                               _model.paymentId != '') {
-                                            final usersUpdateData2 =
+                                            final usersUpdateData =
                                                 createUsersRecordData(
                                               subscribed: true,
                                               subscriptionDate:
                                                   getCurrentTimestamp,
                                             );
                                             await currentUserReference!
-                                                .update(usersUpdateData2);
+                                                .update(usersUpdateData);
                                             Navigator.pop(context);
                                           } else {
                                             Navigator.pop(context);
